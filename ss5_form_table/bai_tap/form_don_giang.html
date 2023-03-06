@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .f{
+            margin-left: 400px;
+            background-color: aquamarine;
+            width: 380px;
+            padding: 50px;
+        }
+    </style>
+    <style>
+        .e{
+            margin-left: 50px;
+            background-color: bisque;
+            width: 380px;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<form class="f" action="http://google.com" method="Post">
+       <table>
+            <tr>
+                <th colspan="2">
+                    <label style="background-color: red; color: white;margin-left: 30px">SỞ THÍCH CỦA BẠN</label>
+                </th>
+            </tr>
+           <tr>
+                    <td><label for="name">Họ Và Tên</label></td>
+                    <td><input id="name" name="name"></td>
+           </tr>
+           <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input id="email" name="Email"></td>
+           </tr>
+           <tr>
+
+               <table>
+                   <tr>
+                       <td rowspan="4"> <label>Sở Thích</label></td>
+                   </tr>
+                   <tr>
+                        <td>
+                            <input type="checkbox">Thể Thao
+                            <input type="checkbox">Lướt Web
+                            <input type="checkbox">Du Lịch
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox">Âm Nhạc
+                            <input type="checkbox">Chơi Game
+
+                        </td>
+                    </tr>
+                   <tr>
+                       <td>
+                           <input type="checkbox">điện ảnh
+                           <input type="checkbox">điện ảnh
+                       </td>
+                   </tr>
+
+                </table>
+           </tr>
+           <tr>
+               <center>
+               <td> <button type="submit">Gửi Thông Tin</button> </td>
+               <td> <button type="reset">Nhập Lại</button> </td>
+               </center>
+           </tr>
+
+
+
+        </table>
+</form>
+<form class="e" action="http://google.com" method="Post">
+    <table>
+        <tr>
+            <th>
+                <label style="background-color: aliceblue; color: blue;margin-left: 50px">Đăng Ký Học Viên</label>
+            </th>
+        </tr>
+        <tr>
+            <td><label for="name">Họ Và Tên:</label></td>
+            <td><input id="name" name="Name" ></td>
+        </tr>
+        <tr>
+            <td><label for="dateOfBirth">Ngày Sinh:</label></td>
+            <td><input id="dateOfBirth" type="date"></td>
+        </tr>
+        <tr>
+            <td><label>Giới Tính</label></td>
+            <td>
+                <input type="Radio" name="gender">Nam
+                <input type="Radio" name="gender">Nữ
+            </td>
+        </tr>
+        <tr>
+            <td><label>Địa Chỉ:</label></td>
+            <td><textarea ROWS="2" ></textarea></td>
+        </tr>
+        <tr>
+            <td><label></label>Lớp:</td>
+            <td>
+                <select>
+                <option>Chọn Lớp</option>
+                <option>Buổi Tối</option>
+                <option>Buổi Sáng</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="email">Email: </label></td>
+            <td><input id="email" name="Email"></td>
+        </tr>
+        <tr>
+            <td><label for="phone">Số Điện Thoại</label></td>
+            <td><input id="phone" type="number"></td>
+        </tr>
+        <tr>
+            <center>
+                <td> <button type="submit">Gửi Thông Tin</button> </td>
+                <td> <button type="reset">Nhập Lại</button> </td>
+            </center>
+        </tr>
+    </table>
+
+
+</form>
+</body>
+</html>

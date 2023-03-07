@@ -1,0 +1,10 @@
+inputWight = prompt("Enter the wight");
+inputHight = prompt("Enter the hight");
+var wight = parseInt(inputWight);
+var hight = parseInt(inputHight);
+var area = wight * hight;
+document.write("The Wight = " +wight);
+document.write("<br/>");
+document.write("The Hight = " +hight);
+document.write("<br/>");
+document.write("The Area = " + area);

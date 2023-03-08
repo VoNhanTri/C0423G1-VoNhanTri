@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi Tiền Tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>Form Currency</td>
+        <td>To Currency</td>
+        <td>      </td>
+    </tr>
+    <tr>
+        <td><input type="number" id="nhapvao"></td>
+        <td>
+            <select name="" id="select1">
+                <option value="vnd">VNĐ</option>
+                <option value="usd">USD</option>
+
+            </select>
+        </td>
+        <td>
+            <select name="" id="select2">
+                <option value="usd">USD</option>
+                <option value="vnd">VNĐ</option>
+
+            </select>
+        <td>
+        <button onclick="chuyendoi()">Convert</button>
+        </td>
+    </tr>
+    <script>
+        function chuyendoi(){
+            let nhapvao = document.getElementById("nhapvao") .value
+            let select1 = document.getElementById("select1") .value
+            let select2 = document.getElementById("select2") .value
+            if (select1==select2){
+                alert(nhapvao)
+            }
+            if (select1=='vnd' && select2=='usd'){
+                alert(nhapvao/23000);
+            }
+
+            if (select1=='usd'&& select2=='vnd'){
+                alert(nhapvao*23000);
+            }
+        }
+
+    </script>
+</table>
+</body>
+</html>

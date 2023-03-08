@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" id="nhapvao1">
+    <input type="number" id="nhapvao2"><br/>
+    <button onclick="addition()">Addition(+)</button>
+    <button onclick="subtrations()">Subtration(-)</button>
+    <button onclick="multiplication()">Multiplication(*)</button>
+    <button onclick="division()">Division(/)</button>
+
+</body>
+    <script>
+        function addition(){
+            let nhapvao1 = document.getElementById("nhapvao1") .value*1
+            let nhapvao2 = document.getElementById("nhapvao2") .value*1
+            let a = nhapvao1+nhapvao2
+            alert(a)
+        }
+        function subtrations(){
+            let nhapvao1 = document.getElementById("nhapvao1") .value*1
+            let nhapvao2 = document.getElementById("nhapvao2") .value*1
+            let a = nhapvao1-nhapvao2
+            alert(a)
+        }
+        function multiplication(){
+            let nhapvao1 = document.getElementById("nhapvao1") .value*1
+            let nhapvao2 = document.getElementById("nhapvao2") .value*1
+            let a = nhapvao1*nhapvao2
+            alert(a)
+        }
+        function division(){
+            let nhapvao1 = document.getElementById("nhapvao1") .value*1
+            let nhapvao2 = document.getElementById("nhapvao2") .value*1
+            let a = nhapvao1/nhapvao2
+            alert(a)
+        }
+
+
+
+
+    </script>
+</html>

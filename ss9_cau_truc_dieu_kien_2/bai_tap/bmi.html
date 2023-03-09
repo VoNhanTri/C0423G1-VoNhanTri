@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>Nhập cân nặng: <input type="number" id="kg"></p>
+<p>Nhập chiều cao: <input type="number" id="m"></p><br/>
+<button onclick="kiemTra()">Kiểm tra</button>
+
+
+<script>
+
+    function kiemTra() {
+        let kg = document.getElementById("kg") .value;
+        let m = document.getElementById("m") .value;
+        let a = kg / (m * m);
+
+        alert(a)
+        if (a >= 30) {
+            alert("Obese");
+        } else if (a >= 25) {
+            alert("Overweight");
+        } else if (a >= 18) {
+            alert("Normal");
+        } else {
+            alert("Underweight")
+        }
+
+    }
+
+
+    // let kg = prompt("Nhập cân Nặng")*1;
+    // let m = prompt("nhập chiều cao")*1;
+    // let bmi = kg/(m*m);
+    // alert(bmi)
+    // if (bmi>=30){
+    //         alert("Obese");
+    //     } else if (bmi>=25){
+    //         alert("Overweight");
+    //     } else if(bmi>=18){
+    //         alert("Normal");
+    //     } else {
+    //         alert("Underweight")
+    //     }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let tienmuon = prompt("Nhập số tiền mượn: ") * 1;
+    let sothang = prompt("nhập số tháng :") * 1;
+    let laisuat = prompt("nhập lãi suất hàng tháng") * 1;
+    let laime = tienmuon * (laisuat/100) * sothang;
+    if(sothang<=3){
+        alert(laime);
+    }else {
+        let laicon = (tienmuon+laime)*(laisuat/100)*sothang;
+         alert(laicon);
+    }
+
+</script>
+</body>
+</html>

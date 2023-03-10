@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập điểm bai kiểm tra")*1;
+    let b = prompt("nhập điểm thi giữa kì")*1;
+    let c = prompt("nhập điểm thi cuối kì")*1;
+    let d = (a+(b*2)+(c*3))/6
+    alert(d)
+    if(d>=8){
+        alert("Học Sinh Giỏi");
+    }else if(d>=6){
+        alert("Học Sinh Khá");
+    }else if(d>=4){
+        alert("Học sinh trung bình");
+    }else {
+        alert("Học sinh yếu");
+    }
+</script>
+</body>
+</html>

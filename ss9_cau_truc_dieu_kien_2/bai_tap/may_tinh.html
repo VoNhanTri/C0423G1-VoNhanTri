@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4">
+            <input type="text" id="nhap">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="mot()">1</button>
+        </td>
+        <td>
+            <button onclick="hai()">2</button>
+        </td>
+        <td>
+            <button onclick="ba()">3</button>
+        </td>
+        <td>
+            <button onclick="cong()">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="bon()">4</button>
+        </td>
+        <td>
+            <button onclick="nam()">5</button>
+        </td>
+        <td>
+            <button onclick="sau()">6</button>
+        </td>
+        <td>
+            <button onclick="tru()">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="bay()">7</button>
+        </td>
+        <td>
+            <button onclick="tam()">8</button>
+        </td>
+        <td>
+            <button onclick="chin()">9</button>
+        </td>
+        <td>
+            <button onclick="nhan()">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="nhaplai()" type="reset">C</button>
+        </td>
+        <td>
+            <button onclick="khong()">0</button>
+        </td>
+        <td>
+            <button onclick="bang()">=</button>
+        </td>
+        <td>
+            <button onclick="chia()">/</button>
+        </td>
+    </tr>
+    <script>
+        function mot() {
+            let string = document.getElementById("nhap").value
+            document.getElementById("nhap").value = string + 1;
+        }
+
+        function hai() {
+            let string = document.getElementById("nhap").value
+            document.getElementById("nhap").value = string + 2;
+        }
+
+        function ba() {
+            let string = document.getElementById("nhap").value
+            document.getElementById("nhap").value = string + 3;
+        }
+
+        function cong() {
+            let string = document.getElementById("nhap").value
+            document.getElementById("nhap").value = string + "+";
+        }
+
+        function bon() {
+            let string = document.getElementById("nhap").value
+            document.getElementById("nhap").value = string + 4;
+        }
+
+        function nam() {
+            let string = document.getElementById("nhap").value
+            document.getElementById("nhap").value = string + 5;
+        }
+
+        function sau() {
+            let string = document.getElementById("nhap").value
+            document.getElementById("nhap").value = string + 6;
+        }
+
+        function tru() {
+            let string = document.getElementById("nhap").value
+            document.getElementById("nhap").value = string + "-";
+        }
+
+        function bay() {
+            let string = document.getElementById("nhap").value
+            document.getElementById("nhap").value = string + 7;
+        }
+
+        function tam() {
+            let string = document.getElementById("nhap").value
+            document.getElementById("nhap").value = string + 8;
+        }
+
+        function chin() {
+            let string = document.getElementById("nhap").value;
+            document.getElementById("nhap").value = string + 9;
+        }
+
+        function nhan() {
+            let string = document.getElementById("nhap").value;
+            document.getElementById("nhap").value = string + "*";
+        }
+
+        function nhaplai() {
+            // let string = document.getElementById("nhap").value;
+            // document.getElementById("nhap").value =string.substring(0, string.length -1);
+            document.getElementById("nhap").value="";
+        }
+        function khong() {
+            let string = document.getElementById("nhap").value;
+            document.getElementById("nhap").value = string + "0";
+        }
+        function  bang(){
+            let string = document.getElementById("nhap").value;
+            document.getElementById("nhap").value=(eval(string));
+        }
+
+    </script>
+</table>
+</body>
+</html>

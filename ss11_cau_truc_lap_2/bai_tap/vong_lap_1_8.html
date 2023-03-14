@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="choiNao()" id="Key">Chơi</button>
+<script>
+    function choiNao() {
+        let fag=true;
+        while (fag) {
+            let nhap = prompt("Mời nhập số dự đoán");
+            let ngauNhien = 10 + Math.round(Math.random() * 5);
+            if (nhap == ngauNhien) {
+                alert('Bạn đã đoán đúng');
+                fag=false;
+            } else if (nhap < ngauNhien) {
+                alert('Bạn đã đoán số nhỏ hơn số bí mật');
+            } else {
+                alert('bạn nhập số lớn hơn số bí mật');
+            }
+        }
+    }
+</script>
+</body>
+</html>

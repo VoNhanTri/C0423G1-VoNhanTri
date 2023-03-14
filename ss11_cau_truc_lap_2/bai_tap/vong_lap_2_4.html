@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chiều a");
+    let b = prompt("Nhập cạnh b")
+    for (let i = 0; i < a; i++) {
+        for (let j = 0; j < b; j++) {
+            if (i==0||j==0||i==a-1||j==b-1){
+                document.writeln(" * ");
+
+            }else {
+                document.writeln("&nbsp&nbsp");
+            }
+        }
+        document.writeln("<br/>");
+    }
+</script>
+</body>
+</html>

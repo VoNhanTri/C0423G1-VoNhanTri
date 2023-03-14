@@ -6,17 +6,20 @@
 </head>
 <body>
 <script>
-    let a = 0, b = 1, next, tong=0;
-    next = a + b;
-    console.log(next);
-    for (let i = 0; i < 20; i++) {
-        console.log(a);
-        a = b;
-        b = next;
-        next = a + b;
-        tong += next
-    }
-document.write(tong)
+   let n1 = 0, n2 =0, next =0;
+   let tong = 0;
+   for(let i=0; i<=20; i++){
+       if(i==1){
+           n2=1;
+           next=1;
+           tong+=next;
+       }else {
+           next = n1+n2;
+           n1=n2
+           n2=next;
+           tong+=next;
+       } console.log(i+ '=' + tong);
+   } document.write('tong la:' +tong)
 </script>
 </body>
 </html>

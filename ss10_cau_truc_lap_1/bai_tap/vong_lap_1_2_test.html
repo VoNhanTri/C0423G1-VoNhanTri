@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lag = true;
+    do {
+        let c = prompt("Nhập nhiệt độ: ") * 1;
+        if (c < 20) {
+            alert("tăng nhiệt độ");
+        } else if (c > 100) {
+            alert("hãy giảm nhiệt độ");
+        } else {
+            alert("nhiệt độ bình thường");
+            lag = false;
+        }
+    } while (lag);
+
+
+</script>
+</body>
+</html>

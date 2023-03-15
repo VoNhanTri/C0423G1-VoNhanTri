@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chữ cái: ")
+    let inHoa = 'Q,W,E,R,T,Y,U,I,O,P,A,S,D,F,G,H,J,K,L,Z,X,C,V,B,N,M';
+    let inThuong = 'q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m';
+    let ketqua = [];
+    for (let i = 0; i < a.length; i++) {
+        if (inHoa.indexOf(a[i]) !== -1) {
+            ketqua.push(a[i].toLowerCase());
+        } else if (inThuong.indexOf(a[i]) !== -1) {
+            ketqua.push(a[i].toUpperCase());
+        } else {
+            ketqua.push(a[i]);
+        }
+    }
+    console.log(result.join(''));
+</script>
+</body>
+</html>

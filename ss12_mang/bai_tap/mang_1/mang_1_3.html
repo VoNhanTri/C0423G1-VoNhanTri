@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [8, 9, 5, 7, 20, 56];
+    let lonNhat = a[0];
+    let trungBinh = 0;
+    for (let i=0;i<a.length;i++){
+        if (a[i]>lonNhat){
+            lonNhat = a[i];
+        }
+        trungBinh += a[i]/a.length;
+    }alert('max:'+lonNhat+'trung bình:' +trungBinh);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập Từ: <input id="dich" type="text"></p>
+<button type="button" onclick="tuDien()">Dịch</button>
+<script>
+    function tuDien() {
+        let eng = ["apple", "oranger", "nut"];
+        let viet = ["táo", "cam", "hạt đậu"];
+        let nhap = document.getElementById("dich").value;
+        for (let i = 0; i < eng.length; i++) {
+            for (let j=0;j<viet.length;j++)
+                if (nhap == eng[i]) {
+                    document.write(viet[j]);
+                    break;
+                }else if(nhap==viet[j]){
+                        document.write(eng[i])
+                        break;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

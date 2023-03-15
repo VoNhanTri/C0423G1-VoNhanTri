@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [8, 9, 5, 7, 20, 56];
+    let dauTien = 0;
+    let cuoiCung = a.length-1;
+    while (dauTien<cuoiCung){
+        let b = a[dauTien];
+        a[dauTien]=a[cuoiCung];
+        a[cuoiCung]= b;
+        dauTien++;
+        cuoiCung--;
+    }document.writeln(a)
+
+</script>
+</body>
+</html>

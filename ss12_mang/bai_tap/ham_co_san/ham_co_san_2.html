@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so = prompt("nhập số");
+    let chuoi = so.toString();
+    let ketqua = [chuoi[0]];
+    for (let i=1; i<chuoi.length; i++){
+        if(chuoi[i-1]%2 === 0 && chuoi[i]%2 === 0){
+            ketqua.push('-', chuoi[i]);
+
+        } else {
+            ketqua.push(chuoi[i]);
+        }
+    }console.log(ketqua.join(''));
+</script>
+</body>
+</html>

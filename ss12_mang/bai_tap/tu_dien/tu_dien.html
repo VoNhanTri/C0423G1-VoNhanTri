@@ -13,13 +13,14 @@
         let viet = ["táo", "cam", "hạt đậu"];
         let nhap = document.getElementById("dich").value;
         for (let i = 0; i < eng.length; i++) {
-            for (let j=0;j<viet.length;j++)
+            for (let j = 0; j < viet.length; j++) {
                 if (nhap == eng[i]) {
-                    document.write(viet[j]);
+                    document.write(viet[i]);
                     break;
-                }else if(nhap==viet[j]){
-                        document.write(eng[i])
-                        break;
+                } else if (nhap == viet[j]) {
+                    document.write(eng[j]);
+                    break;
+                }
             }
         }
     }

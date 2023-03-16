@@ -6,33 +6,32 @@
 </head>
 <body>
 <script>
-    let v = prompt("nhập số");
-    let a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let i = 0;
-    while (i < a.length) {
-        if (v == a[i]) {
-            console.log(v + " is in the array");
-            break;
-        } i++;
-        if (v != a[i]) {
-            console.log(v + "is not");
-        }
-    }
-    // let v = prompt("Nhập số");
+    // let v = prompt("nhập số");
     // let a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    // let dem = 0;
-    // console.log(v);
-    // for (let i = 0; i < a.length; i++) {
+    // let i = 0;
+    // while (i < a.length) {
     //     if (v == a[i]) {
-    //         dem = a[i];
-    //         alert(v + 'is in the array');
+    //         console.log(v + " is in the array");
     //         break;
-    //     } else {
-    //         dem++;
-    //         break;
+    //     } i++;
+    //     if (v != a[i]) {
+    //         console.log(v + "is not");
     //     }
     // }
-    // alert(v + 'is not in the array');
+    let v = prompt("Nhập số") * 1;
+    let a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let flag = false
+    for (let i = 0; i < a.length; i++) {
+        if (v == a[i]) {
+            flag = true;
+            break;
+        }
+    }
+    if (flag) {
+        alert(v + " is in the array");
+    } else {
+        alert(v + " is not the array");
+    }
 
 </script>
 </body>

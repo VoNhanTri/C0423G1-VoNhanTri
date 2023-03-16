@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let a = "chung-ta-dang-hoc-";
+    // let b = a.replace(/-/g,"_");
+    // console.log(b);
+    let a = ["+", "-", "#", "$"];
+    let newa = [];
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] == "-") {
+            a[i] == "_";
+            newa.push("_");
+        } else {
+            newa.push(a[i]);
+        }
+    }
+    console.log(newa);
+</script>
+</body>
+</html>

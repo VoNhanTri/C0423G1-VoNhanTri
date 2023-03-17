@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra() {
+        let a = prompt("Nhập ký tự vào");
+        let flag = false
+        for (let i = 0; i < a; i++) {
+            if (a % a === 0 ) {
+                flag = true;
+                break;
+            }
+        }if(flag){
+            alert("true");
+        }else {
+            alert("false");
+        }
+    }
+
+    kiemTra()
+</script>
+</body>
+</html>

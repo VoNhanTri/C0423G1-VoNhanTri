@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime() {
+        let number = prompt("Mời nhập số cần kiểm tra: ") * 1;
+        let flag = true;
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0 || number>10000) {
+                    flag = false;
+                    break;
+                }
+            }
+        if (flag) {
+            alert(number + " là số nguyên tố");
+        } else {
+            alert(number + "không phải số nguyên tố");
+        }
+    }
+
+    isPrime();
+</script>
+</body>
+</html>

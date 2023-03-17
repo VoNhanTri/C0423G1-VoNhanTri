@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập Từ: <input id="dich" type="text"></p>
+<button type="button" onclick="tuDien()">Dịch</button>
+<script>
+    function tuDien() {
+        let  ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major","Leo"];
+        let nhap = document.getElementById("dich").value;
+        let flag = false;
+        let dem;
+        for (let i = 0; i < ngoiSao.length; i++) {
+            if(nhap==ngoiSao[i]){
+                dem =chomSao[i];
+                flag = true;
+                break;
+            }else if(nhap==chomSao[i]){
+                dem = ngoiSao[i];
+                flag = true;
+                break;
+            }
+        }if(flag){
+            alert(dem);
+        }else {
+            alert("Không có trong chòm sao");
+        }
+    }
+</script>
+</body>
+</html>

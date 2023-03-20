@@ -6,18 +6,17 @@
 </head>
 <body>
 <script>
-
-    function haiThamSo(a,b){
-        let c = prompt("nhập vào a")*1;
-        let d = prompt("nhập vào b")*1;
-        let f = 0;
-        if (c>d){
+    function haiThamSo(c, d) {
+        if (c > d) {
             alert("c lớn hơn d");
-        }else {
-            f=c+d;
-            alert(f);
+        } else {
+            alert(c + d);
         }
-    }haiThamSo();
+    }
+
+    let g = prompt("nhập vào a") * 1;
+    let h = prompt("nhập vào b") * 1;
+    haiThamSo(g, h);
 </script>
 </body>
 </html>

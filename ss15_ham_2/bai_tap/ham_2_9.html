@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(a, b) {
+        let c = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (b == a[i]) {
+                c++;
+            }
+        }
+        if (c == 0) {
+            document.write('-1');
+        } else {
+            document.write('số lần xuất hiện là:' + c);
+        }
+    }
+    let a = [1, 1, 4, 2, 1, 7, 9, 1];
+    let b = prompt("nhập vào");
+    kiemTra(a, b);
+</script>
+</body>
+</html>

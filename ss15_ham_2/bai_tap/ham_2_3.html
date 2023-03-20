@@ -6,13 +6,14 @@
 </head>
 <body>
 <script>
-     function giaiThua(){
-        let a = prompt("Nhập số để tính giai thừa:");
+     function giaiThua(a){
         let soGiaiThua = 1;
         for (let i=a;i>0;i--){
            soGiaiThua *= i;
         }alert(soGiaiThua);
-     }giaiThua();
+     }
+     let b = prompt("Nhập số để tính giai thừa:");
+     giaiThua(b);
 </script>
 </body>
 </html>

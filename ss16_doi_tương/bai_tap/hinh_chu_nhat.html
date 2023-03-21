@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas">
+</canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        tinhDienTich() {
+            return this.width * this.height;
+        }
+
+        tinhChuVi() {
+            return (this.width + this.height) * 2;
+        }
+
+        canvas() {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(20, 20, this.width, this.height);
+            ctx.stroke();
+        }
+    }
+
+    let input1 = prompt("nhập chiều dài: ")*1;
+    let input2 = prompt("nhập chiều rộng: ")*1;
+    let newrectangle = new Rectangle(input1, input2);
+    newrectangle.canvas();
+    document.write("<br/>" + "diện tích là:" + newrectangle.tinhDienTich() + "<br/>");
+    document.write("chu vi là: " + newrectangle.tinhChuVi());
+
+</script>
+</body>
+</html>

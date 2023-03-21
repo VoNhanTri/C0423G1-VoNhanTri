@@ -6,17 +6,18 @@
 </head>
 <body>
 <script>
-    function viTri(a,b,c) {
-        document.write(a+"<br/>");
-        document.write(b+"<br/>");
-        c=a;
-        a=b;
-        b=c;
-        document.write("vị trí đảo ngược: "+a,b);
+    function viTri(a, b) {
+        document.write(a + "<br/>");
+        document.write(b + "<br/>");
+        let c = a;
+        a = b;
+        b = c;
+        document.write("vị trí đảo ngược: " + a, b);
     }
+
     let d = prompt("nhập a");
-    let e = prompt("nhap b");
-    viTri(d,e);
+    let e = prompt("nhập b");
+    viTri(d, e);
 </script>
 </body>
 </html>

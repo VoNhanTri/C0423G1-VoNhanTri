@@ -9,16 +9,17 @@
     function nhoNhat(a, b, c) {
         if (a < c && a < b) {
             alert("a nhỏ nhất");
-        } else if (b < a && b < c) {
+        } else if (b < c) {
             alert("b nhỏ nhất");
         } else {
             alert("c nhỏ nhất");
         }
     }
+
     let d = prompt("Nhập số nguyên a:");
     let e = prompt("Nhập số nguyên b:");
     let f = prompt("Nhập số nguyên c:");
-    nhoNhat(d,e,f);
+    nhoNhat(d, e, f);
 </script>
 </body>
 </html>

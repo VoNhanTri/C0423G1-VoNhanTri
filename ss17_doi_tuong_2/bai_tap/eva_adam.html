@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+        getWeight(weight){
+            return this.weight = weight;
+        }
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decrease() {
+            if (this.isEmpty()) {
+                alert("đã ăn hết táo")
+            } else {
+                this.weight--;
+            }
+
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        getWeight(weight){
+            return this.weight = weight;
+        }
+
+        isMale() {
+            if(this.gender =="nam") {
+                return true;
+            } else {
+              return false;
+            }
+        }
+        getGender(gender) {
+        this.gender = gender;
+        }
+        say(text){
+            console.log(this.name+ ":"+ text);
+        }
+        checkApple(apple){
+            if (apple.isEmpty()){
+                return false;
+            }else {
+                return true;
+            }
+        }
+        eatApple(apple){
+            if(this.checkApple(apple)){
+                    apple.decrease();
+                    this.weight++;
+            } else {
+                this.say(this.name+ ": Đã hết táo");
+            }
+        }
+    }
+    let tao = new Apple(10);
+    let adam = new Human("adam", "nam", 50);
+    let eva = new Human("Eva", "nữ", 40);
+    adam.say("chào em eva");
+    eva.say("chào anh adam");
+    adam.eatApple(tao);
+    console.log(adam.weight);
+    eva.eatApple(tao);
+    console.log(eva.weight);
+    adam.eatApple(tao);
+    eva.eatApple(tao);
+    console.log(adam.weight);
+    console.log(eva.weight);
+    console.log("còn lại :" + tao.weight);
+</script>
+</body>
+</html>

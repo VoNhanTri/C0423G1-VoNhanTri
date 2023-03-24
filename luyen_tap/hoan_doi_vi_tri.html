@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function swap(arr) {
+        let temp = 0;
+        temp = arr[0];
+        arr[0] = arr[arr.length - 1];
+        arr[arr.length - 1] = temp;
+        //your code here
+        return arr;
+    }
+
+    let a = [1, 2, 3, 4];
+    alert(swap(a));
+</script>
+</body>
+</html>

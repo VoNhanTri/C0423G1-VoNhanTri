@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nv1 = prompt("Nhập lương nhận tháng này: ");
+    let thue;
+    let luong;
+    if(nv1>=15){
+        thue =  (nv1*20)/100;
+        luong = nv1-thue;
+    }else if(nv1>=7){
+        thue = (nv1*10)/100;
+        luong = nv1-thue;
+    }else {
+        thue = (nv1*5)/100;
+        luong = nv1-thue;
+    }
+    alert("thuế phải đóng là:" +thue);
+    alert("lương thực nhận:" +luong);
+</script>
+</body>
+</html>

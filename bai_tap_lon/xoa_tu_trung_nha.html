@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 3, 4, 5, 6,10];
+    let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 11];
+    let newa = [];
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < b.length; j++) {
+            if (a[i] == b[j]) {
+                b.splice(j, 1);
+            }
+        }
+    }
+    let newb = [];
+    for (let i = 0; i < b.length; i++) {
+        if (newb.indexOf(b[i]) === -1) {
+            newb.push(b[i]);
+        }
+    }
+    alert(newb);
+    alert(newa);
+
+</script>
+</body>
+</html>

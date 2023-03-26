@@ -6,34 +6,13 @@
 </head>
 <body>
 <script>
-    // let a =[1,2,3,4];
-    // let b =[];
-    // for (let i=0;i<a.length;i++) {
-    //     let n = a.length;
-    //     b[0] = a[0];
-    //     b[1] = a[0] + a[1];
-    //     b[2] = a[0] + a[1] + a[2];
-    //     b[n - 1] = a[0] + a[1]+a[2]+a[n - 1];
-    // }
-    // document.write(b)
-    let a = [1, 2, 3, 4, 5]
+    let a = [1, 2, 3, 4, 5, 6];
     let b = [];
-    let flag = false;
     for (let i = 1; i < a.length; i++) {
-        if (a[0]) {
-            a[0] = a[0];
-            flag = true;
-            b.push(a);
-        }
-        if (a[i]) {
-            a[i] = a[i] + a[i - 1];
-            flag = true;
-            b.push(a);
-        }
+        a[i] = a[i] + a[i - 1];
     }
-    if (flag) {
-        alert(b);
-    }
+    b.push(a);
+    alert(b);
 </script>
 </body>
 </html>

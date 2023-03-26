@@ -6,7 +6,26 @@
 </head>
 <body>
 <script>
+    let a = [5, 2, 5];
+    let b = [4, 3, 6];
+    let c = [];
+    let d = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] != b[i]) {
+            d = a[i] / b[i];
+            c.push(d);
 
+        }
+        Math.ceil(d);
+    }
+    let max = c[0];
+    for (let i = 0; i < c.length; i++) {
+        if (c[i] > max) {
+            max = c[i];
+        }
+    }
+    alert(c);
+    alert("chỉ số lớn nhất là" + Math.ceil(max));
 </script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Menu</legend>
+        <input type="text" id="gia" ><br>
+<!--        <input id="soluong"><br>-->
+        <button onclick="cafe()">1.Cafe</button><br>
+        <button onclick="camVat()">2.Cam vắt</button><br>
+        <button onclick="caRot()">3.Nước ép cà rốt</button><br>
+        <button onclick="caChua()">4.Nước ép cà chua</button><br>
+        <button onclick="nuocDua()">5.Nước dừa</button><br>
+        <button onclick="nuocLoc()">6.Nước lọc</button>
+    </fieldset>
+</form>
+<script>
+    function cafe(){
+        let gia1 = document.getElementById("gia").value;
+        document.getElementById("gia").value = gia1;
+    }
+    function camVat(){
+        let gia2 = document.getElementById("gia").value;
+        document.getElementById("gia").value=gia2;
+    }
+</script>
+</body>
+</html>

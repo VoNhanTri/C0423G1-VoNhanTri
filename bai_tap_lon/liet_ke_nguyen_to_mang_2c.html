@@ -35,24 +35,19 @@
     // alert(count);
     let arr1 = [
         [1, 2, 3, 4, 5, 6],
-        [7, 8, 9, 10, 11, 12]
+        [7, 8, 8, 10, 11, 12]
     ];
     let arr3 = [];
     let count = 0;
-    let flag = false;
     for (let i = 0; i < arr1.length; i++) {
-        for (let j = 0; j <= arr1[i].length; j++) {
-            if (arr1[i][j] > 1 && arr1[i][j] % 2 !== 0) {
+        for (let j = 0; j < arr1[i].length; j++) {
+            if (arr1[i][j] > 1 && arr1[i][j] % 2 !== 0 || arr1[i][j]===2) {
                 arr3.push(arr1[i][j]);
                 count++;
-                flag = true;
             }
         }
     }
-    if (flag) {
-        alert(arr3);
-        alert(count);
-    }
+    document.write(arr3);
 </script>
 </body>
 </html>

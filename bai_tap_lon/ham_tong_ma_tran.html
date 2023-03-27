@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = prompt("nhập số hàng")*1;
+    let n = prompt("nhập số cột")*1;
+    let array = [];
+    let tong = 0;
+    for (let i =0;i<m;i++){
+        array[i]=[];
+        for (let j=0;j<n;j++){
+            array[i][j]= prompt('nhập phần tử hàng' +(i+1)+'nhập phần tử cột' +(j+1))*1;
+            if(array[i][j]%2==0 ){
+                tong += array[i][j];
+            }
+        }
+    }
+    document.write(array);
+    document.write(tong);
+</script>
+</body>
+</html>

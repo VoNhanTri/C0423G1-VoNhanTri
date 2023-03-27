@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = "tRuong    Tan    hAi";
+    let newa = a.replace(/\s+/g, ' ');
+    let newb = newa.toLowerCase().split(" ");
+    let c = [];
+    let max = 0;
+    for (let i = 0; i < newb.length; i++) {
+        let newbb = newb[i].charAt(0).toUpperCase() + newb[i].slice(1);
+        c.push(newbb);
+        if (c[i].length > max) {
+            max = c[i].length;
+        }
+    }
+    document.write(c.join(' ') + "<br/>");
+    document.write("từ dài nhất là = " + max);
+
+</script>
+</body>
+</html>

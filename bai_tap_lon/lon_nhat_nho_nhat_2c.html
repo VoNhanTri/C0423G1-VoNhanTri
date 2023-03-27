@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [
+        [1, 2, 3, 4, 5, 6],
+        [7, 8, 9, 10, 11, 12]
+    ];
+    let max = arr1[0][0];
+    let min = arr1[0][0];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j <= arr1[i].length; j++) {
+            if (max < arr1[i][j]) {
+                max = arr1[i][j];
+            }
+            if (min > arr1[i][j]) {
+                min = arr1[i][j];
+            }
+        }
+    }
+    alert(max);
+    alert(min);
+</script>
+</body>
+</html>

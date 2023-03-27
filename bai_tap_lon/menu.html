@@ -10,26 +10,25 @@
         "1.cafe", "2.nước cam", "3.nước ép cà rốt",
         "4.nước ép cà chua", "5.nước dừa", "6.nước lọc", "7.thoát menu"
     ];
+    let nhap;
     let gia = 0;
     let flag = false;
     alert(menu);
-    let nhap = prompt("mời bạn nhập món") * 1;
-    for (let i = 0; i < menu.length; i++) {
-        if (nhap == 1 || nhap == 2 || nhap == 3 || nhap == 4 || nhap == 5 || nhap == 6) {
-            nhap = "giá nước là: " + 20000;
-            flag = true;
+    do {
+        nhap = prompt("mời bạn nhập món") * 1;
+        for (let i = 0; i < menu.length; i++) {
+            if (nhap == 1 || nhap == 2 || nhap == 3 || nhap == 4 || nhap == 5 || nhap == 6) {
+                nhap = "quán nước đồng giá: " + 20000;
+                flag = true;
+                alert(nhap);
+            }
         }
-    }
-    alert(nhap);
-
-    if (flag) {
-        let soLuong = prompt("mời bạn nhập só lượng");
-        gia = soLuong * 20000;
-        alert("tiền mà bạn cần thanh toán là :" + gia);
-    } else {
-        alert("Thoát Menu");
-    }
-
+        if (flag) {
+            let soLuong = prompt("mời bạn nhập só lượng");
+            gia = soLuong * 20000;
+            alert("tiền mà bạn cần thanh toán là :" + gia);
+        }
+    } while (nhap != 7);
 </script>
 </body>
 </html>

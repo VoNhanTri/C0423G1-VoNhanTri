@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let s2 = "adcaa";
+    let news1 = s1.split('');
+    let news2 = s2.split('');
+    let new3 = [];
+    for (let i = 0; i < news1.length; i++) {
+        for (let j = 0; j < news2.length; j++) {
+            if (news1[i] == news2[j]) {
+                new3.push(news2[j]);
+                news1.splice(i, 1);
+            }
+        }
+    }
+    alert(new3);
+</script>
+</body>
+</html>

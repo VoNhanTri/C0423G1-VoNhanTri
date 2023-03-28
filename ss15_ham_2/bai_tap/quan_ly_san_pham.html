@@ -1,66 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="nhap">
-<button type="button" onclick="themVao()">add</button>
-<h2>Display All Product</h2>
-<h4>Product Name</h4>
-<table border="1">
-    <tr>
-        <td>STT</td>
-        <td>Tên Sản Phẩm</td>
-        <td>Sửa</td>
-        <td>Xóa</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>
-            <button type="button" onclick="sua">Sửa</button>
-        </td>
-        <td>
-            <button type="button" onclick="xoa">Xóa</button>
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>
-            <button type="button" onclick="sua">Sửa</button>
-        </td>
-        <td>
-            <button type="button" onclick="xoa">Xóa</button>
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>
-            <button type="button" onclick="sua">Sửa</button>
-        </td>
-        <td>
-            <button type="button" onclick="xoa">Xóa</button>
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>
-            <button type="button" onclick="sua">Sửa</button>
-        </td>
-        <td>
-            <button type="button" onclick="xoa">Xóa</button>
-        </td>
-    </tr>
-</table>
+<input id="productName" type="text" placeholder="Enter Name">
+<button onclick="addNewProduct()">Add</button>
+<p id="display"></p>
 <script>
-    let a = ["nokia", "samsung", "apple", "oppo"];
-    document.getElementById("sua").innerHTML;
-    alert(a)
+    let productArray = ["Nokia", "Sam sung", "Iphone", "LG"];
+    displayProducts();
+    function deleteByIndex(index) {
+        let deleteConf = confirm("Bạn có muốn xoá sản phẩm : "+ productArray[index]+ "?????");
+        if (deleteConf){
+            productArray.splice(index,1);
+        }
+      displayProducts();
+    }
+    function addNewProduct() {
+        let productName = document.getElementById("productName").value;
+        productArray.push(productName);
+        document.getElementById("productName").value ="";
+        displayProducts();
+    }
+    function displayProducts() {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Sửa</th>\n' +
+            '        <th>Xoá</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < productArray.length; i++) {
+            tableString += '   <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + productArray[i] + '</td>\n' +
+                '        <td><button onclick="editById('+i+')" type="button">Edit</button></td>\n' +
+                '        <td><button onclick="deleteByIndex('+i+')" type="button">Delete</button></td>\n' +
+                '    </tr>'
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+
 </script>
 </body>
 </html>

@@ -6,48 +6,34 @@
 </head>
 <body>
 <script>
-    // let arr1 = [
-    //     [1, 2, 3, 4, 5, 6],
-    //     [7, 8, 9, 10, 11, 12]
-    // ];
-    // let arr3 = [];
-    // let count = 0
-    // for (let i = 0; i < arr1.length; i++) {
-    //     for (let j = 0; j < arr1[i].length; j++) {
-    //         flag = true;
-    //         if (arr1[i][j] <= 1) {
-    //             flag = false;
-    //         } else {
-    //             for (let k = 2; k <arr1[i][j]; k++) {
-    //                 if (arr1[i][j] % k == 0) {
-    //                     flag = false;
-    //                     break;
-    //                 }
-    //             }
-    //             if (flag) {
-    //                 arr3.push(arr1[i][j]);
-    //                 count++;
-    //             }
-    //         }
-    //     }
-    // }
-    // alert(arr3)
-    // alert(count);
     let arr1 = [
         [1, 2, 3, 4, 5, 6],
-        [7, 8, 8, 10, 11, 12]
+        [7, 8, 9, 10, 11, 12]
     ];
     let arr3 = [];
-    let count = 0;
+    let count = 0
     for (let i = 0; i < arr1.length; i++) {
         for (let j = 0; j < arr1[i].length; j++) {
-            if (arr1[i][j] > 1 && arr1[i][j] % 2 !== 0 || arr1[i][j]===2) {
-                arr3.push(arr1[i][j]);
-                count++;
+            let flag = true;
+            if (arr1[i][j] <= 1) {
+                flag = false;
+            } else {
+                for (let k = 2; k <arr1[i][j]; k++) {
+                    if (arr1[i][j] % k == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    arr3.push(arr1[i][j]);
+                    count++;
+                }
             }
         }
     }
-    document.write(arr3);
+    alert(arr3)
+    alert(count);
+
 </script>
 </body>
 </html>

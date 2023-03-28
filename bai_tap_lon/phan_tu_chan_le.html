@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 3, 4, 5];
+    a.push(1,2)
+    alert(a)
+     let count1=0;
+     let count2=0;
+    for (let i = 0; i <a.length; i++) {
+        if(a[i]%2==0){
+            count1++;
+        } if(a[i]%2!=0){
+            count2++;
+        }
+    }
+    if (count1==count2) {
+        alert("ok")
+    } else {
+       alert("no ok")
+    }
+</script>
+</body>
+</html>

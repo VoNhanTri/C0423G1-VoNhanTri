@@ -7,20 +7,28 @@
 <body>
 <script>
     let a = "tRuong    Tan    hAi";
-    let newa = a.replace(/\s+/g, ' ');
-    let newb = newa.toLowerCase().split(" ");
-    let c = [];
-    let max = 0;
-    for (let i = 0; i < newb.length; i++) {
-        let newbb = newb[i].charAt(0).toUpperCase() + newb[i].slice(1);
-        c.push(newbb);
-        if (c[i].length > max) {
-            max = c[i].length;
-        }
-    }
-    document.write(c.join(' ') + "<br/>");
-    document.write("từ dài nhất là = " + max);
+    chuaHoa(a);
 
+    function chuaHoa(string) {
+        let array = string.toLowerCase().split(" ");
+        let arrayA = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] != "") {
+                arrayA.push(array[i]);
+            }
+        }
+        let max = 0;
+        let arrayResult = [];
+        for (let i = 0; i < arrayA.length; i++) {
+            let result = arrayA[i].charAt(0).toUpperCase() + arrayA[i].slice(1);
+            arrayResult.push(result);
+            if (arrayResult[i].length > max) {
+                max = arrayResult[i].length;
+            }
+        }
+        document.write(arrayResult.join(' ') + "<br/>");
+        document.write("từ dài nhất là = " + max);
+    }
 </script>
 </body>
 </html>

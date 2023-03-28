@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <button type="button" onclick="them()">Thêm Mới Học Viên</button>
+        </td>
+        <td>
+            <button type="button" onclick="sua()">Sửa Thông Tin Học Viên</button>
+        </td>
+        <td>
+            <button type="button" onclick="xoa()">Xóa Học Viên</button>
+        </td>
+    </tr>
+</table>
+<p id='id'></p>
+<script>
+    class QuanLy {
+        constructor(ma, ten, lop, email, ngaySinh, module) {
+            this.ma = ma;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaysinh = ngaySinh;
+            this.module = module;
+        }
+
+        getMa() {
+            return this.ma ;
+        }
+
+        getTen() {
+            return this.ten ;
+        }
+
+        getLop() {
+            return this.lop ;
+        }
+
+        getEmail() {
+            return this.email ;
+        }
+
+        getNgaySinh() {
+            return this.ngaysinh ;
+        }
+
+        getModule() {
+            return this.module;
+        }
+
+        setMa(value) {
+            this.ma = value;
+        }
+
+        setTen(value) {
+            this.ten = value;
+        }
+
+        setLop(value) {
+            this.lop = value;
+        }
+
+        setEmail(value) {
+            this.email = value;
+        }
+
+        setNgaySinh(value) {
+            this.ngaysinh = value;
+        }
+
+        setModule(value) {
+            this.module = value;
+        }
+
+    }
+
+    let sinhVien1 = new QuanLy ("HV001", "Nguyễn Văn A", "C0223G1", "nguyenvana@gmail.com", "23/02/2000", "1");
+    let sinhVien2 = new QuanLy ("HV002", "Nguyễn Văn B", "C0223G1", "nguyenvanb@gmail.com", "21/02/2002", "1");
+    let sinhVien3 = new QuanLy ("HV003", "Nguyễn Văn C", "C0223G1", "nguyenvanc@gmail.com", "02/02/2002", "1");
+    let arr = [];
+    arr.push(sinhVien1, sinhVien2, sinhVien3);
+
+    function quanLy() {
+        let taoBang = '<table border="1">\n' +
+            '    <tr style="text-align: center">\n' +
+            '        <td>Mã Học Viên</td>\n' +
+            '        <td>Tên Học Viên</td>\n' +
+            '        <td>Lớp</td>\n' +
+            '        <td>Email</td>\n' +
+            '        <td>Ngày Sinh</td>\n' +
+            '        <td>Module</td>\n' +
+            '    </tr>'
+        for (let i = 0; i < arr.length; i++) {
+            taoBang += '<tr>\n' +
+                '<td>' + arr[i].getMa() + '</td>\n' +
+                '<td>' + arr[i].getTen() + '</td>\n' +
+                '<td>' + arr[i].getLop() + '</td>\n' +
+                '<td>' + arr[i].getEmail() + '</td>\n' +
+                '<td>' + arr[i].getNgaySinh() + '</td>\n' +
+                '<td>' + arr[i].getModule() + '</td>\n'+
+            '</tr>'
+        }
+        taoBang += '</table>';
+        document.getElementById("id").innerHTML = taoBang;
+    }
+    quanLy();
+    function them(){
+        let ma = prompt("Nhập mã học sinh");
+        let ten = prompt("Nhập tên học sinh");
+        let lop = prompt("Nhập lớp");
+        let email = prompt("nhập email");
+        let ngaySinh = prompt("nhập sinh");
+        let module = prompt("nhập module");
+        let hocSinh = new QuanLy(ma, ten, lop, email, ngaySinh,module);
+        arr.push(hocSinh);
+        quanLy();
+    }
+    function xoa(maMuonXoa){
+         maMuonXoa = prompt("Nhập mã học sinh muốn xóa");
+         let xoa = confirm("bạn có muốn xóa hay không");
+         if(xoa){
+             for (let i = 0; i < arr.length; i++) {
+                 if(maMuonXoa==arr[i].getMa()){
+                     arr.splice(i, 1);
+                 }
+             }
+         }else {
+             alert("không xóa")
+         }
+         quanLy();
+    }
+</script>
+</body>
+</html>

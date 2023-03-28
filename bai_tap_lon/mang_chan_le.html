@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function timChanLe(array) {
+        let flag1 = false;
+        let flag2 = false;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0 && array[i + 1] % 2 == 0) {
+                return flag1 = true;
+
+            } else if (array[i] % 2 != 0 && array[i + 1] % 2 != 0) {
+                return flag2 = true;
+            } else {
+                return  false;
+            }
+        }
+        if (flag1) {
+            alert("1");
+        } else if (flag2) {
+            alert("0");
+        } else {
+            alert("-1");
+        }
+    }
+
+    let arr = [2, 2, 4, 8];
+    timChanLe(arr);
+</script>
+</body>
+</html>

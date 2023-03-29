@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số phần tử");
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let arr = prompt("nhập phần tử" + i);
+        array.push(arr);
+    }
+    alert(array);
+    let flag = false;
+    for (let i = 0; i < array.length/2; i++) {
+        if (array[i+1] % array[i - 1] == 0) {
+            flag = true;
+        }else if(array[i+1] % array[i - 1] != 0){
+            flag = false;
+        }
+    }
+    if (flag) {
+        alert("ok");
+    } else {
+        alert("no");
+    }
+</script>
+</body>
+</html>

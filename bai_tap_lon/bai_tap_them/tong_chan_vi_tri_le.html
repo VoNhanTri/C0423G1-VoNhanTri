@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n= prompt('nhập số lượng phần tử mảng ')*1;
+    }while (n<0);
+    let array = [];
+    for (let i = 0; i <n ; i++) {
+        let arr1 = prompt("nhập phần tử " +i)*1;
+        array.push(arr1);
+    }
+    alert(array);
+    let tong = 0;
+    for (let i = 1;i < array.length; i=i+2) {
+        if (array[i]%2==0) {
+            tong += array[i];
+        }
+    }
+    alert(tong);
+</script>
+</body>
+</html>

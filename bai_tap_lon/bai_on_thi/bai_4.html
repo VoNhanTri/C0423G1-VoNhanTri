@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="them1()">Thêm Sản Phẩm</button>
+<button type="button" onclick="xoa1()">Xóa Sản Phẩm</button>
+<p id="id"></p>
+<script>
+    class DienThoai {
+        constructor(maMay, tenMay, tenHang, giaMay) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.tenHang = tenHang;
+            this.gia = giaMay;
+        }
+
+        getMaMay() {
+            return this.maMay;
+        }
+
+        getTenMay() {
+            return this.tenMay;
+        }
+
+        getTenHang() {
+            return this.tenHang;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        setMaMay(maMay) {
+            this.maMay = maMay;
+        }
+
+        setTenMay(tenMay) {
+            this.tenMay = tenMay;
+        }
+
+        setTenHang(tenHang) {
+            this.tenHang = tenHang;
+        }
+
+        setGia(gia) {
+            this.gia = gia;
+        }
+    }
+
+    let dienThoai1 = new DienThoai("DT001", "SS1", "SAMSUNG", 14);
+    let dienThoai2 = new DienThoai("DT001", "IP11", "IPHONE", 15);
+    let dienThoai3 = new DienThoai("DT001", "RM11", "REDMI", 13);
+    let ar1 = [];
+    ar1.push(dienThoai1, dienThoai2, dienThoai3);
+
+    function dienThoai() {
+        let taoBang = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <td>Mã Máy</td>\n' +
+            '        <td>Tên Máy</td>\n' +
+            '        <td>Tên Hãng</td>\n' +
+            '        <td>Giá Máy</td>\n' +
+            '    </tr>'
+        for (let i = 0; i < ar1.length; i++) {
+            taoBang +=
+                '    <tr>\n' +
+                '        <td>' + ar1[i].getMaMay() + '</td>\n' +
+                '        <td>' + ar1[i].getTenMay() + '</td>\n' +
+                '        <td>' + ar1[i].getTenHang() + '</td>\n' +
+                '        <td>' + ar1[i].getGia() + '</td>\n' +
+                '    </tr>'
+        }
+        taoBang += '</table>';
+        document.getElementById('id').innerHTML = taoBang;
+    }
+
+    dienThoai()
+    function them1(){
+        let  nhapMa= prompt("Nhập mã máy");
+        let nhapTenMay = prompt("nhập tên máy");
+        let nhapHangMay = prompt("nhập hang máy");
+        let nhapgiaMay = prompt("nhập giá máy")*1;
+        let themMay = new DienThoai (nhapMa,nhapTenMay,nhapHangMay,nhapgiaMay);
+        ar1.push(themMay);
+        dienThoai();
+    }
+    function xoa1(maMuonXoa){
+        maMuonXoa = prompt("Nhập mã điện thoại muốn xóa");
+        let xoa = confirm("Bạn có muốn xoa");
+        if(xoa){
+            for (let i = 0; i <ar1.length ; i++) {
+                if (maMuonXoa==ar1[i].getMaMay()){
+                    ar1.splice(i, 1);
+                }
+            }
+        }else {
+            alert("không muốn xoa");
+        }
+        dienThoai();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function vietTat(string1) {
+        let arr = string1.toLowerCase().split(" ");
+        let arr1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] != "") {
+                arr1.push(arr[i])
+            }
+        }
+        let arr2 = [];
+        let count = 0
+        for (let i = 0; i < arr1.length; i++) {
+            let str = arr1[i].charAt(0).toUpperCase() + arr1[i].slice(0, 0);
+            arr2.push(str);
+            count++;
+        }
+        if (count == 1) {
+            alert("chuỗi này chỉ có 1 từ")
+        } else {
+            document.write(arr2.join(""));
+        }
+    }
+
+    let str3 = "tHi   tHat   kHo";
+    vietTat(str3);
+</script>
+</body>
+</html>

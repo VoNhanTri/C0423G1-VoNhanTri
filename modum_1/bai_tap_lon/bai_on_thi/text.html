@@ -16,17 +16,15 @@
             }
         }
         let arr2 = [];
-        let count = 0
-        for (let i = 0; i < arr1.length; i++) {
-            let str = arr1[i].charAt(0).toUpperCase() + arr1[i].slice(0, 0);
-            arr2.push(str);
-            count++;
-        }
-        if (count == 1) {
+        if (arr1.length == 1) {
             alert("chuỗi này chỉ có 1 từ")
         } else {
-            document.write(arr2.join(""));
+            for (let i = 0; i < arr1.length; i++) {
+                let str = arr1[i].charAt(0).toUpperCase() + arr1[i].slice(1, 0);
+                arr2.push(str);
+            }
         }
+        document.write(arr2.join(""));
     }
 
     let str3 = "tHi   tHat   kHo";

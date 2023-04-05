@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+            width: 300px;
+            background-color: bisque;
+            text-align: center;
+        }
+
+        select {
+            height: 50px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>TIP CACULATOR</legend>
+        <h5>How much was your bill?</h5>
+        $<input type="number" id="bill"/>
+        <h5>how was your service</h5>
+        <select id="select">
+            <option id="op1">Outstanding: 30%</option>
+            <option id="op2">Good: 20%</option>
+            <option id="op3">It was OK: 15%</option>
+            <option id="op4">BAD: 10%</option>
+            <option id="op5">Terrible: 5%</option>
+        </select>
+        <h5>How many people are sharing the bill</h5>
+        <input type="number" id="people"> people <br/> <br/>
+        <button type="button" onclick="calculate()" style="background: blueviolet; height: 30px">CALCULATE</button>
+        <p>Tip amount</p>
+        <sup>$</sup><output id="tip1"></output>
+        <p>each</p>
+    </fieldset>
+</form>
+<script>
+    function calculate() {
+        let nhapVao = document.getElementById('bill').value;
+        let select = document.getElementById('select').value;
+        let op1 = document.getElementById('op1').value;
+        let op2 = document.getElementById('op2').value;
+        let op3 = document.getElementById('op3').value;
+        let op4 = document.getElementById('op4').value;
+        let op5 = document.getElementById('op5').value;
+        let people = document.getElementById('people').value;
+        let tip = document.getElementById('tip1').value;
+        if (select == op1) {
+            let a = (nhapVao * 30) / 100 / people;
+            document.getElementById('tip1').value = a;
+        } else if (select == op2) {
+            let a = (nhapVao * 20) / 100 / people;
+            document.getElementById('tip1').value = a;
+        } else if (select == op3) {
+            let a = (nhapVao * 15) / 100 / people;
+            document.getElementById('tip1').value = a;
+        } else if (select == op4) {
+            let a = (nhapVao * 10) / 100 / people;
+            document.getElementById('tip1').value = a;
+        } else if (select == op5) {
+            let a = (nhapVao * 5) / 100 / people;
+            document.getElementById('tip1').value = a;
+        }
+
+    }
+
+</script>
+</body>
+</html>

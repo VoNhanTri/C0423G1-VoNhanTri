@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("nhập số phần tử n") * 1;
+    } while (n < 0)
+    let ar = [];
+    for (let i = 0; i < n; i++) {
+        let ar1 = prompt("nhập phần tử n") * 1;
+        ar.push(ar1);
+    }
+    alert(ar);
+    let tg = 0;
+    let tb = 0;
+    let count = 0;
+    for (let i = 0; i < ar.length; i++) {
+        tg += ar[i];
+        tb = tg / ar.length;
+    }
+    for (let i = 0; i < ar.length; i++) {
+        if (tb == ar[i]) {
+            count++;
+        }
+    }
+    alert(tg);
+    alert(tb);
+    alert(count);
+</script>
+</body>
+</html>

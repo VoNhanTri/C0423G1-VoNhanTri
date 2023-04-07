@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        let str1 = str.split('')
+        let arr2 = [];
+        let arr1 = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', ',', '<', '>', '/', '?', '"'];
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < str1.length; j++) {
+                if (str1[j] == arr1[i]) {
+                    arr2.push(str1[j]);
+                }
+            }
+        } return arr2
+
+    }
+
+    let str1 = "abc123!@#"
+    alert(checkString(str1))
+</script>
+</body>
+</html>

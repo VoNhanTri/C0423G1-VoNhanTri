@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("nhập phần tử n");
+    }while (n<0)
+    let aray = [];
+    for (let i = 0; i <n ; i++) {
+        let ar = prompt("nhập phần tử n");
+        aray.push(ar);
+    }
+    alert(aray);
+    let aray1 =[];
+    for (let i = 0; i <aray.length ; i++) {
+        if(Math.sqrt(aray[i])%i==0){
+            aray1.push(aray[i]);
+        }
+    }
+    alert(aray1);
+</script>
+</body>
+</html>

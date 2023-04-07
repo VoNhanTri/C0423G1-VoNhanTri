@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("Nhập số phần tử của mảng");
+    } while (n < 0);
+    let ar1 = [];
+    for (let i = 0; i < n; i++) {
+        let ar = prompt("nhập phần tử mảng");
+        ar1.push(ar);
+    }
+    alert(ar1);
+    let max = ar1[0];
+    let count = 0
+    for (let i = 0; i < ar1.length; i++) {
+        if (max == ar1[i]) {
+            count++;
+        }else if(max<ar1[i]){
+            max = ar1[i];
+            count=1;
+        }
+    }
+    alert(max)
+    alert(count);
+</script>
+</body>
+</html>

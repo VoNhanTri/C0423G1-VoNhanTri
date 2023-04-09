@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapThang = prompt("mời nhập tháng") * 1;
+    let nhapNam = prompt("mời nhập năm") * 1;
+    switch (nhapThang) {
+        case 2:
+            if (nhapNam % 400 == 0 || nhapNam % 4 == 0 && nhapNam % 100 != 0) {
+                alert(" tháng 2 có 29 ngày");
+                break;
+            } else {
+                alert("tháng 2 có 28 ngày ");
+                break;
+            }
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            alert("tháng có 31 ngày");
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            alert("tháng có 30 ngày");
+            break;
+        default:
+            alert("mời bạn nhập lại");
+            break;
+    }
+</script>
+</body>
+</html>

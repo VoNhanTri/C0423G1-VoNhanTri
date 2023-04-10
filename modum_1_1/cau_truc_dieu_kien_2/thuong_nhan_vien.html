@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luongNhanVien = prompt("mòi bạn nhập lương")*1;
+    let gioLamViec = prompt("mời bạn nhập số giờ làm")*1;
+    let thuong = 0;
+    if (gioLamViec>=200){
+        thuong = (luongNhanVien*20)/100;
+    }else if(gioLamViec>=100){
+        thuong = (luongNhanVien*10)/100;
+    } else {
+        alert("không có thưởng");
+    }
+    alert("tiền thưởng của nhân viên: " +thuong);
+</script>
+</body>
+</html>

@@ -10,7 +10,7 @@
     let nhapNam = prompt("mời nhập năm") * 1;
     switch (nhapThang) {
         case 2:
-            if (nhapNam % 400 == 0 || nhapNam % 4 == 0 && nhapNam % 100 != 0) {
+            if (nhapNam % 400 == 0 || (nhapNam % 4 == 0 && nhapNam % 100 != 0)) {
                 alert(" tháng 2 có 29 ngày");
                 break;
             } else {

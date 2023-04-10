@@ -16,13 +16,14 @@
             for (let j = 0; j < str2.length; j++) {
                 if (str1[i] === str2[j]) {
                     arr.push(str1[i]);
+                    break;
                 }
             }
         }
         return arr;
     }
 
-    let str2 = ("asdwqer");
+    let str2 = ("aasdwqer");
     alert(checkString(str2));
 </script>
 </body>

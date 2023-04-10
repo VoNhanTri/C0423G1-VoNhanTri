@@ -8,17 +8,18 @@
 <script>
     let a = [5, 2, 5];
     let b = [6, 3, 4];
-    let max =a[0]/b[0] ;
-    let maxViTri=0;
+    let max = a[0] / b[0];
+    let maxViTri = 0;
     for (let i = 0; i < a.length; i++) {
-        for(let j =0;j<b.length;j++)
-        if (i==j) {
-            if (max < a[i] / b[j]) {
-                max = a[i] / b[j];
-                maxViTri = i;
+        for (let j = 0; j < b.length; j++)
+            if (i == j) {
+                if (max < a[i] / b[j]) {
+                    max = a[i] / b[j];
+                    maxViTri = i;
+                }
             }
-        }
-    } document.write("phân số lớn nhất = "+ max +"=>"+ "Vị trí của phân số lớn nhất là "+ maxViTri);
+    }
+    document.write("phân số lớn nhất = "+ max +"=>" + "Vị trí của phân số lớn nhất là " + maxViTri);
 </script>
 </body>
 </html>

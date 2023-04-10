@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        let str1 = str.split('')
+        let arr2 = [];
+        let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let arr3 = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
+        let flag = true;
+        for (let i = 0; i < str1.length; i++) {
+            for (let j = 0; j < arr1.length; j++) {
+                for (let k = 0; k < arr3.length; k++) {
+                    if (str1[i] == arr1[j]) {
+                        flag = false;
+                        break;
+                    }
+                    if (str1[i] == arr3[k]) {
+                        flag = false;
+                        break;
+                    }
+
+
+
+                }
+            }
+            if (flag) {
+                arr2.push(str1[i]);
+                break;
+            }
+        }
+        return arr2
+    }
+
+    let str2 = "abc123!@#";
+    alert(checkString(str2));
+</script>
+</body>
+</html>

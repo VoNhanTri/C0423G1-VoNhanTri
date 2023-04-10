@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        let str1 = str.split('');
+        let array1 = [];
+        let array2 = [];
+        let ar1 = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
+        let ar2 = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'];
+        alert(str1)
+        for (let i = 0; i < str1.length; i++) {
+            for (let j = 0; j < ar1.length; j++) {
+                if (str1[i] === ar1[j]) {
+                    array1.push(str1[i]);
+                    break;
+                }
+            }
+            for (let k = 0; k < ar2.length; k++) {
+                if (str1[i] === ar2[k]) {
+                    array2.push(str1[i]);
+                    break;
+                }
+            }
+        }
+        alert(array1);
+        alert(array2);
+        if (array1.length == array2.length) {
+
+            return "true"
+        } else {
+            return "false";
+        }
+    }
+
+    let string = 'abcdFDC';
+    alert(checkString(string));
+</script>
+</body>
+</html>

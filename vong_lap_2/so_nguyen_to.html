@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số") * 1;\
+    for (let i = 2; i < Math.sqrt(n); i++) {
+        let flag = true;
+        if (n % i == 0) {
+            flag = false;
+            break;
+        }
+        if (flag) {
+            alert("là số nguyên tố");
+        } else {
+            alert("không phải là số nguyên tố");
+        }
+    }
+
+</script>
+</body>
+</html>

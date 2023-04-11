@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>Form Currency</td>
+        <td>To Currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input style="text-align: center" type="number" id="nhapvao"></td>
+        <td>
+            <select name="" id="select1">
+                <option value="23000">VNĐ</option>
+                <option value="1">USD</option>
+                <option value="133">JPY</option>
+                <option value="8">RMB</option>
+            </select>
+        </td>
+        <td>
+            <select name="" id="select2">
+                <option value="23000">VNĐ</option>
+                <option value="1">USD</option>
+                <option value="133">JPY</option>
+                <option value="8">RMB</option>
+            </select>
+        <td>
+            <button onclick="chuyenDoi()">Convert</button>
+        </td>
+        <td><input style="text-align: center" id="id"/></td>
+    </tr>
+    <script>
+        function chuyenDoi(){
+            let nhapVao = +document.getElementById('nhapvao').value;
+            let select1 = +document.getElementById('select1').value;
+            let select2 = +document.getElementById('select2').value;
+            let resum = nhapVao*select2/select1;
+            document.getElementById('id').value = resum ;
+        }
+    </script>
+</table>
+</body>
+</html>

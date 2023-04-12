@@ -6,30 +6,27 @@
 </head>
 <body>
 <script>
+    //kiểm tra mãng vừa nhập, so sánh hàng đơn vị lớn hơn hàng chục,
     let n;
     do {
         n = prompt("nhập số phần tử n");
-    } while (n < 0)
+    } while (n < 0);
     let arr = [];
+    let arr1;
     for (let i = 0; i < n; i++) {
-        let arr1 = prompt("nhập phần tử n");
+        do {
+            arr1 = prompt("nhập phần tử n");
+        } while (arr1 < 10 || arr1 > 100);
         arr.push(arr1);
     }
     alert(arr);
-    let flag = true;
+    let arr2 = [];
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > arr[i+1]) {
-            flag = false;
-            break;
+        if (((arr[i]) / 10) < ((arr[i]) % 10)) {
+            arr2.push(arr[i]);
         }
     }
-    if (flag) {
-        alert("ok");
-
-    } else {
-        alert("no");
-    }
-
+    alert(arr2);
 </script>
 </body>
 </html>

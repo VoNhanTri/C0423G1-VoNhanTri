@@ -6,6 +6,8 @@
 </head>
 <body>
 <script>
+    //đếm số lượng số lớn nhất trong mảng
+    //vd: [1,3,6,6,6] max = 6, có 3 lần xuất hiện
     let n;
     do {
         n = prompt("Nhập số phần tử của mảng");
@@ -16,8 +18,8 @@
         ar1.push(ar);
     }
     alert(ar1);
+    let count=0;
     let max = ar1[0];
-    let count = 0
     for (let i = 0; i < ar1.length; i++) {
         if (max == ar1[i]) {
             count++;

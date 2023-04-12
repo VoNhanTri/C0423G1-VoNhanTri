@@ -6,13 +6,16 @@
 </head>
 <body>
 <script>
-    let array = [51,53,56,60,];
-    for(let i =0; i < Math.random() ; i ++){
-        if(i % 2019 == 0 ) {
-            console.log(array[i]);
-            break;
-        }
+    let n = parseInt(prompt("nhập vị trí muốn tìm kiếm"));
+    let ar = [];
+    let number = 50;
+    let count;
+    for (let i = 0; i < n; i++) {
+        ar.push(number);
+        count = i + 1;
+        number += count;
     }
+    alert(ar[n-1])
 </script>
 </body>
 </html>

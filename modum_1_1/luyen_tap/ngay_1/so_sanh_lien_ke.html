@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //kiểm tra cặp số liền kề nhau, (phần tử thứ nhất < phần tử thứ 2)
+    //vd: [1,2,3,4,8,4] no - không thỏa mãn vì cặp 8>4
+    let n;
+    do {
+        n = prompt("nhập số phần tử n");
+    } while (n < 0)
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let arr1 = prompt("nhập phần tử n");
+        arr.push(arr1);
+    }
+    alert(arr);
+    let flag = true;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > arr[i + 1]) {
+            flag = false;
+            break;
+        }
+    }
+    if (flag) {
+        alert("ok");
+
+    } else {
+        alert("no");
+    }
+
+</script>
+</body>
+</html>

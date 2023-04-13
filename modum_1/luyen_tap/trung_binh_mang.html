@@ -6,15 +6,17 @@
 </head>
 <body>
 <script>
-    function trungBinh(arr){
+    function trungBinh(arr) {
         let avg = 0;
         let sum = 0;
-        for(let i =0;i<arr.length;i++){
-            sum +=arr[i];
-            avg = sum/arr.length;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            avg = sum / arr.length;
         }
         return avg;
-    }let a = [1,2,3,4];
+    }
+
+    let a = [1, 2, 3, 4];
     alert(trungBinh(a));
 </script>
 </body>

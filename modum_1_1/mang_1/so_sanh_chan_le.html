@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("nhập độ dài của mảng");
+    } while (n < 0);
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let ar = prompt("nhập phần tử của mảng");
+        array.push(ar);
+    }
+    alert(array);
+    let ar1 = [];
+    let ar2 = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 == 0) {
+            ar1.push(array[i]);
+        } else {
+            ar2.push(array[i]);
+        }
+    }
+    alert(ar1);
+    alert(ar2);
+    if (ar1.length == ar2.length) {
+        alert("ok");
+    } else {
+        alert("no")
+    }
+</script>
+</body>
+</html>

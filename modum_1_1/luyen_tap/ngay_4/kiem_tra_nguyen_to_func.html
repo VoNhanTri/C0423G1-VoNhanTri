@@ -8,22 +8,22 @@
 <script>
     let n;
     do {
-        n = prompt("nhập số n");
-    } while (n < 0)
-    let arr = [];
+        n = prompt("nhập độ dài của mảng");
+    } while (n < 0);
+    let array = [];
     for (let i = 0; i < n; i++) {
-        let ar = prompt("nhập phần tử n");
-        arr.push(ar);
+        let ar = prompt("nhập từng phần tử trong mảng");
+        array.push(ar);
     }
-    alert(arr);
+    alert(array);
 
-    function checkString(n) {
+    function checkArray(a) {
         let flag = true;
-        if (n < 2) {
+        if (a < 2) {
             flag = false;
         } else {
-            for (let i = 2; i <= Math.sqrt(n); i++) {
-                if (n % i == 0) {
+            for (let i = 2; i <= Math.sqrt(a); i++) {
+                if (a % i == 0) {
                     flag = false;
                     break;
                 }
@@ -32,18 +32,18 @@
         return flag;
     }
 
-    let arr2 = [];
-    for (let i = 0; i < arr.length; i++) {
+    let arr = [];
+    for (let i = 0; i < array.length; i++) {
         let flag = true;
-        if (checkString(arr[i]) == false) {
+        if (checkArray(array[i]) == false) {
             flag = false;
         }
         if (flag) {
-            arr2.push(arr[i]);
+            arr.push(array[i]);
         }
     }
-    alert(arr2);
-    if (arr2.length == arr.length) {
+    alert(arr);
+    if (arr.length == array.length) {
         alert("ok");
     } else {
         alert("no");

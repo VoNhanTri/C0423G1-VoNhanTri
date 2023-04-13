@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //in ra từ nếu chỉ có 1 từ trong chuỗi;
+    function checkString(str) {
+        let str1 = str.split(' ');
+        let arr = [];
+        for (let i = 0; i < str1.length; i++) {
+            if (str1 != '') {
+                arr.push(str1[i])
+            }
+        }
+        let arr2 = [];
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            let arr1 = arr[i].charAt(0).toUpperCase();
+            arr2.push(arr1);
+            count++;
+        }
+        if (count == 1) {
+            alert(arr.join(" "));
+        } else {
+            alert(arr2.join(""));
+        }
+        return count;
+    }
+
+    let a = "hello best friend";
+    checkString(a);
+</script>
+</body>
+</html>

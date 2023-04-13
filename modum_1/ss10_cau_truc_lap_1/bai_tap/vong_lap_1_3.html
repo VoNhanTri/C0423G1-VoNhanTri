@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
+    let n = prompt("in")
     let a = 0, b =1, next;
     next = a + b;
-    for (let i = 0; i < 20; i++) {
-       console.log(a);
+    for (let i = 0; i < n; i++) {
+        console.log(a);
         a = b;
         b = next;
         next = a + b;

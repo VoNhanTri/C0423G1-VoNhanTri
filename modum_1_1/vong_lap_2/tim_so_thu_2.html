@@ -6,19 +6,41 @@
 </head>
 <body>
 <script>
-    let array ;
+    let array;
     do {
-        array = prompt("nhập số phần tử trong mảng");
-    }while (array <= 3);
+        array = prompt("nhập số phần tử trong mảng") * 1;
+    } while (array <= 3);
     let array1 = [];
-    for (let i = 0; i <array ; i++) {
-        let ar = prompt("nhập phần tử ");
+    for (let i = 0; i < array; i++) {
+        let ar = prompt("nhập phần tử ") * 1;
         array1.push(ar);
     }
     alert(array1);
-    for (let i = 0; i <array1.length ; i++) {
-        alert(array1[1]);
+    // // let arrr = array1.sort((a,b)=>a-b);
+    // // alert(arrr);
+    // let max = array1[0];
+    // let array2 = [];
+    // for (let i = 0; i < array1.length; i++) {
+    //     if (max < array1[i]) {
+    //         max = array1[i];
+    //     } else if(array1[i]<max){
+    //         array2.push(array1[i])
+    //     }
+    // }
+    // alert(max);
+    // alert(array2);
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = i + 1; j > array1.length; j++) {
+            if (array1[j] > array1[i]) {
+                let a;
+                a = array1[i];
+                array1[i] = array1[j];
+                array1[j] = a;
+            }
+        }
     }
+    alert(array1);
+    alert(array1[array1.length - 2]);
 </script>
 </body>
 </html>

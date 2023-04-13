@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 20;
+    let a1 = 0;
+    let b = 1;
+    let next = a1 + b
+    let arr = [];
+    for (let i = 0; i < a; i++) {
+        arr.push(a1);
+        a1 = b;
+        b = next;
+        next = a1 + b;
+    }
+    alert(arr);
+    let n;
+    do {
+        n = prompt("nhập độ dài của mảng");
+    } while (n < 0);
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let ar = prompt("nhập từng phần tử n");
+        array.push(ar);
+    }
+    alert(array);
+    let arrf = [];
+    for (let i = 0; i < array.length; i++) {
+        let flag = true;
+        for (let j = 0; j < arr.length; j++) {
+            if (array[i] != arr[j]) {
+                flag = false;
+            } else {
+                arrf.push(array[i]);
+            }
+        }
+    }
+    alert(arrf);
+    if (arrf.length == array.length) {
+        alert("ok");
+    } else {
+        alert("no");
+    }
+</script>
+</body>
+</html>

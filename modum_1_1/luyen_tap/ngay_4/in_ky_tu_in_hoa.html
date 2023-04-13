@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        let str1 = str.split('');
+        let str2 = [];
+        for (let i = 0; i <str1.length ; i++) {
+            if(str1!=''){
+                str2.push(str1[i]);
+            }
+        }
+        alert(str2)
+        let array = [];
+        let arr = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M']
+        for (let i = 0; i < str2.length; i++) {
+            let flag = true;
+            for (let j = 0; j < arr.length; j++) {
+                if (str2[i] != arr[j]) {
+                   flag = false;
+                }else {
+                    array.push(str2[i]);
+                }
+            }
+        }
+        return  array.join('');
+    }
+
+    let string = 'Hello CoDeGym'
+    alert(checkString(string));
+</script>
+</body>
+</html>

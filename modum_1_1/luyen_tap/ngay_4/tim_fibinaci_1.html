@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let n;
+    do {
+        n = prompt("nhập độ dài của mảng");
+    } while (n < 0);
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let ar = prompt("nhập phần tử n");
+        array.push(ar);
+    }
+    alert(array);
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i]
+        }
+    }
+    alert(max);
+
+    function arrayFibonacci(arr) {
+        let a = 0;
+        let b = 1;
+        let next = a + b;
+        let arrFi = [];
+        for (let i = 0; i < arr; i++) {
+            arrFi.push(a);
+            a = b;
+            b = next;
+            next = a + b;
+        }
+        return arrFi;
+    }
+
+    let a = max;
+    let arrF = arrayFibonacci(a);
+    alert(arrF);
+    let flag;
+    let arrFibo = [];
+    for (let i = 0; i < array.length; i++) {
+        flag = true;
+        for (let j = 0; j < arrF.length; j++) {
+            if (array[i] != arrF[j]) {
+                flag = false;
+            } else {
+                arrFibo.push(array[i]);
+                break;
+            }
+        }
+    }
+    alert(arrFibo);
+    if (arrFibo.length == array.length) {
+        alert('ok');
+    } else {
+        alert('no');
+
+    }
+</script>
+</body>
+</html>

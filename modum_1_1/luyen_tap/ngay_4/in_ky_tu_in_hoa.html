@@ -9,8 +9,8 @@
     function checkString(str) {
         let str1 = str.split('');
         let str2 = [];
-        for (let i = 0; i <str1.length ; i++) {
-            if(str1!=''){
+        for (let i = 0; i < str1.length; i++) {
+            if (str1 != "") {
                 str2.push(str1[i]);
             }
         }
@@ -21,13 +21,13 @@
             let flag = true;
             for (let j = 0; j < arr.length; j++) {
                 if (str2[i] != arr[j]) {
-                   flag = false;
-                }else {
+                    flag = false;
+                } else {
                     array.push(str2[i]);
                 }
             }
         }
-        return  array.join('');
+        return array.join('');
     }
 
     let string = 'Hello CoDeGym'

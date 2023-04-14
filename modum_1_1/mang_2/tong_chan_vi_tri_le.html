@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //tính tổng số chẵn ở vị trí lẽ
+    let n;
+    do {
+        n = prompt("nhập độ dài của mảng")*1;
+    } while (n < 0);
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let n1 = prompt("nhập từng phần tử của mảng")*1;
+        arr.push(n1);
+    }
+    alert(arr);
+    let arr1 = [];
+    let tong = 0;
+    for (let i = 1; i < arr.length; i = i + 2) {
+        if (arr[i] % 2 == 0) {
+            tong += arr[i];
+            arr1.push(arr[i]);
+        }
+    }
+    alert(arr1);
+    alert(tong);
+</script>
+</body>
+</html>

@@ -6,16 +6,6 @@
 </head>
 <body>
 <script>
-    let n;
-    do {
-        n = prompt("nhập độ dài của mảng");
-    } while (n < 0);
-    let array = [];
-    for (let i = 0; i < n; i++) {
-        let ar = prompt("nhập từng phần tử trong mảng");
-        array.push(ar);
-    }
-    alert(array);
 
     function checkArray(a) {
         let flag = true;
@@ -32,6 +22,16 @@
         return flag;
     }
 
+    let n;
+    do {
+        n = prompt("nhập độ dài của mảng");
+    } while (n < 0);
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let ar = prompt("nhập từng phần tử trong mảng");
+        array.push(ar);
+    }
+    alert(array);
     let arr = [];
     for (let i = 0; i < array.length; i++) {
         let flag = true;

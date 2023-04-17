@@ -1,0 +1,52 @@
+       #include <iostream>
+     using namespace std;
+     main()
+     {
+float a[11][11];
+int n, i, j, d;
+float s, min;
+do
+{
+	cout << "Nhap so hang va so cot: ";
+	cin >> n;
+}while(n <= 0 || n > 10);
+for( i = 1; i <= n; i++)
+	for(j = 1; j <= n; j++)
+	{
+		cout << "Nhap a["<<i<<","<<j<<"] = ";
+		cin >> a[i][j];
+	}
+for(i = 1; i <= n; i++)
+{
+	for(j = 1; j <= n; j++)
+		cout << a[i][j] << "   ";
+		cout << endl;
+}
+//Cho biet co bao nhieu phan tu co phan nguyen la chan
+d = 0;
+for(i = 1; i <= n; i++)
+for(j = 1; j <= n; j++)
+if(int(a[i][j]) % 2 == 0)
+	d++;
+cout << "Co "<< d << " p.tu co phan nguyen la chan" << endl;
+//Cac phan tu nam tren duong cheo chinh
+cout << "=====================================" << endl;
+cout << "cac phan tu nam tren duong cheo chinh : ";
+for(i= 1; i <= n; i++)
+	cout << float(a[i][i])<< "  ";
+	cout << endl;
+s = 0;
+for(i = 1; i <= n; i++) // 2
+	for(j = 1; j <= n; j++)
+		if(i+j == n + 1)
+			s = s + a[i][j];
+cout << "Tong cac phan tu tren duong cheo phu la: " << s << endl;
+  }
+-Giải thích hộ mình đoạn code này được không? :grinning:
+
+  s = 0;
+for(i = 1; i <= n; i++) // 2
+	for(j = 1; j <= n; j++)
+		if(i+j == n + 1)
+			s = s + a[i][j];
+cout << "Tong cac phan tu tren duong cheo phu la: " << s << endl;

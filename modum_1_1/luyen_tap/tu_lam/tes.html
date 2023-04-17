@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập sồ hàng");
+    let m = +prompt("Nhập sồ cột");
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        arr[i] = new Array(m);
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = +prompt("nhập phần tử thứ " + i + ":" + j);
+        }
+    }
+    console.log(arr);
+    let tong = 0;
+    let tong1 = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (i === j ) {
+                tong += arr[i][j];
+            }
+            if (i + j === arr.length - 1){
+                tong1 += arr[i][j];
+            }
+        }
+    }
+    alert(tong1);
+    alert(tong);
+</script>
+</body>
+</html>

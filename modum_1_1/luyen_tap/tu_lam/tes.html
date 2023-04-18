@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 698a33fab0fd84d8b96511ef3f54c4d476d6ba87
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +10,7 @@
 </head>
 <body>
 <script>
+<<<<<<< HEAD
     let n = +prompt("Nhập độ dài của mảng:");
     let arr = [];
     for (let i = 0; i < n; i++) {
@@ -44,3 +49,32 @@
 </script>
 </body>
 </html>
+=======
+    let n = +prompt("Nhập sồ hàng");
+    let m = +prompt("Nhập sồ cột");
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        arr[i] = new Array(m);
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = +prompt("nhập phần tử thứ " + i + ":" + j);
+        }
+    }
+    console.log(arr);
+    let tong = 0;
+    let tong1 = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (i === j ) {
+                tong += arr[i][j];
+            }
+            if (i + j === arr.length - 1){
+                tong1 += arr[i][j];
+            }
+        }
+    }
+    alert(tong1);
+    alert(tong);
+</script>
+</body>
+</html>
+>>>>>>> 698a33fab0fd84d8b96511ef3f54c4d476d6ba87

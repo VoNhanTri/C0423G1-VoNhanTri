@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập độ dài của mảng:");
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhập các phần tử của mảng:");
+    }
+    document.write(checkFibonacci(arr));
+
+    function checkFibonacci(arr) {
+        arr.sort();
+        let max = arr[arr.length-1];
+        //20
+        //0 1 1 ....13
+        let flag = true;
+        let count = 0;
+        let arr1 = [];
+        for (let i = 0; i < arr.length - 1;i++) {
+            // arr.length - 2  để xác định độ dài của mảng để không phải out of bounce.
+            for (let j = 0; j < arr1.length ; j++) {
+                if(arr[i] === arr1[j]){
+                    count++;
+                    flag = true;
+                } else {
+                    arr1.push(arr[i]);
+                    flag = false;
+
+                    break;
+                }
+            }
+        } alert(arr1);
+        if (arr.length === arr1.length) {
+            return "OK";
+        } else {
+            return "NO";
+        }
+    }
+</script>
+</body>
+</html>

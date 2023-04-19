@@ -8,17 +8,14 @@
 <script>
     function checkArray(arr) {
         let flag = true;
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] > (arr[i+1])) {
-                flag = false;
+        let a = arr[1] - arr[0];
+        for (let i = 1; i < arr.length-1; i++) {
+            if (arr[i+1] - arr[i] != a) {
+                    flag = false;
+                    break;
             }
         }
-        if (flag) {
-            alert("true");
-        } else {
-            alert("false");
-        }
-        return flag;
+      return flag;
     }
 
     let n;

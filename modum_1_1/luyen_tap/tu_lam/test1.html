@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function find(string) {
+        let a = [];
+        let count = 0;
+        let b="";
+        let c="";
+        a = string.split("");
+        for (let i = 0; i < a.length; i++) {
+            if (a[i]=="/"){
+                count=i;
+            }
+        }
+        for (let i = 0; i < count; i++) {
+            if ((a[i]*1)%1==0){
+                b+=a[i];
+            }else {
+                alert("không phải");
+                return;
+            }
+        }
+        if (a.length-count==1||count<1){
+            alert("không phải");
+            return;
+        }
+        for (let i = count+1; i < a.length; i++) {
+            if ((a[i]*1)%1==0 && a[i]!=0){
+                c+=a[i];
+            }else {
+                alert("không phải");
+                return;
+            }
+        }
+        alert(b+" / "+c+" = "+(b/c));
+    }
+    find("124");
+</script>
+</body>
+</html>

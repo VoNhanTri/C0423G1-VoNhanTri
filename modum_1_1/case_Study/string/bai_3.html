@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.-->
+<!--Ví dụ: s1 = "aabcc" và s2 = "adcaa", thì kết quả commonCharacterCount(s1, s2) = 3.-->
+<!--⇨	2 xâu s1 và s2 có 3 kí tự chung: 2 ký tự 'a' và 1 kí tự 'c'.-->
+<script>
+let s1 = 'aabccbcef';
+let arr1 = s1.split('').sort();
+let s2 = 'adcaaef';
+let arr2 = s2.split('').sort();
+let array = [];
+for (let i = 0; i <arr1.length ; i++) {
+    for (let j = 0; j <arr2.length ; j++) {
+        if (arr1[i]==arr2[j]){
+            array.push(arr1[i]);
+        }
+    }
+}
+alert(array);
+let array1 = [];
+for (let i = 0; i <array.length ; i++) {
+    if(!array1.includes(array[i])){
+        array1.push(array[i]);
+    }
+}
+alert("có "+array1.length+" từ trùng nhau");
+</script>
+</body>
+</html>

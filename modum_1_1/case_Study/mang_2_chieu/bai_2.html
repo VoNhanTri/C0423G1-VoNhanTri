@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều,
+đếm các số nguyên tố có trong mảng đó.-->
+<script>
+    function checkArray(a) {
+        let flag = true;
+        if (a < 2) {
+            flag = false;
+        } else {
+            for (let i = 2; i < Math.sqrt(a); i++) {
+                if (a % i == 0) {
+                    flag = false
+                    break;
+                }
+            }
+        }
+        return flag;
+    }
+
+    let n = +prompt("nhập độ dài hàng");
+    let m = +prompt("nhập độ dài cột");
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        arr[i] = new Array(m);
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = prompt("nhập phần tử " + i + ' ' + j);
+
+        }
+    }
+    console.log(arr);
+    let array1 = [];
+    for (let i = 0; i < arr.length; i++) {
+        let flag = true;
+        for (let j = 0; j < arr[i].length; j++) {
+            if (checkArray(arr[i][j]) == false) {
+                flag = false;
+            }
+            if (flag) {
+                array1.push(arr[i][j]);
+            }
+        }
+    }
+    alert(array1);
+    alert(array1.length)
+</script>
+</body>
+</html>

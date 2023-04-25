@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau
+và bắt đầu mỗi từ phải in hoa.
+Ví dụ tRuong    TaN   HAI => Truong Tan Hai.-->
+<!--Và một hàm tìm từ dài nhất trong 1 xâu ký tự.
+Hàm main sử dụng các hàm này để nhập xâu ký tự từ bàn phím,
+in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.-->
+
+<script>
+    function checkString(str) {
+        let ar = str.toLowerCase().split(' ');
+        alert(ar);
+        let array = [];
+        for (let i = 0; i < ar.length; i++) {
+            if (ar[i] != '') {
+                array.push(ar[i]);
+            }
+        }
+        alert(array);
+        let max = '';
+        let array2 = [];
+        for (let i = 0; i < array.length; i++) {
+            let ar1 = array[i].charAt(0).toUpperCase() + array[i].slice(1);
+            array2.push(ar1);
+            if (max.length < array2[i].length) {
+                max = array2[i];
+            }
+        }
+        alert('chuỗi sau khi chuẩn hóa : ' + array2.join(' '));
+        alert('từ dài nhất là: ' + max +' : '+'số ký tự là: '+ max.length);
+    }
+
+    let str1 = 'tran van chanh';
+    checkString(str1);
+</script>
+</body>
+</html>

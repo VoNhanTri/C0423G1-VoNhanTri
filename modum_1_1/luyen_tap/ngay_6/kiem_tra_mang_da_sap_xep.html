@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //kiểm tra mảng đã sắp xếp chưa
+    let n;
+    do {
+        n = prompt("nhập độ dài của mảng");
+    } while (n < 0)
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let ar = prompt("nhập phần tử cho mang");
+        array.push(ar);
+    }
+    alert(array);
+    let flag = true;
+    let flag1 = false;
+    for (let i = 0; i < array.length - 1; i++) {
+        flag = true;
+        if (array[i] > array[i + 1]) {
+            flag = false;
+            break;
+        }
+    }
+    for (let i = 0; i < array.length; i++) {
+        flag1 = true;
+        if (array[i] < array[i + 1]) {
+            flag1 = false;
+            break;
+        }
+    }
+
+    if (flag || flag1 ) {
+        alert('true');
+    } else {
+        alert('false');
+    }
+
+</script>
+</body>
+</html>

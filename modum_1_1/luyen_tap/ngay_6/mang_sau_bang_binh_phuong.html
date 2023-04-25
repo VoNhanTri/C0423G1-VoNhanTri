@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //mảng sau là bình phương của mảng trước;
+    function checkArray(array) {
+        let flag = true;
+        for (let i = 0; i < array.length / 2; i++) {
+            flag = true;
+            if (array[i] * array[i] != array[(array.length / 2) + i]) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    let n;
+    do {
+        n = prompt("nhập chiều dài của mảng bằng số chẵn")
+    } while (n % 2 != 0);
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let ar = prompt('nhập phần tử n');
+        arr.push(ar);
+    }
+    alert(arr)
+    let a = [1, 2, 3, 1, 4, 9];
+    alert(checkArray(a));
+</script>
+</body>
+</html>

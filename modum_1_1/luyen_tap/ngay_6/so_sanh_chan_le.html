@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //nếu số chắn bằng số lẽ thì ok
+    let n;
+    do {
+        n = prompt("nhập độ dài mảng");
+    } while (n < 0)
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let ar = prompt('nhập phần tử mảng');
+        array.push(ar);
+    }
+    alert(array);
+    let flag;
+    let chan = [];
+    let le = [];
+    for (let i = 0; i < array.length; i++) {
+        if ((array[i] % 2 == 0)) {
+            chan.push(array[i]);
+        }
+        if (array[i] % 2 != 0) {
+            le.push(array[i]);
+        }
+    }
+    if (chan.length == le.length) {
+        alert('true');
+    } else {
+        alert('false');
+    }
+    alert(le);
+    alert(chan);
+</script>
+</body>
+</html>

@@ -8,20 +8,21 @@
 <!--Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều,
 đếm các số nguyên tố có trong mảng đó.-->
 <script>
-    function checkArray(a) {
+    function isPrime(num) {
         let flag = true;
-        if (a < 2) {
+        if (num < 2) {
             flag = false;
         } else {
-            for (let i = 2; i < Math.sqrt(a); i++) {
-                if (a % i == 0) {
-                    flag = false
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    flag = false;
                     break;
                 }
             }
         }
         return flag;
     }
+
 
     let n = +prompt("nhập độ dài hàng");
     let m = +prompt("nhập độ dài cột");
@@ -33,21 +34,18 @@
 
         }
     }
+
     console.log(arr);
     let array1 = [];
     for (let i = 0; i < arr.length; i++) {
-        let flag = true;
         for (let j = 0; j < arr[i].length; j++) {
-            if (checkArray(arr[i][j]) == false) {
-                flag = false;
-            }
-            if (flag) {
+            if (isPrime(arr[i][j])) {
                 array1.push(arr[i][j]);
             }
         }
     }
     alert(array1);
-    alert(array1.length)
+    alert(array1.length);
 </script>
 </body>
 </html>

@@ -112,9 +112,6 @@
         let themHocSinh = new HocSinh('', maHV, tenHV, lop, email, ngaySinh);
         arr.push(themHocSinh);
         hocSinh();
-
-
-
     }
 
     function xoa() {
@@ -126,11 +123,11 @@
                     arr.splice(i, 1);
                     break;
                 } else {
-                    alert("mã bạn nhập ko đúng")
+                    alert("mã bạn nhập ko đúng");
                 }
             }
         } else {
-            alert('Không xóa')
+            alert('Không xóa');
         }
         hocSinh();
     }
@@ -150,7 +147,7 @@
                 arr[i].setEmail(email1);
                 arr[i].setNgaySinh(ngaySinh1);
             }else {
-                alert("mã bạn nhập không đúng")
+                alert("mã bạn nhập không đúng");
             }
         }
         hocSinh();

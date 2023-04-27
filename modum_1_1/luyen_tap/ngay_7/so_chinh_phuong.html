@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("nhập độ dài của mảng");
+    } while (n < 0 || n > 50)
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let ar = +prompt("nhập phần tử của mảng");
+        array.push(ar);
+    }
+    alert(array);
+    let arrC=[];
+    for (let i = 0; i <array.length ; i++) {
+        if (isPrime(array[i])){
+            arrC.push(array[i]);
+        }
+    }
+    alert(arrC);
+    function isPrime(num) {
+        let flag = false
+        for (let i = 0; i < num; i++) {
+            if (Math.sqrt(num) % 1 == 0) {
+                flag = true;
+            }
+        }
+        return flag;
+    }
+</script>
+</body>
+</html>

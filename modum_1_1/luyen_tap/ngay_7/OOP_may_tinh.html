@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="them1()">Thêm Máy Tính</button>
+<button onclick="xoa1()">Xóa Máy Tính</button>
+<button onclick="sua1()">sua Máy Tính</button>
+<p id="id"></p>
+<script>
+    class MayTinh {
+        constructor(maMay, tenMay, hangSanXuat, gia) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.hangSanXuat = hangSanXuat;
+            this.gia = gia;
+        }
+
+        getMaMay() {
+            return this.maMay;
+        }
+
+        getTenMay() {
+            return this.tenMay;
+        }
+
+        getHangSanXuat() {
+            return this.hangSanXuat;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        setMaMay(maMay) {
+            this.maMay = maMay;
+        }
+
+        setTenMay(tenMay) {
+            this.tenMay = tenMay;
+        }
+
+        setHangSanXuat(hangSanXuat) {
+            this.hangSanXuat = hangSanXuat;
+        }
+
+        setGia(gia) {
+            this.gia = gia;
+        }
+
+        toString1() {
+            return 'maMay:' + this.maMay + 'tenMay' + this.tenMay + 'hangSanXuat' + this.hangSanXuat + 'gia' + this.gia
+        }
+    }
+
+    let array = [];
+    let may1 = new MayTinh("MM01", "Notebook", "Asus", "12.000.000");
+    let may2 = new MayTinh("MM02", "G63", "Dell", "35.000.000");
+    let may3 = new MayTinh("MM03", "Macbook", "Apple", "40.000.000");
+    array.push(may1, may2, may3);
+
+    function mayTinh() {
+        let taoBang = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Mã Máy</th>\n' +
+            '        <th>Tên Máy</th>\n' +
+            '        <th>Hãng Sản Xuất</th>\n' +
+            '        <th>Giá</th>\n' +
+            '    </tr>'
+        for (let i = 0; i < array.length; i++) {
+            taoBang +=
+                '    <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + array[i].getMaMay() + '</td>\n' +
+                '        <td>' + array[i].getTenMay() + '</td>\n' +
+                '        <td>' + array[i].getHangSanXuat() + '</td>\n' +
+                '        <td>' + array[i].getGia() + '</td>\n' +
+                '    </tr>'
+        }
+        taoBang += '</table>'
+        document.getElementById('id').innerHTML = taoBang;
+    }
+
+    mayTinh();
+
+    function them1() {
+        let maMay = prompt('nhập mã máy');
+        let tenMay = prompt('nhập tên máy');
+        let hangSanXuat = prompt('nhập  hãng sản xuất');
+        let gia = prompt('nhập giá ');
+        let themMoi = new MayTinh(maMay, tenMay, hangSanXuat, gia);
+        array.push(themMoi);
+        mayTinh();
+    }
+
+    function xoa1() {
+        let maMuonXoa = prompt("Nhập mã muốn xóa");
+        let xoa = confirm("Bạn có chắc muốn xóa máy tính có mã" + maMuonXoa);
+        if (xoa) {
+            let flag = false
+            for (let i = 0; i < array.length; i++) {
+                if (maMuonXoa == array[i].getMaMay()) {
+                    array.splice(i, 1);
+                    flag = true;
+                }
+            }
+            if (flag == false) {
+                alert("mã khống đúng");
+            }
+
+        } else {
+            alert("Không xóa");
+        }
+        mayTinh();
+    }
+
+    function sua1() {
+        let maMuonSua = prompt("nhập mã muốn sữa");
+        for (let i = 0; i < array.length; i++) {
+            if (maMuonSua == array[i].getMaMay()) {
+                let maMay1 = prompt("nhập lại mã máy ");
+                let tenMay1 = prompt("nhập lại tên máy ");
+                let hangSX = prompt("nhập lại hãng sản xuất máy ");
+                let giaMay = prompt("nhập lại mã máy ");
+                array[i].setMaMay(maMay1);
+                array[i].setTenMay(tenMay1);
+                array[i].setHangSanXuat(hangSX);
+                array[i].setGia(giaMay);
+                break;
+            }
+            else {
+                alert("mã máy không đúng")
+            }
+        }
+        mayTinh();
+    }
+</script>
+</body>
+</html>

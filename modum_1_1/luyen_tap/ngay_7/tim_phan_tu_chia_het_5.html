@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập từ bàn phím mảng số nguyên gồm n phần tử (n<=50). Hiển thị ra màn hình-->
+<!--danh sách các phần tử của mảng, hiển thị giá trị trung bình của các phần tử chia hết-->
+<!--cho 5 ở vị trí chia hết cho 3-->
+<script>
+    let n;
+    do {
+        n = prompt("nhập độ dài của mảng");
+    } while (n < 0 || n > 50);
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let num = +prompt("nhập phần tử của mảng");
+        array.push(num);
+    }
+    alert(array);
+
+
+    function checlArray(array) {
+        let arr = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 5 == 0 && i % 3 == 0) {
+                arr.push(array[i]);
+            }
+        }
+        return arr;
+    }
+
+    alert(checlArray(array));
+
+    function tinhTrungBinh(arr1) {
+        let tong = 0;
+        let trungBinh;
+        for (let i = 0; i < arr1.length; i++) {
+            tong += arr1[i];
+        }
+        trungBinh = tong / arr1.length;
+        return trungBinh;
+    }
+
+    alert(tinhTrungBinh(checlArray(array)));
+</script>
+</body>
+</html>

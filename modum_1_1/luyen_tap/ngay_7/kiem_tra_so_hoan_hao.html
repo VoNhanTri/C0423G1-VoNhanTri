@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let flag = false;
+        let sum = 0;
+        for (let i = 1; i < number; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+        }
+        if (sum == number && number != 0) {
+            flag = true;
+        }
+        return flag;
+    }
+    let num = +prompt("nhập 1 số để kiểm tra");
+  let check =  isPrime(num);
+    if (check){
+        alert(num+" là số hoàn hảo");
+    }else {
+        alert(num+" không phải số hoàn hảo");
+    }
+</script>
+</body>
+</html>

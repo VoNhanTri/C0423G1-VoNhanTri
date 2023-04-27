@@ -6,40 +6,23 @@
 </head>
 <body>
 <script>
-    function find(string) {
-        let a = [];
-        let count = 0;
-        let b="";
-        let c="";
-        a = string.split("");
-        for (let i = 0; i < a.length; i++) {
-            if (a[i]=="/"){
-                count=i;
-            }
-        }
-        for (let i = 0; i < count; i++) {
-            if ((a[i]*1)%1==0){
-                b+=a[i];
-            }else {
-                alert("không phải");
-                return;
-            }
-        }
-        if (a.length-count==1||count<1){
-            alert("không phải");
-            return;
-        }
-        for (let i = count+1; i < a.length; i++) {
-            if ((a[i]*1)%1==0 && a[i]!=0){
-                c+=a[i];
-            }else {
-                alert("không phải");
-                return;
-            }
-        }
-        alert(b+" / "+c+" = "+(b/c));
+    let n;
+    do {
+        n = prompt("nhập chiều dài của mảng");
+    } while (n < 0);
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let ar = +prompt("nhập phần tử của mảng");
+        arr.push(ar);
     }
-    find("124");
+    alert(arr);
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    alert(max);
 </script>
 </body>
 </html>

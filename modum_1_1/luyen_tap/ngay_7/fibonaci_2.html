@@ -48,10 +48,22 @@
             for (let j = 0; j < arrayFi.length; j++) {
                 if (arr[i] == arrayFi[j]) {
                     arrayFibonaci.push(arr[i]);
-                    arrayFibonaci.sort();
+                    arrayFibonaci.sort(function (a, b) {
+                        return a - b
+                    })
+                    break;
                 }
             }
         }
+        // for (let i = 0; i < arrayFibonaci.length - 1; i++) {
+        //     for (let j = i + 1; j < arrayFibonaci.length; j++) {
+        //         if (arrayFibonaci[i] > arrayFibonaci[j]) {
+        //             let tg = arrayFibonaci[i];
+        //             arrayFibonaci[i] = arrayFibonaci[j];
+        //             arrayFibonaci[j] = tg;
+        //         }
+        //     }
+        // }
         return arrayFibonaci;
     }
 

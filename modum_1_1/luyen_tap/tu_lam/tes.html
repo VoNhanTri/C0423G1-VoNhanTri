@@ -2,94 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hệ thống quản lí bài tập Casestudy module 1</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        thead {
+            padding-bottom: 1px;
+            padding-top: 12px;
+            padding-left: 12px;
+        }
+
+        header {
+            background-color: darkgray;
+        }
+
+        h1 {
+            margin-left: 350px;
+        }
+
+        tbody {
+            padding-bottom: 1px;
+            padding-top: 12px;
+            padding-left: 12px;
+        }
+
+        div {
+            background-color: white;
+            width: 300px;
+            height: 660px;
+        }
+        select{
+            width: 200px;
+            height: 50px;
+
+        }
+    </style>
 </head>
 <body>
-<input>
-<button onclick="themMoi()">Thêm mới học viên</button>
-<button onclick="suaDoi()">Sửa thông tin học viên</button>
-<button onclick="xoaHocVien()">Xóa học viên</button>
-<p id="display"></p>
-<script>
-    let maArray = [1, 2, 3];
-    let tenArray = ["Nguyễn Văn A", "Nguyễn Văn B", "Nguyễn Văn C"];
-    let emailArray = ["abc@gmai.com", "zxc@gmai.com", "qwe@gmai.com"];
-    let ngaySinhArray = ["01/01/2000", "30/06/2000", "25/10/2000"]
-    dislayProducts();
+<header>
+    <table class="a">
+        <thead>
+        <tr>
+            <td width="100px"><img
+                    src="https://static.topcv.vn/company_logos/0ZT9refQobeAkpzsYWBdyaki10IlbFB4_1655288503____f48c9fc932b36c4eec44ec23d223fa18.png"
+                    alt="Logo" width="120%"></td>
+            <td><h1>Hệ thống quản lí bài tập Casestudy module 1</h1></td>
+        </tr>
+    </table>
+</header>
+<div>
+    <select>
+        <option label='Task 1' style="display: none"></option>
+        <option>Bài 1</option>
+        <option>Bài 2</option>
+        <option>Bài 3</option>
+    </select>
+    <br>
+    <select>
+        <option label='Task 2' style="display: none"></option>
+        <option>Bài 1</option>
+        <option>Bài 2</option>
+        <option>Bài 3</option>
+    </select>
+    <br>
+    <select>
+        <option label='Task 3' style="display: none"></option>
+        <option>Bài 1</option>
+        <option>Bài 2</option>
+        <option>Bài 3</option>
+    </select>
+    <br>
+    <select>
+        <option label='Task 4' style="display: none"></option>
+        <option>Bài 1</option>
+        <option>Bài 2</option>
+        <option>Bài 3</option>
+    </select>
+</div>
 
-    function themMoi() {
-        let ma=prompt("Nhập mã học sinh")
-        let ten = prompt("Nhập tên học sinh");
-        let email = prompt("Nhập email học sinh");
-        let ngaysinh = prompt("Nhập ngày sinh của học sinh");
-        maArray.push(ma);
-        tenArray.push(ten);
-        emailArray.push(email);
-        ngaySinhArray.push(ngaysinh);
-        dislayProducts();
-    }
 
-    function suaDoi() {
-        let sua = prompt("Nhập mã học sinh bạn muốn sửa thông tin: HV-000 ");
-        let flag = false;
-        for (let i = 0; i < tenArray.length; i++) {
-            if (sua == maArray[i]) {
-                let ten1 = prompt(tenArray[i] + " bạn muốn sửa tên học sinh thành: ");
-                let email1 = prompt(emailArray[i] + " bạn muốn sửa email học sinh thành: ");
-                let ngaysinh1 = prompt(ngaySinhArray[i] + " bạn muốn sửa ngày sinh của học sinh thành: ");
-                tenArray[i] = ten1;
-                emailArray[i] = email1;
-                ngaySinhArray[i] = ngaysinh1;
-            } else {
-                flag = true;
-            }
-        }
-        if (flag) {
-            alert("Mã học viên không tồn tại");
-        }
-        dislayProducts();
-    }
-
-    function xoaHocVien() {
-        let xoa = prompt("Nhập mã học sinh bạn muốn xóa: HV-000 ")
-        let flag = false;
-        for (let i = 0; i < maArray.length; i++) {
-            if (xoa == maArray[i]) {
-                tenArray.splice(i, 1);
-            } else {
-                flag = true;
-            }
-        }
-        // let xoaConf=confirm("Bạn có muốn xóa học viên này khỏi danh sách: "+tenArray[index]+"?????");
-        if (flag) {
-            alert("Mã học viên không tồn tại");
-        }
-        dislayProducts();
-    }
-
-    function dislayProducts() {
-        let tableString = '<table border="1">\n' +
-            '        <tr>\n' +
-            '            <th>Mã học viên</th>\n' +
-            '            <th>Tên</th>\n' +
-            '            <th>Lớp</th>\n' +
-            '            <th>Email</th>\n' +
-            '            <th>Ngày sinh</th>\n' +
-            '        </tr>\n';
-        for (let i = 0; i < tenArray.length; i++) {
-            tableString += '<tr>\n' +
-                '    <td>HV-000' + maArray[i] + '</td>\n' +
-                '    <td>' + tenArray[i] + '</td>\n' +
-                '    <td> C1022G1</td>\n' +
-                '    <td>' + emailArray[i] + '</td>\n' +
-                '    <td>' + ngaySinhArray[i] + '</td>\n' +
-                '</tr>'
-        }
-        tableString += '</table>';
-        document.getElementById("display").innerHTML = tableString;
-
-    }
-
-</script>
 </body>
 </html>

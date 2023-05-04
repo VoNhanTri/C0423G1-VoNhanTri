@@ -50,18 +50,21 @@
             this.gia = gia;
         }
 
-        toString1() {
-            return 'maMay:' + this.maMay + 'tenMay' + this.tenMay + 'hangSanXuat' + this.hangSanXuat + 'gia' + this.gia
-        }
+        // toString1() {
+        //     return 'maMay:' + this.maMay + 'tenMay' + this.tenMay + 'hangSanXuat' + this.hangSanXuat + 'gia' + this.gia
+        // }
     }
 
     let array = [];
-    let may1 = new MayTinh("MM01", "Notebook", "Asus", "12.000.000");
-    let may2 = new MayTinh("MM02", "G63", "Dell", "35.000.000");
-    let may3 = new MayTinh("MM03", "Macbook", "Apple", "40.000.000");
+    let may1 = new MayTinh("MM01", "Notebook", "Asus", 12000000);
+    let may2 = new MayTinh("MM02", "G63", "Dell", 35000000);
+    let may3 = new MayTinh("MM03", "Macbook", "Apple", 40000000);
     array.push(may1, may2, may3);
 
     function mayTinh() {
+        array.sort(function (a, b) {
+            return a.getGia() - b.getGia();
+        })
         let taoBang = '<table border="1">\n' +
             '    <tr>\n' +
             '        <th>STT</th>\n' +
@@ -130,8 +133,7 @@
                 array[i].setHangSanXuat(hangSX);
                 array[i].setGia(giaMay);
                 break;
-            }
-            else {
+            } else {
                 alert("mã máy không đúng")
             }
         }

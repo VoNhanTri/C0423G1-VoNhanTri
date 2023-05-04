@@ -17,12 +17,13 @@
     }
     alert(array);
     let arrN = [];
-    for (let i = 0; i <array.length ; i++) {
-        if (isPrime(array[i])){
+    for (let i = 0; i < array.length; i++) {
+        if (isPrime(array[i])) {
             arrN.push(array[i]);
         }
     }
     alert(arrN);
+
     function isPrime(num) {
         let flag = true;
         if (num < 2) {

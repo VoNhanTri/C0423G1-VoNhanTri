@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("nhập độ dài của mảng")*1;
+    } while (n < 0);
+    let arr = [];
+    let arr1;
+    for (let i = 0; i < n; i++) {
+        do {
+            arr1 = prompt("nhập phần tử của mảng")*1;
+        } while (arr1 < 0);
+        arr.push(arr1);
+    }
+    alert(arr);
+    let flag = true;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] % i != 0) {
+            flag = false;
+            break;
+        }
+    }
+    if(flag){
+        alert('ok');
+    }else {
+        alert('no');
+    }
+</script>
+</body>
+</html>

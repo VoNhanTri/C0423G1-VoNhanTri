@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let menu = [
+        "1.cafe", "2.nước cam", "3.nước ép cà rốt",
+        "4.nước ép cà chua", "5.nước dừa", "6.nước lọc", "7.thoát menu"
+    ];
+    alert(menu);
+    let chonMon;
+    let tong = 0;
+    let tong1 = 0;
+    let tong2 = 0;
+    let tong3 =0;
+    let tong4 = 0;
+    let tong5 = 0;
+    let tong6 = 0;
+    let soLuong;
+    do {
+        chonMon = prompt("nhập số thứ tự món nước bạn chọn") * 1;
+        if (chonMon == 1) {
+            alert('giá cafe là 15.000');
+            soLuong = prompt("mời bạn nhập số lượng ");
+            tong1 = soLuong * 15000;
+            alert("tiền bạn cần thanh toán" + tong1)
+        }
+        if (chonMon == 2 ) {
+            alert('giá nước cam là 35.000');
+            soLuong = prompt("mời bạn nhập số lượng ");
+            tong2 = soLuong * 35000;
+            alert("tiền bạn cần thanh toán" + tong2 )
+        }
+        if (chonMon == 3) {
+            alert('giá nước ép cà rốt là 25.000');
+            soLuong = prompt("mời bạn nhập số lượng ");
+            tong3 = soLuong * 25000;
+            alert("tiền bạn cần thanh toán" + tong3 )
+        }
+        if ( chonMon == 4) {
+            alert('giá nước ép cà chua là 28.000');
+            soLuong = prompt("mời bạn nhập số lượng ");
+            tong4 = soLuong * 28000;
+            alert("tiền bạn cần thanh toán" + tong4 )
+        }
+        if (chonMon == 5) {
+            alert('giá nước dừa là 20.000');
+            soLuong = prompt("mời bạn nhập số lượng ");
+            tong5 = soLuong * 20000;
+            alert("tiền bạn cần thanh toán" + tong5 );
+        }
+        if (chonMon == 6) {
+            alert('giá nước lọc là 10.000');
+            soLuong = prompt("mời bạn nhập số lượng ");
+            tong6 = soLuong * 10000;
+            alert("tiền bạn cần thanh toán" + tong6 )
+        }
+        if (chonMon==7){
+            alert('thoát Menu');
+        }
+        tong= tong1+tong2+tong3+tong4+tong5+tong6;
+        alert("tổng số tiền bạn phải thanh toán: "+tong);
+
+    } while (chonMon != 7)
+</script>
+</body>
+</html>

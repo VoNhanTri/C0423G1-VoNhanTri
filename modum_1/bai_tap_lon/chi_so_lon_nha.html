@@ -6,8 +6,8 @@
 </head>
 <body>
 <script>
-    let a = [5, 2, 5];
-    let b = [6, 3, 4];
+    let a = [5, 2, 5, 4];
+    let b = [6, 3, 4, 2];
     let max = a[0] / b[0];
     let maxViTri = 0;
     for (let i = 0; i < a.length; i++) {
@@ -19,7 +19,7 @@
                 }
             }
     }
-    document.write("phân số lớn nhất = "+ max +"=>" + "Vị trí của phân số lớn nhất là " + maxViTri);
+    document.write("phân số lớn nhất là: " + a[maxViTri]+'/' + b[maxViTri] + "=>" + "Vị trí của phân số lớn nhất là:  " + maxViTri);
 </script>
 </body>
 </html>

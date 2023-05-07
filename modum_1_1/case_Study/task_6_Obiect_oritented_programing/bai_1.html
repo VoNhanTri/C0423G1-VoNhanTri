@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="them()">Thêm Học Sinh</button>
+<button type="button" onclick="xoa()">Xóa Học Sinh</button>
+<button type="button" onclick="sua()">Sửa Học Sinh</button>
+<p id="id"></p>
+<a href="bai_1.html" ></a>
+<script>
+    class HocSinh {
+        constructor(stt, maHocVien, tenHocVien, lop, email, ngaySinh) {
+            this.stt = stt;
+            this.maHocVien = maHocVien;
+            this.tenHocVien = tenHocVien;
+            this.lop = lop;
+            this.email = email;
+            this.ngaySinh = ngaySinh;
+        }
+
+        getStt() {
+            return this.stt;
+        }
+
+        getMaHocVien() {
+            return this.maHocVien;
+        }
+
+        getTenHocVien() {
+            return this.tenHocVien;
+        }
+
+        getLop() {
+            return this.lop;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        getNgaySinh() {
+            return this.ngaySinh;
+        }
+
+        setStt(stt) {
+            this.stt = stt;
+        }
+
+        setMaHocVien(maHocVien) {
+            this.maHocVien = maHocVien;
+        }
+
+        setTenHocVien(tenHocVien) {
+            this.tenHocVien = tenHocVien;
+        }
+
+        setLop(lop) {
+            this.lop = lop;
+        }
+
+        setEmail(email) {
+            this.email = email;
+        }
+
+        setNgaySinh(ngaySinh) {
+            this.ngaySinh = ngaySinh;
+        }
+    }
+
+    let hocSinh1 = new HocSinh('', 'HV001', 'Võ Văn A', 'C03202G1', 'abc@gail.com', '15/12/1994');
+    let hocSinh2 = new HocSinh('', 'HV002', 'Võ Văn A', 'C03202G1', 'abc@gail.com', '15/12/1994');
+    let hocSinh3 = new HocSinh('', 'HV003', 'Võ Văn A', 'C03202G1', 'abc@gail.com', '15/12/1994');
+    let arr = [];
+    arr.push(hocSinh1, hocSinh2, hocSinh3);
+
+    function hocSinh() {
+        let taoBang = '<table border="1" style="text-align: center">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Mã Học Viên</th>\n' +
+            '        <th>Tên Học Viên</th>\n' +
+            '        <th>Lớp</th>\n' +
+            '        <th>Email</th>\n' +
+            '        <th>Ngày Sinh</th>\n' +
+            '    </tr>'
+        for (let i = 0; i < arr.length; i++) {
+            taoBang +=
+                '    <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + arr[i].getMaHocVien() + '</td>\n' +
+                '        <td>' + arr[i].getTenHocVien() + '</td>\n' +
+                '        <td>' + arr[i].getLop() + '</td>\n' +
+                '        <td>' + arr[i].getEmail() + '</td>\n' +
+                '        <td>' + arr[i].getNgaySinh() + '</td>\n' +
+                '    </tr>'
+        }
+        taoBang += '</table>'
+        document.getElementById('id').innerHTML = taoBang;
+    }
+
+    hocSinh();
+
+    function them() {
+        let maHV = prompt("Nhập mã học viên");
+        let tenHV = prompt("Nhập tên học viên");
+        let lop = prompt("Nhập lớp học viên");
+        let email = prompt("Nhập email học viên");
+        let ngaySinh = prompt("Nhập ngày sinh học viên");
+        let themHocSinh = new HocSinh('', maHV, tenHV, lop, email, ngaySinh);
+        arr.push(themHocSinh);
+        hocSinh();
+    }
+
+    function xoa() {
+        let maMuonXoa = prompt("Nhập mã Học Sinh Bạn Muốn Xóa");
+        let xoa = confirm("Bạn muốn xóa mã" + maMuonXoa);
+        if (xoa) {
+            for (let i = 0; i < arr.length; i++) {
+                if (maMuonXoa == arr[i].getMaHocVien()) {
+                    arr.splice(i, 1);
+                    break;
+                } else {
+                    alert("mã bạn nhập ko đúng");
+                }
+            }
+        } else {
+            alert('Không xóa');
+        }
+        hocSinh();
+    }
+
+    function sua() {
+        let maMuonSua = prompt("Nhập mã bạn muốn sửa");
+        for (let i = 0; i < arr.length; i++) {
+            if (maMuonSua == arr[i].getMaHocVien()) {
+                let maHV1 = prompt("sữa mã học viên");
+                let tenHV1 = prompt("sữa tên học viên");
+                let lopHV1 = prompt("sữa lớp học viên");
+                let email1 = prompt("sữa email học viên");
+                let ngaySinh1 = prompt("sữa ngày sinh học viên");
+                arr[i].setMaHocVien(maHV1);
+                arr[i].setTenHocVien(tenHV1);
+                arr[i].setLop(lopHV1);
+                arr[i].setEmail(email1);
+                arr[i].setNgaySinh(ngaySinh1);
+            }else {
+                alert("mã bạn nhập không đúng");
+            }
+        }
+        hocSinh();
+    }
+</script>
+</body>
+</html>

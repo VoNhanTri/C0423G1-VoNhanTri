@@ -6,15 +6,17 @@
 </head>
 <body>
 <script>
-    let h = prompt("nhập chiều cao tam giác")*1;
-    for (let i=1;i<=h;i++){
-        for (let k=h;k>=i;k--){
+    let h = +prompt("nhập chiều cao tam giác");
+    for (let i = 1; i <= h; i++) {
+        for (let k = h; k >= i; k--) {
             document.write("&nbsp;&nbsp");
         }
-        for(let j=1;j<=i*2-1;j++){
+        for (let j = 1; j <= i * 2 - 1; j++) {
             document.write("*");
-        }document.write("<br/>");
-    }document.write("<br/>");
+        }
+        document.write("<br/>");
+    }
+    document.write("<br/>");
 </script>
 </body>
 </html>

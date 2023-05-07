@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="guiTien()">Gửi Tiền</button>
+<button type="button" onclick="rutTien()">Rút Tiền</button>
+<button type="button" onclick="them()">Thêm Khách Hàng</button>
+<button type="button" onclick="xoa()">Xóa Khách Hàng</button>
+<button type="button" onclick="sua()">Sửa Thông Tin Khách Hàng</button>
+<p id="id"></p>
+
+<script>
+    class Account {
+        constructor(stt, soTaiKhoan, tenTaiKHoan, tienTaiKhoan) {
+            this.stt = stt;
+            this.soTaiKhoan = soTaiKhoan;
+            this.tenTaiKHoan = tenTaiKHoan;
+            this.tienTaiKHoang = tienTaiKhoan;
+
+        }
+
+        getStt() {
+            return this.stt;
+        }
+
+        getSoTaiKhoan() {
+            return this.soTaiKhoan;
+        }
+
+        getTenTaiKHoan() {
+            return this.tenTaiKHoan;
+        }
+
+        getTienTaiKHoang() {
+            return this.tienTaiKHoang;
+        }
+
+        setStt(stt) {
+            this.stt = stt;
+        }
+
+        setSoTaiKhoan(soTaiKHoan) {
+            this.soTaiKhoan = soTaiKHoan;
+        }
+
+        setTenTaiKHoan(tenTaiKhoan) {
+            this.tenTaiKHoan = tenTaiKhoan;
+        }
+
+        setTienTaiKHoang(tienTaiKHoan) {
+            this.tienTaiKHoang = tienTaiKHoan;
+        }
+    }
+
+    let khachHang1 = new Account( '','MK01', 'Võ Nhân Trí', 525000);
+    let khachHang2 = new Account( '','MK02', 'Mã Văn Tài', 225000);
+    let khachHang3 = new Account( '','MK03', 'Nguyễn Tấn Dũng', 425000);
+    let arr = [];
+    arr.push(khachHang1, khachHang2, khachHang3);
+
+    // function toString(arr) {
+    //     let khachHang1 = new Account(1, 'MK01', 'Võ Nhân Trí', 525000);
+    //     let khachHang2 = new Account(2, 'MK02', 'Mã Văn Tài', 225000);
+    //     let khachHang3 = new Account(3, 'MK03', 'Nguyễn Tấn Dũng', 425000);
+    //     arr = [];
+    //     arr.push(khachHang1, khachHang2, khachHang3);
+    //     return arr;
+    // }
+    //
+    // alert(toString());
+
+    function account() {
+        let taoBang = '<table border="1" style="text-align: center">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Số Tài Khoản</th>\n' +
+            '        <th>Tên Tài Khoản</th>\n' +
+            '        <th>Số Tiền Trong Tài Khoản</th>\n' +
+            '    </tr>'
+        for (let i = 0; i < arr.length; i++) {
+            taoBang +=
+                '    <tr>\n' +
+                '        <td>' + (i+1) + '</td>\n' +
+                '        <td>' + arr[i].getSoTaiKhoan() + '</td>\n' +
+                '        <td>' + arr[i].getTenTaiKHoan() + '</td>\n' +
+                '        <td>' + arr[i].getTienTaiKHoang() + '</td>\n' +
+                '    </tr>'
+
+        }
+        taoBang += '</table> ';
+        document.getElementById('id').innerHTML = taoBang;
+    }
+
+    account();
+
+    function guiTien() {
+        let taiKhoanGui = prompt("nhập số tài khoản muốn gửi tiền");
+        let tienGui = prompt("nhập số tiền muốn gửi") * 1;
+        let gui = confirm("bạn có chắc muốn thêm:" + ' ' + tienGui + ' ' + "cho tài khoản:" + ' ' + taiKhoanGui);
+        if (gui) {
+            for (let i = 0; i < arr.length; i++) {
+                if (taiKhoanGui == arr[i].getSoTaiKhoan()) {
+                    let tong = arr[i].getTienTaiKHoang() + tienGui;
+                    arr[i].setTienTaiKHoang(tong);
+                }
+            }
+        } else {
+            alert('cảm ơn quý khách');
+        }
+        account();
+    }
+
+    function rutTien() {
+        let taiKhoanGui = prompt("nhập số tài khoản muốn rút tiền");
+        let tienRut = prompt("nhập số tiền muốn rút");
+        let rut = confirm("bạn có chắc muốn rút:" + ' ' + tienRut + ' ' + "từ tài khoản:" + ' ' + taiKhoanGui);
+        if (rut) {
+            for (let i = 0; i < arr.length; i++) {
+                if (taiKhoanGui == arr[i].getSoTaiKhoan()) {
+                    if (tienRut <= arr[i].getTienTaiKHoang()) {
+                        let hieu = arr[i].getTienTaiKHoang() - tienRut;
+                        arr[i].setTienTaiKHoang(hieu);
+                        break;
+                    } else {
+                        alert("số tiền lớn hơn số tiền đang có");
+                        break;
+                    }
+                }else {
+                    alert("Mã Bạn Nhập Không Có Trong Hệ Thống");
+                }
+            }
+        } else {
+            alert('Cảm ơn quý khách');
+        }
+        account();
+    }
+
+    function them() {
+        let soTaiKhoan = prompt("nhập số tài khoản");
+        let tenTaiKhoan = prompt("nhập tên tài khoản");
+        let tienTaiKhoan = prompt("nhập tiền tài khoản");
+        let themTaiKhoan = new Account('',soTaiKhoan, tenTaiKhoan, tienTaiKhoan);
+        arr.push(themTaiKhoan);
+        account();
+    }
+
+    function xoa(maMuonXoa) {
+        maMuonXoa = prompt("nhập mã muỗn xóa");
+        let xoa = confirm("Bạn có chắc muốn xóa" + ' ' + maMuonXoa);
+        if (xoa) {
+            for (let i = 0; i < arr.length; i++) {
+                if (maMuonXoa == arr[i].getSoTaiKhoan()) {
+                    arr.splice(i, 1);
+                    break;
+                }else {
+                    alert('Mã Bạn Nhập Không Có Trong Hệ Thống');
+                }
+            }
+        } else {
+            alert('không xóa');
+        }
+        account();
+    }
+
+    function sua(maMuonSua) {
+        maMuonSua = prompt("nhập mã muốn sửa");
+        for (let i = 0; i < arr.length; i++) {
+            if (maMuonSua == arr[i].getSoTaiKhoan()) {
+                let soTaiKhoan1 = prompt('bạn muốn sữa số tài khoản thành:');
+                let tenTaiKhoan1 = prompt('bạn muốn sữa tên tài khoản thành:');
+                let tienTaiKhoan1 = prompt('bạn muốn sữa số tiền trong tài khoản thành:');
+                arr[i].setSoTaiKhoan(soTaiKhoan1);
+                arr[i].setTenTaiKHoan(tenTaiKhoan1);
+                arr[i].setTienTaiKHoang(tienTaiKhoan1);
+                break;
+            }else {
+                alert("Mã Bạn Nhập Không Có Trong Hệ Thống");
+            }
+        }
+        account();
+    }
+</script>
+</body>
+</html>

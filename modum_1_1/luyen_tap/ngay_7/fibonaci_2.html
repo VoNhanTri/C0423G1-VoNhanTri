@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("nhập chiều dài của mảng");
+    } while (n < 0);
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let ar = +prompt("nhập phần tử của mảng");
+        arr.push(ar);
+    }
+    alert(arr);
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+            max = arr[i];
+        }
+    }
+    alert(max);
+    let num = max;
+    alert(isFibonaci(num));
+
+    function isFibonaci(num) {
+        let a = 0;
+        let b = 1;
+        let next = a + b;
+        let arrFi = [];
+        for (let i = 0; i < num; i++) {
+            arrFi.push(a);
+            a = b;
+            b = next;
+            next = a + b;
+        }
+        return arrFi;
+    }
+
+    let arrayFi = isFibonaci(num);
+
+    function checkArray(arrayFi) {
+        let arrayFibonaci = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arrayFi.length; j++) {
+                if (arr[i] == arrayFi[j]) {
+                    arrayFibonaci.push(arr[i]);
+                    arrayFibonaci.sort(function (a, b) {
+                        return a - b
+                    })
+                    break;
+                }
+            }
+        }
+        // for (let i = 0; i < arrayFibonaci.length - 1; i++) {
+        //     for (let j = i + 1; j < arrayFibonaci.length; j++) {
+        //         if (arrayFibonaci[i] > arrayFibonaci[j]) {
+        //             let tg = arrayFibonaci[i];
+        //             arrayFibonaci[i] = arrayFibonaci[j];
+        //             arrayFibonaci[j] = tg;
+        //         }
+        //     }
+        // }
+        return arrayFibonaci;
+    }
+
+    alert(checkArray(arrayFi));
+</script>
+</body>
+</html>

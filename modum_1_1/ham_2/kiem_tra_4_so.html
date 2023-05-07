@@ -9,22 +9,17 @@
     function findMaxNumber(n) {
         let n1 = n.split('');
         alert(n1);
-        let min = n1[0];
-        for (let i = 0; i < n1.length; i++) {
-            if (n1.length < 4) {
+        for (let i = 0; i < n1.length - 1; i++) {
+            if (n1.length !== 4) {
                 return '-1';
             } else {
-                for (let j = 0; j < n1.length; j++) {
-                    if (min > n1[j]) {
-                        min = n1[j];
-                        break;
-                    }
+                if (n1[i] < n1[i + 1]) {
+                    n1.splice(i, 1);
+                    break;
                 }
             }
+
         }
-        n1.sort(function (a, b) {
-            return b - a;
-        }).pop();
         return n1.join('');
     }
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("nhập chiều dài của mảng");
+    } while (n < 0);
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let ar = +prompt("nhập phần tử của mảng");
+        arr.push(ar);
+    }
+    alert(arr);
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    alert(max);
+</script>
+</body>
+</html>

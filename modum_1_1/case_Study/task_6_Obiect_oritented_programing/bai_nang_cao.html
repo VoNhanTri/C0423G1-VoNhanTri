@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="id" placeholder="Enter id">
+<input type="text" id="name" placeholder="Enter Name">
+<input type="text" id="address" placeholder="Enter address">
+<button id="btn-add" onclick="addNew()">Add</button>
+<button id="btn-edit" style="display: none" onclick="updateEmployee()">Update</button>
+<p id="result"></p>
+<script>
+    class Employee{
+        constructor(id, name,address) {
+            this.id=id;
+            this.name=name;
+            this.address= address;
+        }
+        setId(id){
+            this.id=id;
+        }
+        setName(name){
+            this.name= name;
+        }
+        setAddress(address){
+            this.address = address;
+        }
+        getId(){
+            return this.id;
+        }
+        getName(){
+            return this.name;
+        }
+        getAddress(){
+            return this.address;
+        }
+    }
+    let employeeList =[];
+    let employee1= new Employee("MNV-001", "Lê Huy Nhất","Đà Nẵng");
+    let employee2= new Employee("MNV-002", "Lê Huy Hai","Đà Nẵng");
+    let employee3= new Employee("MNV-003", "Lê Huy Ba","Đà Nẵng");
+    employeeList.push(employee1,employee2,employee3);
+    display(employeeList);
+    let updateIndex =-1;
+    function updateEmployee() {
+        let editId= document.getElementById("id").value;
+        let editName= document.getElementById("name").value;
+        let editAddress= document.getElementById("address").value;
+        employeeList[updateIndex].setId(editId);
+        employeeList[updateIndex].setName(editName);
+        employeeList[updateIndex].setAddress(editAddress);
+        document.getElementById("btn-add").style.display="inline";
+        document.getElementById("btn-edit").style.display="none";
+        document.getElementById("id").value="";
+        document.getElementById("name").value="";
+        document.getElementById("address").value="";
+        display(employeeList);
+    }
+    function addNew() {
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let address = document.getElementById("address").value;
+        let newEmployee = new Employee(id,name,address);
+        employeeList.push(newEmployee);
+        document.getElementById("id").value="";
+        document.getElementById("name").value="";
+        document.getElementById("address").value="";
+        display(employeeList);
+    }
+    function deleteEmployee(index) {
+        let conf= confirm("Do you delete employee :" + employeeList[index].getName() +"????");
+        if (conf){
+            employeeList.splice(index,1);
+        }
+        display(employeeList);
+    }
+    function display(list) {
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '   <tr>\n' +
+            '       <th>#</th>\n' +
+            '       <th>ID</th>\n' +
+            '       <th>Name</th>\n' +
+            '       <th>Adress</th>\n' +
+            '       <th>Edit</th>\n' +
+            '       <th>Delete</th>\n' +
+            '   </tr>';
+        for (let i = 0; i <list.length ; i++) {
+            tableString +='<tr>\n' +
+                '        <td>'+(i+1)+'</td>\n' +
+                '        <td>'+list[i].getId()+'</td>\n' +
+                '        <td>'+list[i].getName()+'</td>\n' +
+                '        <td>'+list[i].getAddress()+'</td>\n' +
+                '        <td><button onclick="showInfoEdit('+i+')">Edit</button></td>\n' +
+                '        <td><button onclick="deleteEmployee('+i+')">Delete</button></td>\n' +
+                '    </tr>'
+        }
+        tableString+='</table>'
+        document.getElementById("result").innerHTML= tableString;
+    }
+    function showInfoEdit(index) {
+        updateIndex = index;
+        document.getElementById("id").value=employeeList[index].getId();
+        document.getElementById("name").value=employeeList[index].getName();
+        document.getElementById("address").value=employeeList[index].getAddress();
+        document.getElementById("btn-add").style.display="none";
+        document.getElementById("btn-edit").style.display="inline";
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

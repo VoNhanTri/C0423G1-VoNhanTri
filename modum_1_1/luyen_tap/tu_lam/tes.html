@@ -1,80 +1,87 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 698a33fab0fd84d8b96511ef3f54c4d476d6ba87
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hệ thống quản lí bài tập Casestudy module 1</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        thead {
+            padding-bottom: 1px;
+            padding-top: 12px;
+            padding-left: 12px;
+        }
+
+        header {
+            background-color: darkgray;
+        }
+
+        h1 {
+            margin-left: 350px;
+        }
+
+        tbody {
+            padding-bottom: 1px;
+            padding-top: 12px;
+            padding-left: 12px;
+        }
+
+        div {
+            background-color: white;
+            width: 300px;
+            height: 660px;
+        }
+        select{
+            width: 200px;
+            height: 50px;
+
+        }
+    </style>
 </head>
 <body>
-<script>
-<<<<<<< HEAD
-    let n = +prompt("Nhập độ dài của mảng:");
-    let arr = [];
-    for (let i = 0; i < n; i++) {
-        arr[i] = +prompt("Nhập các phần tử của mảng:");
-    }
-    document.write(checkFibonacci(arr));
+<header>
+    <table class="a">
+        <thead>
+        <tr>
+            <td width="100px"><img
+                    src="https://static.topcv.vn/company_logos/0ZT9refQobeAkpzsYWBdyaki10IlbFB4_1655288503____f48c9fc932b36c4eec44ec23d223fa18.png"
+                    alt="Logo" width="120%"></td>
+            <td><h1>Hệ thống quản lí bài tập Casestudy module 1</h1></td>
+        </tr>
+    </table>
+</header>
+<div>
+    <select>
+        <option label='Task 1' style="display: none"></option>
+        <option>Bài 1</option>
+        <option>Bài 2</option>
+        <option>Bài 3</option>
+    </select>
+    <br>
+    <select>
+        <option label='Task 2' style="display: none"></option>
+        <option>Bài 1</option>
+        <option>Bài 2</option>
+        <option>Bài 3</option>
+    </select>
+    <br>
+    <select>
+        <option label='Task 3' style="display: none"></option>
+        <option>Bài 1</option>
+        <option>Bài 2</option>
+        <option>Bài 3</option>
+    </select>
+    <br>
+    <select>
+        <option label='Task 4' style="display: none"></option>
+        <option>Bài 1</option>
+        <option>Bài 2</option>
+        <option>Bài 3</option>
+    </select>
+</div>
 
-    function checkFibonacci(arr) {
-        arr.sort();
-        let max = arr[arr.length-1];
-        //20
-        //0 1 1 ....13
-        let flag = true;
-        let count = 0;
-        let arr1 = [];
-        for (let i = 0; i < arr.length - 1;i++) {
-            // arr.length - 2  để xác định độ dài của mảng để không phải out of bounce.
-            for (let j = 0; j < arr1.length ; j++) {
-                if(arr[i] === arr1[j]){
-                    count++;
-                    flag = true;
-                } else {
-                    arr1.push(arr[i]);
-                    flag = false;
 
-                    break;
-                }
-            }
-        } alert(arr1);
-        if (arr.length === arr1.length) {
-            return "OK";
-        } else {
-            return "NO";
-        }
-    }
-</script>
 </body>
 </html>
-=======
-    let n = +prompt("Nhập sồ hàng");
-    let m = +prompt("Nhập sồ cột");
-    let arr = new Array(n);
-    for (let i = 0; i < n; i++) {
-        arr[i] = new Array(m);
-        for (let j = 0; j < arr[i].length; j++) {
-            arr[i][j] = +prompt("nhập phần tử thứ " + i + ":" + j);
-        }
-    }
-    console.log(arr);
-    let tong = 0;
-    let tong1 = 0;
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length; j++) {
-            if (i === j ) {
-                tong += arr[i][j];
-            }
-            if (i + j === arr.length - 1){
-                tong1 += arr[i][j];
-            }
-        }
-    }
-    alert(tong1);
-    alert(tong);
-</script>
-</body>
-</html>
->>>>>>> 698a33fab0fd84d8b96511ef3f54c4d476d6ba87

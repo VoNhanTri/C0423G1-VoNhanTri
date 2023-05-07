@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Viết hàm có tham số truyền vào là một chuỗi các ký tự.Hàm thực hiện tạo ra một-->
+<!--cụm từ viết tắt-->
+<!-- - Nếu chuỗi có nhiều hơn hoặc bằng 2 từ trở lên thì hàm sẽ trả về 1 cụm từ viết tắt-->
+<!--là lấy các ký tự đầu tiên của từng từ và đổi sang in hoa.-->
+<!--Ví dụ:   object     Oriented     programming => kết quả trả về :OOP-->
+<!-- - Nếu Chuỗi chỉ có duy nhất 1 từ thì kết quả trả về là 1 thông báo "Chuỗi chỉ có 1 từ, không cần viết tắt-->
+<body>
+<script>
+    function checkString(str) {
+        let str1 = str.toLowerCase().split(" ");
+        let array = [];
+        for (let i = 0; i < str1.length; i++) {
+            if (str1[i] != '') {
+                array.push(str1[i]);
+            }
+        }
+        alert(array);
+        let array1 = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array.length >= 2) {
+                let arr = array[i].charAt(0).toUpperCase();
+                array1.push(arr);
+            } else {
+                alert("chuỗi chỉ có 1 từ không cần viết tắt");
+            }
+        }
+        alert(array1.join(''));
+    }
+
+    let str2 = 'object'
+    let str1 = 'object     Oriented     programming'
+    checkString(str2);
+</script>
+</body>
+</html>

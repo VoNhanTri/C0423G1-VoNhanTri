@@ -79,7 +79,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/codegym/C0223G1-VoNhanTri/modum_2",
+    "last_opened_file_path": "D:/codegym/C0223G1-VoNhanTri/modum_2/untitled/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,7 +87,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "configurable.group.tools",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -121,7 +121,7 @@
       <updated>1683389297376</updated>
       <workItem from="1683389298002" duration="46000" />
       <workItem from="1683460510172" duration="94000" />
-      <workItem from="1683460639389" duration="803000" />
+      <workItem from="1683460639389" duration="625000" />
     </task>
     <servers />
   </component>

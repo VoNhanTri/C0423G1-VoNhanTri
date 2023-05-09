@@ -2,19 +2,19 @@ package ss1_introduction_to_java.bai_tap;
 
 import java.util.Scanner;
 
-public class DocSoThanhChu {
+public class ReadNumberIntoWord {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập vào số muốn đọc dưới ba chữ số: ");
         int num = Integer.parseInt(scanner.nextLine());
-        int[] so = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        String[] chuoi1 = {" ", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-        String[] chuoi2 = {" ", "one", "twen", "thir", "for", "fif", "six", "seven", "eight", "nine"};
+        int[] number = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        String[] arrayUnits = {" ", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+        String[] arrayTens = {" ", "one", "twen", "thir", "for", "fif", "six", "seven", "eight", "nine"};
         switch ((num + "").length()) {
             case 1:
-                for (int i = 0; i < so.length; i++) {
-                    if (num == so[i]) {
-                        System.out.println(chuoi1[i]);
+                for (int i = 0; i < number.length; i++) {
+                    if (num == number[i]) {
+                        System.out.println(arrayUnits[i]);
                     }
                 }
                 break;
@@ -35,7 +35,7 @@ public class DocSoThanhChu {
                     System.out.println("fourteen");
                     break;
                 } else if (num == 15) {
-                    System.out.println("fiveteen");
+                    System.out.println("fifteen");
                     break;
                 } else if (num == 16) {
                     System.out.println("sixteen");
@@ -50,21 +50,21 @@ public class DocSoThanhChu {
                     System.out.println("nineteen");
                     break;
                 } else {
-                    System.out.println(chuoi2[num / 10] + "ty" + chuoi1[num % 10]);
+                    System.out.println(arrayTens[num / 10] + "ty" + arrayUnits[num % 10]);
                     break;
                 }
             case 3:
                 if ((num - (num / 100 * 100) == 11)) {
-                    System.out.println(chuoi1[num / 100] + "hundred" + "eleven");
+                    System.out.println(arrayUnits[num / 100] + "hundred" + "eleven");
                     break;
                 } else if ((num - (num / 100 * 100) == 12)) {
-                    System.out.println(chuoi1[num / 100] + "hundred" + "Twelve");
+                    System.out.println(arrayUnits[num / 100] + "hundred" + "Twelve");
                     break;
                 } else if ((num - (num / 100 * 100) == 13)) {
-                    System.out.println(chuoi1[num / 100] + "hundred" + "thirteen");
+                    System.out.println(arrayUnits[num / 100] + "hundred" + "thirteen");
                     break;
                 } else {
-                    System.out.println(chuoi1[num / 100] + "hundred" + chuoi2[(num % 100) / 10] + chuoi1[(num%100)%10]);
+                    System.out.println(arrayUnits[num / 100] + "hundred" + arrayTens[(num % 100) / 10] + arrayUnits[(num%100)%10]);
                     break;
                 }
         }

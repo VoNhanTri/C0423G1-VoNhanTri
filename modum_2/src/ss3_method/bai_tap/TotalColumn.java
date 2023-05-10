@@ -22,12 +22,13 @@ public class TotalColumn {
             }
             System.out.println();
         }
-        int sum = 0;
-        for (int c = 0; c < matrix[0].length; c++) {
-            for (int r = 0; r < matrix.length; r++)
-                sum += matrix[r][c];
-            System.out.println("Sum for column " + c + " is "
-                    + sum);
+        double sum = 0;
+        int indexColumn;
+        System.out.println("nhập cột muốn cộng");
+        indexColumn = scanner.nextShort();
+            for (int c = 0; c < matrix.length; c++) {
+                sum += matrix[c][indexColumn];
+            }System.out.println("Sum for column " + " is " + sum);
         }
+
     }
-}

@@ -16,6 +16,7 @@ public class CountChar {
                     count ++;
                 }
         }
-        System.out.println(count);
+        System.out.println("tổng kí tự có trong chuỗi  " +string.length());
+        System.out.println("ký tự " + checkChar + " xuất hiên "+count);
     }
 }

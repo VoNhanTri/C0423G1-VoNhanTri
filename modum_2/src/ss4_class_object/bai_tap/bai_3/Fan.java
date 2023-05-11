@@ -1,10 +1,10 @@
-package ss4_class_object.bai_tap.bai_2;
+package ss4_class_object.bai_tap.bai_3;
 
 public class Fan {
     public static final int SLOW =1;
     public static final int MEDIUM = 2;
     public static final int FAST = 3;
-    public int speed = 1;
+    public int speed = SLOW;
     public boolean toggle = false;
     public double radius = 5;
     public String color = "blue";

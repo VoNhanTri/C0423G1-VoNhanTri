@@ -7,7 +7,7 @@ public class Main {
         StopWatch watch = new StopWatch();
         watch.star();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("nhập bất kì: ");
+        System.out.println("nhập bất kì đê kiểm tra thời gian chạy: ");
             int num = scanner.nextInt();
         System.out.println(num);
         watch.stop();

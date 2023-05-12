@@ -1,4 +1,4 @@
-package ss5_access_modifier_static_method_static_property.thuc_hanh.thuc_hanh_2;
+package ss5_access_modifier_static.thuc_hanh.thuc_hanh_2;
 
 public class TestStaticProperty {
     public static void main(String[] args) {

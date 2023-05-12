@@ -1,7 +1,7 @@
 package ss4_class_object.bai_tap.bai_3;
 
 public class Fan {
-    public static final int SLOW =1;
+    public static final int SLOW = 1;
     public static final int MEDIUM = 2;
     public static final int FAST = 3;
     public int speed = SLOW;
@@ -47,10 +47,11 @@ public class Fan {
     public void setColor(String color) {
         this.color = color;
     }
-    public String toString(){
-        if (!toggle){
-            return speed + " " + color + " " +radius + "fan is on";
-        }else {
+
+    public String toString() {
+        if (!toggle) {
+            return speed + " " + color + " " + radius + "fan is on";
+        } else {
             return "fan is off";
         }
     }

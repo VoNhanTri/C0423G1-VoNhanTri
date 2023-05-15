@@ -7,7 +7,5 @@ public class Test {
         student.setName("Trí");//set lại giá trị name
         student.setClassic("C03323");//set lại giá trị classic
         System.out.println("hiển thi giá trị sau khi set: "+student.toString());
-        System.out.println(student.getName());
-        System.out.println(student.getClassic());
     }
 }

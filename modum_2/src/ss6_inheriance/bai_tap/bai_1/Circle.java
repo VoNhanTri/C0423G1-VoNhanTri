@@ -1,8 +1,8 @@
 package ss6_inheriance.bai_tap.bai_1;
 
 public class Circle {
-    double radius;
-    String color;
+   private double radius;
+    private String color;
 
     public Circle(double radius, String color) {
         this.radius = radius;

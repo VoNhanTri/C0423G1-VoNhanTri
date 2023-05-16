@@ -8,8 +8,8 @@ public class RunCircle {
         Circle circle = new Circle();
 
         System.out.println("Nhập bán kính radius");
-        circle.radius = Integer.parseInt(scanner.nextLine());
-        System.out.println(circle.radius);
+        circle.setRadius(Integer.parseInt(scanner.nextLine()));
+        System.out.println(circle.getRadius());
         circle.setColor("blue");
         System.out.println(circle.toString());
         System.out.println("diện tích: " + circle.getArea());

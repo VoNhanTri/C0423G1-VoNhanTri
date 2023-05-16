@@ -42,6 +42,6 @@ public class Square extends Shape implements Colorable{
 
     @Override
     public void howToColor() {
-        System.out.println(getColor() + "Color full size");
+        System.out.println(getColor()+ " " + "Color full size");
     }
 }

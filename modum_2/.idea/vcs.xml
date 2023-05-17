@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ss8_clean_code/bai_tap/apj-tennis-game" vcs="Git" />
   </component>
 </project>

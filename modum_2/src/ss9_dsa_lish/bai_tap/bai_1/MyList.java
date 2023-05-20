@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MyList<E> {
     private int size = 0;
     private static final int DEFAULT_CAPACITY = 10;
-    Object[] elements;
+    private Object[] elements;
 
     public MyList() {
         elements = new Object[DEFAULT_CAPACITY];
@@ -20,19 +20,22 @@ public class MyList<E> {
     }
 
     public boolean add(E element) {
+        if (size == elements.length) {
+            ensureCapacity();
+        }
         elements[size] = element;
         size++;
         return true;
     }
 
-    private void ensureCapacity(int miniCapacity) {
-        int newSize = this.elements.length + miniCapacity;
+    private void ensureCapacity() {
+        int newSize = this.elements.length * 2;
         elements = Arrays.copyOf(elements, newSize);
     }
 
     public void add(int index, E element) {
         if (size == elements.length) {
-            ensureCapacity(index);
+            ensureCapacity();
         }
         elements[index] = element;
         size++;
@@ -47,7 +50,7 @@ public class MyList<E> {
 
     public E remove(int index) {
         if (index > 0 && index < elements.length) {
-            for (int i = index; i < size-1 ; i++) {
+            for (int i = index; i < size - 1; i++) {
                 elements[i] = elements[i + 1];
             }
             elements[index] = null;

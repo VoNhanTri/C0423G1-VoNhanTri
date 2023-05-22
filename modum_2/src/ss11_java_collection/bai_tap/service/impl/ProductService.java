@@ -5,6 +5,7 @@ import ss11_java_collection.bai_tap.repository.IProductRepository;
 import ss11_java_collection.bai_tap.repository.impl.ProductRepository;
 import ss11_java_collection.bai_tap.service.IProductService;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -71,6 +72,25 @@ public class ProductService implements IProductService {
             System.out.println("nhập số lượng mới của sản phẩm");
             int quantity = Integer.parseInt(scanner.nextLine());
             checkCode.setQuantity(quantity);
+        }
+    }
+    @Override
+    public void displayProduct(){
+        List<Product1> product1s = productRepository.getAll();
+        product1s.sort(Comparator.comparing(Product1::getPrice));
+        for (Product1 display: product1s) {
+            System.out.println(display);
+        }
+    }
+    @Override
+    public void findProduct(){
+        System.out.println("nhập tên sản phẩm bạn muốn tìm");
+        String name = scanner.nextLine();
+        boolean find = productRepository.findProduct(name);
+        if (find){
+            System.out.println("đây l sản phẩm bạn đã tìm " + name);
+        }else {
+            System.out.println("tên sản phẩm bạn nhập không có");
         }
     }
 }

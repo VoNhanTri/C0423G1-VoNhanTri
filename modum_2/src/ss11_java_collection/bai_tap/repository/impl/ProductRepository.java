@@ -10,8 +10,8 @@ public class ProductRepository implements IProductRepository {
     private static List<Product1> products = new ArrayList<>();
 
     static {
-        products.add(new Product1("001", "rượu", 100000, 100));
-        products.add(new Product1("002", "nước ngọt", 30000, 100));
+        products.add(new Product1("003", "rượu", 100000, 100));
+        products.add(new Product1("002", "nước ngọt", 300000, 100));
     }
 
     @Override
@@ -49,5 +49,16 @@ public class ProductRepository implements IProductRepository {
         }
         return false;
     }
+    @Override
+    public boolean findProduct(String name){
+        for (Product1 find: products) {
+            if (name.equals(find.getName())){
+                System.out.println(find);
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
 

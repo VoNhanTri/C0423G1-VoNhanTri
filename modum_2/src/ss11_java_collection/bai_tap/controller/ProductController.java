@@ -16,6 +16,8 @@ public class ProductController {
             System.out.println("2. Thêm sản phẩm");
             System.out.println("3. Xóa sản phẩm");
             System.out.println("4. Sửa sản phẩm");
+            System.out.println("5. Hiển thị danh sách sắp xếp theo giá ");
+            System.out.println("6. tìm kiếm sản phẩm");
             System.out.println("0. Thoát");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice){
@@ -31,6 +33,11 @@ public class ProductController {
                 case 4:
                     productService.editProduct();
                     break;
+                case 5:
+                    productService.displayProduct();
+                    break;
+                case 6:
+                    productService.findProduct();
                 case 0:
                     System.out.println("cảm ơn");
                     System.exit(1);

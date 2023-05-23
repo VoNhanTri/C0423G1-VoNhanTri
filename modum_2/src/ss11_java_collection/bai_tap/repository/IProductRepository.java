@@ -1,21 +1,21 @@
 package ss11_java_collection.bai_tap.repository;
 
-import ss11_java_collection.bai_tap.model.Product1;
+import ss11_java_collection.bai_tap.model.Product;
 
 import java.util.List;
 
 public interface IProductRepository {
 
-    List<Product1> getAll();
+    List<Product> getAll();
 
-    void addProduct(Product1 product);
+    void addProduct(Product product);
 
-    Product1 getByCode(String code);
+    Product getByCode(String code);
 
 
-    void removeProduct(Product1 product);
+    void removeProduct(Product product);
 
-    boolean editProduct(Product1 product, String id);
+    boolean editProduct(Product product, String id);
 
-    boolean findProduct(String name);
+    void findProduct(String name);
 }

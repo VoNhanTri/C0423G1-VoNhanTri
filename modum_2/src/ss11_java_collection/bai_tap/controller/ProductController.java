@@ -38,9 +38,14 @@ public class ProductController {
                     break;
                 case 6:
                     productService.findProduct();
+                    break;
                 case 0:
                     System.out.println("cảm ơn");
                     System.exit(1);
+                    break;
+                default:
+                    System.out.println("Nhâp lại");
+                    break;
             }
         }while (true);
     }

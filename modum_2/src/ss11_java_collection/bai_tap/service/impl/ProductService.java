@@ -1,6 +1,6 @@
 package ss11_java_collection.bai_tap.service.impl;
 
-import ss11_java_collection.bai_tap.model.Product1;
+import ss11_java_collection.bai_tap.model.Product;
 import ss11_java_collection.bai_tap.repository.IProductRepository;
 import ss11_java_collection.bai_tap.repository.impl.ProductRepository;
 import ss11_java_collection.bai_tap.service.IProductService;
@@ -15,8 +15,8 @@ public class ProductService implements IProductService {
 
     @Override
     public void disPlayAll() {
-        List<Product1> product1s = productRepository.getAll();
-        for (Product1 p : product1s) {
+        List<Product> product1s = productRepository.getAll();
+        for (Product p : product1s) {
             System.out.println(p);
         }
     }
@@ -31,7 +31,7 @@ public class ProductService implements IProductService {
         float price = Float.parseFloat(scanner.nextLine());
         System.out.println("mời bạn nhập số lượng");
         int quantity = Integer.parseInt(scanner.nextLine());
-        Product1 product1 = new Product1(code, name, price, quantity);
+        Product product1 = new Product(code, name, price, quantity);
         productRepository.addProduct(product1);
         System.out.println("đã thêm sản phẩm thành công");
     }
@@ -40,7 +40,7 @@ public class ProductService implements IProductService {
     public void deleteProduct() {
         System.out.println("mời bạn nhập mã sản phẩm mà bạn muỗn xóa");
         String code = scanner.nextLine();
-        Product1 product1 = productRepository.getByCode(code);
+        Product product1 = productRepository.getByCode(code);
         if (product1 == null) {
             System.out.println("Mã sản phẩm không đúng");
         } else {
@@ -59,7 +59,7 @@ public class ProductService implements IProductService {
     public void editProduct() {
         System.out.println("Mời bạn nhập mã sản phẩm muon sữa");
         String editCode = scanner.nextLine();
-        Product1 checkCode = productRepository.getByCode(editCode);
+        Product checkCode = productRepository.getByCode(editCode);
         if (checkCode == null) {
             System.out.println("mã không tồn tại");
         }else {
@@ -76,9 +76,9 @@ public class ProductService implements IProductService {
     }
     @Override
     public void displayProduct(){
-        List<Product1> product1s = productRepository.getAll();
-        product1s.sort(Comparator.comparing(Product1::getPrice));
-        for (Product1 display: product1s) {
+        List<Product> product1s = productRepository.getAll();
+        product1s.sort(Comparator.comparing(Product::getPrice));
+        for (Product display: product1s) {
             System.out.println(display);
         }
     }
@@ -86,11 +86,6 @@ public class ProductService implements IProductService {
     public void findProduct(){
         System.out.println("nhập tên sản phẩm bạn muốn tìm");
         String name = scanner.nextLine();
-        boolean find = productRepository.findProduct(name);
-        if (find){
-            System.out.println("đây l sản phẩm bạn đã tìm " + name);
-        }else {
-            System.out.println("tên sản phẩm bạn nhập không có");
-        }
+          productRepository.findProduct(name);
     }
 }

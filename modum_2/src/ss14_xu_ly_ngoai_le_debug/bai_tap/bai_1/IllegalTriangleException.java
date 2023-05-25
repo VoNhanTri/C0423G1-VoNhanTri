@@ -49,8 +49,8 @@ public class IllegalTriangleException {
         }
     }
 
-    public static boolean checkTriangle(double a, double b, double c) throws TriangleException {
-        if (a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a) {
+    public static boolean checkTriangle(int firstEdge, int twoEdge, int threeEdge) throws TriangleException {
+        if (firstEdge <= 0 || twoEdge <= 0 || threeEdge <= 0 || firstEdge + twoEdge <= threeEdge || firstEdge + threeEdge <= twoEdge || twoEdge + threeEdge <= firstEdge) {
             throw new TriangleException("Cac canh khong hop ly ");
         }
         return true;

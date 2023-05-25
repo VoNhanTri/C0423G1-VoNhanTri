@@ -31,7 +31,7 @@ public class StudentRepository implements IPersonRepository {
 
     @Override
     public Person getByID(String id) {
-        for (Student student: studentsList) {
+        for (Person student: studentsList) {
             if (student.getId().equals(id));
             return student;
         }

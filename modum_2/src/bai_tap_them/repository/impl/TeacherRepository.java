@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TeacherRepository implements IPersonRepository {
-    private static List<Teacher> teacherList = new ArrayList<>();
+    private static List<Person> teacherList = new ArrayList<>();
 
     static {
         teacherList.add(new Teacher("101", "Lê Thị Hồng", "12/05/1980", "Nữ", "10"));
@@ -19,7 +19,7 @@ public class TeacherRepository implements IPersonRepository {
 
     @Override
     public List<Student> getAll() {
-        return null;
+        return teacherList;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class TeacherRepository implements IPersonRepository {
 
     @Override
     public Person getByID(String id) {
-        for (Teacher teacher: teacherList) {
+        for (Person teacher: teacherList) {
             if (teacher.getId().equals(id));
             return teacher;
         }

@@ -19,8 +19,22 @@ public class PersonController {
            System.out.println("4. Thoát");
            System.out.println("Chọn chức Năng");
            int choice = Integer.parseInt(scanner.nextLine());
-           if (choice == 3) {
-               studentService.disPlayAll();
+           switch (choice){
+               case 1:
+                   studentService.addPerson();
+                   break;
+               case 2:
+                   studentService.deletePerson();
+                   break;
+               case 3:
+                   studentService.disPlayAll();
+                   break;
+               case 4:
+                   System.out.println("xin cảm ơn");
+                   System.exit(1);
+                   break;
+               default:
+                   System.out.println("mời nhập lại ");
            }
        }while (true);
    }

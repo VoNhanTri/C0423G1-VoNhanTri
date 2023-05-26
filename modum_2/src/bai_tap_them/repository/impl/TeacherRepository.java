@@ -18,7 +18,7 @@ public class TeacherRepository implements IPersonRepository {
     }
 
     @Override
-    public List<Student> getAll() {
+    public List<Person> getAll() {
         return teacherList;
     }
 

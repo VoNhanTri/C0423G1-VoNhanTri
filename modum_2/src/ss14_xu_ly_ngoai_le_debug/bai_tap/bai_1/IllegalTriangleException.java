@@ -1,40 +1,56 @@
 package ss14_xu_ly_ngoai_le_debug.bai_tap.bai_1;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class IllegalTriangleException {
+public class IllegalTriangleException extends Throwable {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            int firstEdge = 0;
+            int firstEdge ;
 
             do {
                 try {
                     System.out.println("Nhap canh firstEdge");
                     firstEdge = Integer.parseInt(scanner.nextLine());
+                    if (firstEdge <= 0){
+                        throw new TriangleException("Canh a phải > 0");
+                    }
                     break;
                 } catch (NumberFormatException numberFormatException) {
                     System.out.println("mời bạn nhập lại");
+                } catch (TriangleException e) {
+                    System.out.println(e.getMessage());
                 }
             } while (true);
-            int twoEdge = 0;
+            int twoEdge;
             do {
                 try {
                     System.out.println("nhap canh twoEdge");
                     twoEdge = Integer.parseInt(scanner.nextLine());
+                   if (twoEdge <= 0){
+                       throw new TriangleException("Cạnh b phải > 0");
+                   }
                     break;
                 } catch (NumberFormatException numberFormatException) {
                     System.out.println("Mời bạn nhập lại");
+                } catch (TriangleException e) {
+                    System.out.println(e.getMessage());
                 }
             } while (true);
-            int threeEdge = 0;
+            int threeEdge;
             do {
                 try {
                     System.out.println("nhap canh threeEdge");
                     threeEdge = Integer.parseInt(scanner.nextLine());
+                    if ( threeEdge <= 0){
+                        throw new TriangleException("cạnh c phải > 0");
+                    }
                     break;
                 } catch (NumberFormatException numberFormatException) {
                     System.out.println("mời bạn nhập lại");
+                } catch (TriangleException e) {
+                    System.out.println(e.getMessage());
                 }
 
             } while (true);
@@ -50,7 +66,7 @@ public class IllegalTriangleException {
     }
 
     public static boolean checkTriangle(int firstEdge, int twoEdge, int threeEdge) throws TriangleException {
-        if (firstEdge <= 0 || twoEdge <= 0 || threeEdge <= 0 || firstEdge + twoEdge <= threeEdge || firstEdge + threeEdge <= twoEdge || twoEdge + threeEdge <= firstEdge) {
+        if (firstEdge + twoEdge <= threeEdge || firstEdge + threeEdge <= twoEdge || twoEdge + threeEdge <= firstEdge) {
             throw new TriangleException("Cac canh khong hop ly ");
         }
         return true;

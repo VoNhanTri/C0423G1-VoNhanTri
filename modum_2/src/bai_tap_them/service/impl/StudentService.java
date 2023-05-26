@@ -14,8 +14,8 @@ private static Scanner scanner = new Scanner(System.in);
 private static IPersonRepository studentRepository = new StudentRepository();
     @Override
     public void disPlayAll() {
-        List<Student> students = studentRepository.getAll();
-        for (Student person: students) {
+        List<Person> students = studentRepository.getAll();
+        for (Person person: students) {
             System.out.println(person);
         }
     }

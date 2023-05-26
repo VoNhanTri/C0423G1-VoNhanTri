@@ -8,14 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentRepository implements IPersonRepository {
-    private static List<Student> studentsList = new ArrayList<>();
+    private static List<Person> studentsList = new ArrayList<>();
     static {
         studentsList.add(new Student("001","Võ Nhân Trí","24/09/2012","Nam","C3323",10));
         studentsList.add(new Student("002","Trần Thị Bê","12/12/2012","Nữ","C3323",9));
         studentsList.add(new Student("003","Nguyễn Văn A","02/01/2012","Nam","C3323",8));
     }
     @Override
-    public List<Student> getAll() {
+    public List<Person> getAll() {
         return studentsList;
     }
 

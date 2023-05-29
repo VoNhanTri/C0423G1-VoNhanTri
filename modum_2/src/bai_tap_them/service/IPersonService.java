@@ -1,7 +1,10 @@
 package bai_tap_them.service;
 
 public interface IPersonService {
-    void disPlayAll();
-    void addPerson();
-    void deletePerson();
+    void disPlayAllStudent();
+    void disPlayAllTeacher();
+    void addStudent();
+    void addTeacher();
+    void deleteTeacher();
+    void deleteStudent();
 }

@@ -8,8 +8,8 @@ import bai_tap_them.repository.IPersonRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TeacherRepository implements IPersonRepository {
-    private static List<Person> teacherList = new ArrayList<>();
+public abstract class TeacherRepository implements IPersonRepository {
+    private static List<Teacher> teacherList = new ArrayList<>();
 
     static {
         teacherList.add(new Teacher("101", "Lê Thị Hồng", "12/05/1980", "Nữ", "10"));
@@ -18,25 +18,27 @@ public class TeacherRepository implements IPersonRepository {
     }
 
     @Override
-    public List<Person> getAll() {
+    public List<Teacher> getAllTeacher() {
         return teacherList;
     }
 
     @Override
-    public void addPerson(Person person) {
-        teacherList.add((Teacher) person);
+    public void addTeacher(Teacher teacher) {
+        teacherList.add(teacher);
+    }
+
+
+    @Override
+    public void removeTeacher(Teacher teacher) {
+    teacherList.remove(teacher);
     }
 
     @Override
-    public void removePerson(Person person) {
-        teacherList.remove((Teacher) person);
-    }
-
-    @Override
-    public Person getByID(String id) {
-        for (Person teacher: teacherList) {
-            if (teacher.getId().equals(id));
-            return teacher;
+    public Teacher getByIDTeacher(String id) {
+        for (Teacher teacher: teacherList) {
+            if (teacher.getId().equals(id)){
+                return  teacher;
+            }
         }
         return null;
     }

@@ -1,39 +1,16 @@
 package bai_tap_them.service.impl;
 
-import bai_tap_them.model.Person;
-import bai_tap_them.model.impl.Student;
 import bai_tap_them.model.impl.Teacher;
-import bai_tap_them.repository.IPersonRepository;
+import bai_tap_them.repository.ITeacherRepository;
 import bai_tap_them.repository.impl.TeacherRepository;
-import bai_tap_them.service.IPersonService;
+import bai_tap_them.service.ITeacherService;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public abstract class TeacherService implements IPersonService {
+public class TeacherService implements ITeacherService {
     private static Scanner scanner = new Scanner(System.in);
-    private static IPersonRepository teacherRepository = new TeacherRepository() {
-        @Override
-        public List<Student> getAllStudent() {
-            return null;
-        }
-
-        @Override
-        public void addStudent(Student student) {
-
-        }
-
-        @Override
-        public void removeStudent(Student student) {
-
-        }
-
-        @Override
-        public Student getByIDStudent(String id) {
-            return null;
-        }
-    };
+    private static ITeacherRepository teacherRepository = new TeacherRepository();
 
     @Override
     public void disPlayAllTeacher() {
@@ -60,7 +37,21 @@ public abstract class TeacherService implements IPersonService {
 
     @Override
     public void deleteTeacher() {
-
+        System.out.println("nhập mã giáo viên mốn xóa");
+        String id = scanner.nextLine();
+        Teacher teacher = teacherRepository.getByIDTeacher(id);
+        if (teacher==null){
+            System.out.println("Mã giáo viên không đúng");
+        }else {
+            System.out.println("bạn có muốn xóa giáo viên với tên: " + teacher.getName());
+            System.out.println("1. Xóa");
+            System.out.println("2. Không xóa");
+        }
+        int choice = Integer.parseInt(scanner.nextLine());
+        if (choice==1){
+            teacherRepository.removeTeacher(teacher);
+            System.out.println("Xóa thành công");
+        }
     }
 
 }

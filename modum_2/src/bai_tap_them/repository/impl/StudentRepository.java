@@ -1,13 +1,13 @@
 package bai_tap_them.repository.impl;
 
-import bai_tap_them.model.Person;
 import bai_tap_them.model.impl.Student;
-import bai_tap_them.repository.IPersonRepository;
+import bai_tap_them.repository.IStudentRepository;
+import bai_tap_them.repository.ITeacherRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class StudentRepository implements IPersonRepository {
+public  class StudentRepository implements IStudentRepository {
     private static List<Student> studentsList = new ArrayList<>();
     static {
         studentsList.add(new Student("001","Võ Nhân Trí","24/09/2012","Nam","C3323",10));
@@ -37,10 +37,4 @@ public abstract class StudentRepository implements IPersonRepository {
         }
         return null;
     }
-
-    public abstract void disPlayAllStudent();
-
-    public abstract void addStudent();
-
-    public abstract void deleteStudent();
 }

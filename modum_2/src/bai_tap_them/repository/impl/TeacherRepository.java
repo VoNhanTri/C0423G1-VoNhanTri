@@ -1,14 +1,12 @@
 package bai_tap_them.repository.impl;
 
-import bai_tap_them.model.Person;
-import bai_tap_them.model.impl.Student;
 import bai_tap_them.model.impl.Teacher;
-import bai_tap_them.repository.IPersonRepository;
+import bai_tap_them.repository.ITeacherRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class TeacherRepository implements IPersonRepository {
+public class TeacherRepository implements ITeacherRepository {
     private static List<Teacher> teacherList = new ArrayList<>();
 
     static {

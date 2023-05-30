@@ -2,7 +2,7 @@ package bai_tap_them.model;
 
 import java.util.Objects;
 
-public class Person {
+public abstract class Person {
     private String id;
     private String name;
     private String date;

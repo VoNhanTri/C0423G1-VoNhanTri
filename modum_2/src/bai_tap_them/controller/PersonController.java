@@ -9,8 +9,7 @@ import java.util.Scanner;
 
 public class PersonController {
     private static final Scanner scanner = new Scanner(System.in);
-    private static IStudentService studentService = new StudentService() {
-    };
+    private static IStudentService studentService = new StudentService();
     private static ITeacherService teacherService = new TeacherService();
 
     public static void menu() {

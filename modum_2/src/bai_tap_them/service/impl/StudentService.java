@@ -34,8 +34,16 @@ public class StudentService implements IStudentService {
         String gender = scanner.nextLine();
         System.out.println("Nhập lớp học");
         String classes = scanner.nextLine();
-        System.out.println("Nhập số điểm");
-        float point = Float.parseFloat(scanner.nextLine());
+        float point;
+        while (true) {
+            try {
+                System.out.println("Nhập số điểm");
+                point = Float.parseFloat(scanner.nextLine());
+                break;
+            } catch (NumberFormatException numberFormatException) {
+                System.out.println("Mời bạn nhập số");
+            }
+        }
         Student student = new Student(id, name, date, gender, classes, point);
         studentRepository.addStudent(student);
     }

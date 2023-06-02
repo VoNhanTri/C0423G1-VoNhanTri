@@ -35,10 +35,10 @@ public class CustomerController {
                     System.out.println("edit");
                     break;
                 case 4:
-                    FuramaController.displayMainMenu();
-                    break;
+                    return;
                 default:
                     System.out.println("mời nập lại");
+                    break;
             }
         } while (true);
     }

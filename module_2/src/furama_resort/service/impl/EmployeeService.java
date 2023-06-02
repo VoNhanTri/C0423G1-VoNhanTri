@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeService implements IEmployeeService {
-    private static Scanner scanner = new Scanner(System.in);
-    private static IEmployeeRepository employeeRepository = new EmployeeRepository();
+    private static final Scanner scanner = new Scanner(System.in);
+    private static final IEmployeeRepository employeeRepository = new EmployeeRepository();
 
     @Override
     public void displayAllEmployee() {
@@ -36,63 +36,62 @@ public class EmployeeService implements IEmployeeService {
             System.out.println("Nhập tên nhân viên mới");
             name = scanner.nextLine();
         } while (!Regex.checkName(name));
-        String date="";
+        String date = "";
         do {
             try {
                 System.out.println("nhập ngày tháng năm sinh mới");
                 date = scanner.nextLine();
-                int day = Integer.parseInt(""+date.charAt(0)+date.charAt(1));
-                int month = Integer.parseInt(""+date.charAt(3)+date.charAt(4));
-                int year = Integer.parseInt(""+date.charAt(6)+date.charAt(7)+date.charAt(8)+date.charAt(9));
-                LocalDate birthday = LocalDate.of(year,month,day);
+                int day = Integer.parseInt("" + date.charAt(0) + date.charAt(1));
+                int month = Integer.parseInt("" + date.charAt(3) + date.charAt(4));
+                int year = Integer.parseInt("" + date.charAt(6) + date.charAt(7) + date.charAt(8) + date.charAt(9));
+                LocalDate birthday = LocalDate.of(year, month, day);
                 LocalDate today = LocalDate.now();
-                int age = Period.between(birthday,today).getYears();
-                if (Regex.checkBirthDay(date)&&age>=18){
+                int age = Period.between(birthday, today).getYears();
+                if (Regex.checkBirthDay(date) && age >= 18) {
                     break;
-                }else {
+                } else {
                     System.out.println("Nhân viên chưa đủ tuổi");
                 }
-            }catch (NumberFormatException numberFormatException){
+            } catch (NumberFormatException numberFormatException) {
                 System.out.println("Nhập so");
-            }catch (StringIndexOutOfBoundsException stringIndexOutOfBoundsException){
+            } catch (StringIndexOutOfBoundsException stringIndexOutOfBoundsException) {
                 System.out.println("Nhập theo định dạng dd-mm-yy");
-            }catch (Exception e){
+            } catch (Exception e) {
                 System.out.println("lỗi");
             }
 
-        }while (true);
+        } while (true);
 
         String gender = null;
-        int check = 0;
-        do {
+        String check = null;
+        NL:
+        while (true) {
             System.out.println("nhập giới tính");
             System.out.println("1. Nam");
             System.out.println("2. Nữ");
             System.out.println("3. Giới Tính Khác");
             try {
                 System.out.println("Chọn Giới Tính");
-                check = Integer.parseInt(scanner.nextLine());
-                break;
+                check = scanner.nextLine();
             } catch (NumberFormatException numberFormatException) {
                 System.out.println("Mời Nhập số");
             } catch (Exception e) {
                 System.out.println("Lỗi");
             }
             switch (check) {
-                case 1:
+                case "1":
                     gender = "Nam";
-                    break;
-                case 2:
+                    break NL;
+                case "2":
                     gender = "Nữ";
-                    break;
-                case 3:
+                    break NL;
+                case "3":
                     gender = "Giới Tính Khác";
-                    break;
+                    break NL;
                 default:
                     System.out.println("Hãy nhập số từ 1 đến 3");
-                    break;
             }
-        } while (true);
+        }
 
 
         String identityCard;
@@ -110,8 +109,9 @@ public class EmployeeService implements IEmployeeService {
             System.out.println("Nhập email mới");
             email = scanner.nextLine();
         } while (!Regex.checkEmail(email));
-        String level = null;
-        int choiceLV = 0;
+        String level = "";
+        String choiceLV = null;
+        NLE:
         do {
             System.out.println("Chọn Trình Độ");
             System.out.println("1. Trung Cấp");
@@ -120,34 +120,33 @@ public class EmployeeService implements IEmployeeService {
             System.out.println("4. Sau Đại Học");
             try {
                 System.out.println("Nhập chọn trình độ");
-                choiceLV = Integer.parseInt(scanner.nextLine());
-                break;
+                choiceLV = scanner.nextLine();
             } catch (NumberFormatException numberFormatException) {
                 System.out.println("mời nhập số");
             } catch (Exception e) {
                 System.out.println("Lỗi");
             }
             switch (choiceLV) {
-                case 1:
+                case "1":
                     level = "Trung Cấp";
-                    break;
-                case 2:
+                    break NLE;
+                case "2":
                     level = "Cao Đẳng";
-                    break;
-                case 3:
+                    break NLE;
+                case "3":
                     level = "Đại Học";
-                    break;
-                case 4:
+                    break NLE;
+                case "4":
                     level = "Sau Đại Học";
-                    break;
+                    break NLE;
                 default:
                     System.out.println("Chọn từ 1 đến 4");
-                    break;
             }
         } while (true);
 
-        String position = null;
-        int chose = 0;
+        String position = "";
+        String chose = null;
+        NLB:
         do {
             System.out.println("Chọn chức vụ");
             System.out.println("1. Lễ Tân");
@@ -158,34 +157,33 @@ public class EmployeeService implements IEmployeeService {
             System.out.println("6. Giám Đốc");
             try {
                 System.out.println("Nhập để chọn chức vụ");
-                chose = Integer.parseInt(scanner.nextLine());
-                break;
+                chose = scanner.nextLine();
             } catch (NumberFormatException numberFormatException) {
                 System.out.println("Mời nhập số");
             } catch (Exception e) {
                 System.out.println("Lỗi");
             }
             switch (chose) {
-                case 1:
+                case "1":
                     position = "Lễ Tân";
-                    break;
-                case 2:
+                    break NLB;
+                case "2":
                     position = "Phục Vụ";
-                    break;
-                case 3:
+                    break NLB;
+                case "3":
                     position = "Chuyên Viên";
-                    break;
-                case 4:
+                    break NLB;
+                case "4":
                     position = "Giám Sát";
-                    break;
-                case 5:
+                    break NLB;
+                case "5":
                     position = "Quản Lý";
-                    break;
-                case 6:
+                    break NLB;
+                case "6":
                     position = "Giám Đốc";
+                    break NLB;
                 default:
                     System.out.println("Hãy Nhập Từ 1 đến 6");
-                    break;
             }
         } while (true);
         float salary;
@@ -208,8 +206,232 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void editEmployee() {
+        System.out.println("nhập id muốn sửa");
+        String code = scanner.nextLine();
+        Employee employeeList = employeeRepository.getByCodeEmployee(code);
+        if (employeeList == null) {
+            System.out.println("Mã không tô tại");
+        } else {
+            System.out.println("Nhập mục muốn sửa");
+            System.out.println("1. Sửa Tên");
+            System.out.println("2. Sửa Ngày");
+            System.out.println("3. Sửa giới tính");
+            System.out.println("4. Sửa CMND");
+            System.out.println("5. Sửa số điện thoại");
+            System.out.println("6. Sửa email");
+            System.out.println("7. Sửa Trình Độ");
+            System.out.println("8. Sửa Chức Vụ");
+            System.out.println("9. Sửa Lương");
+            String choice;
+            while (true){
+                try {
+                    System.out.println("Nhập Mục cần sửa: ");
+                    choice = scanner.nextLine();
+                    break;
+                }catch (NumberFormatException numberFormatException){
+                    System.out.println("Mời Nhập Số");
+                }catch (Exception e){
+                    System.out.println("Lỗi");
+                }
+            }
+            switch (choice) {
+                case "1":
+                    String name;
+                    do {
+                        System.out.println("Nhập tên nhân viên mới");
+                        name = scanner.nextLine();
+                    } while (!Regex.checkName(name));
+                    employeeList.setName(name);
+                    break;
+                case "2":
+                    String date = "";
+                    do {
+                        try {
+                            System.out.println("nhập ngày tháng năm sinh mới");
+                            date = scanner.nextLine();
+                            int day = Integer.parseInt("" + date.charAt(0) + date.charAt(1));
+                            int month = Integer.parseInt("" + date.charAt(3) + date.charAt(4));
+                            int year = Integer.parseInt("" + date.charAt(6) + date.charAt(7) + date.charAt(8) + date.charAt(9));
+                            LocalDate birthday = LocalDate.of(year, month, day);
+                            LocalDate today = LocalDate.now();
+                            int age = Period.between(birthday, today).getYears();
+                            if (Regex.checkBirthDay(date) && age >= 18) {
+                                break;
+                            } else {
+                                System.out.println("Nhân viên chưa đủ tuổi");
+                            }
+                        } catch (NumberFormatException numberFormatException) {
+                            System.out.println("Nhập so");
+                        } catch (StringIndexOutOfBoundsException stringIndexOutOfBoundsException) {
+                            System.out.println("Nhập theo định dạng dd-mm-yy");
+                        } catch (Exception e) {
+                            System.out.println("lỗi");
+                        }
 
+                    } while (true);
+                    employeeList.setDate(date);
+                    break;
+                case "3":
+                    String gender = null;
+                    String check = null;
+
+                    NL:
+                    while (true) {
+                        System.out.println("nhập giới tính");
+                        System.out.println("1. Nam");
+                        System.out.println("2. Nữ");
+                        System.out.println("3. Giới Tính Khác");
+                        try {
+                            System.out.println("Chọn Giới Tính");
+                            check = scanner.nextLine();
+                        } catch (NumberFormatException numberFormatException) {
+                            System.out.println("Mời Nhập số");
+                        } catch (Exception e) {
+                            System.out.println("Lỗi");
+                        }
+                        switch (check) {
+                            case "1":
+                                gender = "Nam";
+                                break NL;
+                            case "2":
+                                gender = "Nữ";
+                                break NL;
+                            case "3":
+                                gender = "Giới Tính Khác";
+                                break NL;
+                            default:
+                                System.out.println("Hãy nhập số từ 1 đến 3");
+                                break NL;
+                        }
+                    }
+                    employeeList.setGender(gender);
+                    break;
+                case "4":
+                    String identityCard;
+                    do {
+                        System.out.println("Nhập chứng minh nhân dân mới");
+                        identityCard = scanner.nextLine();
+                    } while (!Regex.checkIdentityCard(identityCard));
+                    employeeList.setIdentityCard(identityCard);
+                    break;
+                case "5":
+                    String numberPhone;
+                    do {
+                        System.out.println("Nhap số điện thoại mới");
+                        numberPhone = scanner.nextLine();
+                    } while (!Regex.checkNumPhone(numberPhone));
+                    employeeList.setNumberPhone(numberPhone);
+                    break;
+                case "6":
+                    String level = "";
+                    String choiceLV = null;
+                    NLE:
+                    do {
+                        System.out.println("Chọn Trình Độ");
+                        System.out.println("1. Trung Cấp");
+                        System.out.println("2. Cao Đẳng");
+                        System.out.println("3. Đại Học");
+                        System.out.println("4. Sau Đại Học");
+                        try {
+                            System.out.println("Nhập chọn trình độ");
+                            choiceLV = scanner.nextLine();
+                        } catch (NumberFormatException numberFormatException) {
+                            System.out.println("mời nhập số");
+                        } catch (Exception e) {
+                            System.out.println("Lỗi");
+                        }
+                        switch (choiceLV) {
+                            case "1":
+                                level = "Trung Cấp";
+                                break NLE;
+                            case "2":
+                                level = "Cao Đẳng";
+                                break NLE;
+                            case "3":
+                                level = "Đại Học";
+                                break NLE;
+                            case "4":
+                                level = "Sau Đại Học";
+                                break NLE;
+                            default:
+                                System.out.println("Chọn từ 1 đến 4");
+                                break NLE;
+                        }
+                    } while (true);
+                    employeeList.setLevel(level);
+                    break;
+                case "7":
+                    String position = "";
+                    String chose = null;
+                    NLB:
+                    do {
+                        System.out.println("Chọn chức vụ");
+                        System.out.println("1. Lễ Tân");
+                        System.out.println("2. Phục Vụ");
+                        System.out.println("3. Chuyên Viên");
+                        System.out.println("4. Giám Sát");
+                        System.out.println("5. Quản Lý");
+                        System.out.println("6. Giám Đốc");
+                        try {
+                            System.out.println("Nhập để chọn chức vụ");
+                            chose = scanner.nextLine();
+                        } catch (NumberFormatException numberFormatException) {
+                            System.out.println("Mời nhập số");
+                        } catch (Exception e) {
+                            System.out.println("Lỗi");
+                        }
+                        switch (chose) {
+                            case "1":
+                                position = "Lễ Tân";
+                                break NLB;
+                            case "2":
+                                position = "Phục Vụ";
+                                break NLB;
+                            case "3":
+                                position = "Chuyên Viên";
+                                break NLB;
+                            case "4":
+                                position = "Giám Sát";
+                                break NLB;
+                            case "5":
+                                position = "Quản Lý";
+                                break NLB;
+                            case "6":
+                                position = "Giám Đốc";
+                                break NLB;
+                            default:
+                                System.out.println("Hãy Nhập Từ 1 đến 6");
+                                break NLB;
+                        }
+                    } while (true);
+                    employeeList.setPosition(position);
+                    break;
+                case "8":
+                    float salary;
+                    while (true) {
+                        try {
+                            System.out.println("Nhập mức lương");
+                            salary = Float.parseFloat(scanner.nextLine());
+                            if (salary > 0) {
+                                break;
+                            }
+                        } catch (NumberFormatException numberFormatException) {
+                            System.out.println("nhập số");
+                        } catch (Exception e) {
+                            System.out.println("Lỗi");
+                        }
+                    }
+                    employeeList.setSalary(salary);
+                    break;
+                default:
+                    System.out.println("Nhập từ 1 đến 8");
+                    break;
+            }
+            System.out.println("Chỉnh sưả thành công");
+        }
+        employeeRepository.editEmployee();
     }
+
 
     @Override
     public void deleteEmployee() {
@@ -229,9 +451,9 @@ public class EmployeeService implements IEmployeeService {
                 System.out.println("Nhập sự lua chon");
                 choice = Integer.parseInt(scanner.nextLine());
                 break;
-            }catch (NumberFormatException numberFormatException){
+            } catch (NumberFormatException numberFormatException) {
                 System.out.println("Nhập số");
-            }catch (Exception e){
+            } catch (Exception e) {
                 System.out.println("Lỗi");
             }
         } while (true);
@@ -243,6 +465,8 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void searchEmployee() {
-
+        System.out.println("Nhập tên nhân viên bạn muốn tìm kiếm");
+        String name = scanner.nextLine();
+        employeeRepository.searchEmployee(name);
     }
 }

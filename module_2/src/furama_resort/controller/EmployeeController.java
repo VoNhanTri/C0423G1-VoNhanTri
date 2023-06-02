@@ -46,8 +46,7 @@ public class EmployeeController {
                     employeeService.searchEmployee();
                     break;
                 case 6:
-                    FuramaController.displayMainMenu();
-                    break;
+                  return;
                 default:
                     System.out.println("nhập lại");
                     break;

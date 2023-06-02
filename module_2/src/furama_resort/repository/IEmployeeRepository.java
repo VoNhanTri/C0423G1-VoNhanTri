@@ -7,8 +7,10 @@ import java.util.List;
 public interface IEmployeeRepository {
     List<Employee> getAllEmployee();
     void addEmployee(Employee employee);
+     void upEditEmployee();
 
-    void editEmployee(Employee employee, int index);
+    void editEmployee();
+
     void removeEmployee(Employee employee);
     void searchEmployee(String name);
 

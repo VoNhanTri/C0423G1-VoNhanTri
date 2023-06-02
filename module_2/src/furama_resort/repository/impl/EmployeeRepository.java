@@ -31,16 +31,17 @@ public class EmployeeRepository implements IEmployeeRepository {
         ReadAndWrite.writeFile(PATH_EMPLOYEE, strings, true);
     }
 
-    @Override
-    public void editEmployee(Employee employee, int index) {
-        List<String> list = ReadAndWrite.readFile(PATH_EMPLOYEE);
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).equals(employee.getCode())) {
-                employeeList.set(i, employee);
-                ReadAndWrite.writeFile(PATH_EMPLOYEE,list,false);
-            }
-        }
+    public void upEditEmployee() {
+        employeeList = getAllEmployee();
+    }
 
+    @Override
+    public void editEmployee() {
+        List<String> list = new ArrayList<>();
+        for (Employee temp : employeeList) {
+            list.add(temp.getCode() + "," + temp.getName() + "," + temp.getDate() + "," + temp.getGender() + "," + temp.getIdentityCard() + "," + temp.getNumberPhone() + "," + temp.getEmail() + "," + temp.getLevel() + "," + temp.getPosition() + "," + temp.getSalary());
+        }
+        ReadAndWrite.writeFile(PATH_EMPLOYEE, list, false);
     }
 
     @Override
@@ -48,15 +49,20 @@ public class EmployeeRepository implements IEmployeeRepository {
         employeeList = getAllEmployee();
         employeeList.remove(employee);
         List<String> strings = new ArrayList<>();
-        for (Employee temp: employeeList) {
-            strings.add(temp.getCode()+","+temp.getName()+","+temp.getDate()+","+temp.getGender()+","+temp.getIdentityCard()+","+temp.getNumberPhone()+","+temp.getEmail()+","+temp.getLevel()+","+temp.getPosition()+","+temp.getSalary());
+        for (Employee temp : employeeList) {
+            strings.add(temp.getCode() + "," + temp.getName() + "," + temp.getDate() + "," + temp.getGender() + "," + temp.getIdentityCard() + "," + temp.getNumberPhone() + "," + temp.getEmail() + "," + temp.getLevel() + "," + temp.getPosition() + "," + temp.getSalary());
         }
-        ReadAndWrite.writeFile(PATH_EMPLOYEE,strings,false);
+        ReadAndWrite.writeFile(PATH_EMPLOYEE, strings, false);
     }
 
     @Override
     public void searchEmployee(String name) {
-
+        employeeList = getAllEmployee();
+        for (Employee find: employeeList) {
+            if (find.getName().contains(name)){
+                System.out.println(find);
+            }
+        }
     }
 
     @Override

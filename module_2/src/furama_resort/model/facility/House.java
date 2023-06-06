@@ -6,12 +6,8 @@ public class House extends Facility {
     private String roomStandard;
     private int floorNum;
 
-    public House(String roomStandard, int floorNum) {
-        this.roomStandard = roomStandard;
-        this.floorNum = floorNum;
-    }
 
-    public House(String code, String name, String area, float expense, int quantity, String rentalType, String roomStandard, int floorNum) {
+    public House(String code, String name, float area, long expense, int quantity, String rentalType, String roomStandard, int floorNum) {
         super(code, name, area, expense, quantity, rentalType);
         this.roomStandard = roomStandard;
         this.floorNum = floorNum;

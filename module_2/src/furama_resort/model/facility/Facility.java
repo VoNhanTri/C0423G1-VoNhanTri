@@ -5,15 +5,15 @@ import java.util.Objects;
 public abstract class Facility {
     private String code;
     private String name;
-    private String area;
-    private float expense;
+    private float area;
+    private long expense;
     private int quantity;
     private String rentalType;
 
     public Facility() {
     }
 
-    public Facility(String code, String name, String area, float expense, int quantity, String rentalType) {
+    public Facility(String code, String name, float area, long expense, int quantity, String rentalType) {
         this.code = code;
         this.name = name;
         this.area = area;
@@ -38,19 +38,19 @@ public abstract class Facility {
         this.name = name;
     }
 
-    public String getArea() {
+    public float getArea() {
         return area;
     }
 
-    public void setArea(String area) {
+    public void setArea(float area) {
         this.area = area;
     }
 
-    public float getExpense() {
+    public long getExpense() {
         return expense;
     }
 
-    public void setExpense(float expense) {
+    public void setExpense(long expense) {
         this.expense = expense;
     }
 

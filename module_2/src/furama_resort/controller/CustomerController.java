@@ -1,9 +1,13 @@
 package furama_resort.controller;
 
+import furama_resort.service.ICustomerService;
+import furama_resort.service.impl.CustomerService;
+
 import java.util.Scanner;
 
 public class CustomerController {
     private static final Scanner scanner = new Scanner(System.in);
+    private  static final ICustomerService customerService = new CustomerService();
 
     public static void customerManagement() {
         do {
@@ -11,7 +15,9 @@ public class CustomerController {
             System.out.println("1. Display list customers");
             System.out.println("2. Add new customer");
             System.out.println("3. Edit customer");
-            System.out.println("4. Return main menu");
+            System.out.println("4. Delete customer");
+            System.out.println("5. Search customer");
+            System.out.println("6. Return main menu");
 
             int choice = 0;
             while (true) {
@@ -26,15 +32,21 @@ public class CustomerController {
             }
             switch (choice){
                 case 1:
-                    System.out.println("display");
+                    customerService.disPlayAllCustomer();
                     break;
                 case 2:
-                    System.out.println("add");
+                    customerService.addCustomer();
                     break;
                 case 3:
-                    System.out.println("edit");
+                    customerService.editCustomer();
                     break;
                 case 4:
+                    customerService.deleteCustomer();
+                    break;
+                case 5:
+                    customerService.findCustomer();
+                    break;
+                case 6:
                     return;
                 default:
                     System.out.println("mời nập lại");

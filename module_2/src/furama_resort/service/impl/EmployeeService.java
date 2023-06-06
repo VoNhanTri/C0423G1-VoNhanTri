@@ -228,8 +228,6 @@ public class EmployeeService implements IEmployeeService {
                     System.out.println("Nhập Mục cần sửa: ");
                     choice = scanner.nextLine();
                     break;
-                }catch (NumberFormatException numberFormatException){
-                    System.out.println("Mời Nhập Số");
                 }catch (Exception e){
                     System.out.println("Lỗi");
                 }
@@ -323,6 +321,14 @@ public class EmployeeService implements IEmployeeService {
                     employeeList.setNumberPhone(numberPhone);
                     break;
                 case "6":
+                    String email="";
+                    do {
+                        System.out.println("Sửa Email Nhan Viên");
+                        email = scanner.nextLine();
+                    }while (!Regex.checkEmail(email));
+                    employeeList.setEmail(email);
+                    break;
+                case "7":
                     String level = "";
                     String choiceLV = null;
                     NLE:
@@ -360,7 +366,7 @@ public class EmployeeService implements IEmployeeService {
                     } while (true);
                     employeeList.setLevel(level);
                     break;
-                case "7":
+                case "8":
                     String position = "";
                     String chose = null;
                     NLB:
@@ -406,7 +412,7 @@ public class EmployeeService implements IEmployeeService {
                     } while (true);
                     employeeList.setPosition(position);
                     break;
-                case "8":
+                case "9":
                     float salary;
                     while (true) {
                         try {

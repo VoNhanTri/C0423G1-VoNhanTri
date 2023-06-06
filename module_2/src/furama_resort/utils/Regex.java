@@ -22,4 +22,13 @@ public class Regex {
     public static boolean checkCodeCustomer(String code){
         return code.matches("^KH-\\d{4}$");
     }
+    public static boolean checkCodeHouse(String code){
+        return code.matches("^SVHO-\\d{4}$");
+    }
+    public static boolean checkCodeVilla(String code){
+        return code.matches("^SVVL-\\d{4}$");
+    }
+    public static boolean checkCodeRoom(String code){
+        return code.matches("^SVRO-\\d{4}$");
+    }
 }

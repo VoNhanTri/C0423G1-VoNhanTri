@@ -19,7 +19,6 @@ public class StudentService implements IStudentService {
         for (Student student : students) {
             System.out.println(student);
         }
-
     }
 
     @Override

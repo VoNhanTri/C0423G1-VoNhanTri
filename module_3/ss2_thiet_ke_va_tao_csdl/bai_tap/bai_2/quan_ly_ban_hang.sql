@@ -1,28 +1,31 @@
 create database quan_ly_ban_hang;
 drop table `order`;
-create table customer(
-c_id varchar(20) primary key,
-customer_name varchar(45),
-customer_age int
+CREATE TABLE customer (
+    c_id VARCHAR(20) PRIMARY KEY,
+    customer_name VARCHAR(45),
+    customer_age INT
 );
-create table `order`(
-o_id varchar(20) primary key,
-customer_id varchar(20),
-order_date date,
-order_total_price int,
-foreign key (customer_id) references customer(c_id)
+CREATE TABLE `order` (
+    o_id VARCHAR(20) PRIMARY KEY,
+    customer_id VARCHAR(20),
+    order_date DATE,
+    order_total_price INT,
+    FOREIGN KEY (customer_id)
+        REFERENCES customer (c_id)
 );
-create table product(
-p_id varchar(45) primary key,
-p_name varchar(45),
-p_price int
+CREATE TABLE product (
+    p_id VARCHAR(45) PRIMARY KEY,
+    p_name VARCHAR(45),
+    p_price INT
 );
-create table order_detail(
-order_id varchar(20),
-product_id varchar(45),
-od_QTY date,
-foreign key (order_id) references `order`(o_id),
-foreign key (product_id) references product(p_id)
+CREATE TABLE order_detail (
+    order_id VARCHAR(20),
+    product_id VARCHAR(45),
+    od_QTY DATE,
+    FOREIGN KEY (order_id)
+        REFERENCES `order` (o_id),
+    FOREIGN KEY (product_id)
+        REFERENCES product (p_id)
 );
 alter table order_detail
 add constraint pk_order primary key (order_id, product_id);

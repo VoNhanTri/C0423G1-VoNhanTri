@@ -94,7 +94,7 @@ CREATE TABLE accompanied_service (
     unit VARCHAR(10) NOT NULL,
     status VARCHAR(45)
 );
-drop table contract_detailed;
+
 CREATE TABLE contract_detailed (
     id_contract_detailed INT PRIMARY KEY,
     quantity INT,

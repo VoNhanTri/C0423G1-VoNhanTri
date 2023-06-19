@@ -143,14 +143,20 @@ join service ser on con.id_service = ser.id_service
 join contract_detailed cd on con.id_contract = cd.id_contract
 join accompanied_service aser on  cd.id_accompanied_service =  aser.id_accompanied_service
 group by con.id_contract,ser.name_service,aser.name_accomanied_service, aser.id_accompanied_service
+having count(*)= 1;
 
-having count(distinct cd.id_accompanied_service)= 1
-
+-- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do, ten_bo_phan, 
+-- so_dien_thoai, dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.
+select st.id_staff, st.name_staff, lv.name_level, p.name_part, st.number_phone_staff, st.dress_staff, count(*) as count
+from staff st
+join job_position jp on st.id_position = jp.id_position
+join level lv on st.id_level = lv.id_level
+join part p on st.id_part = p.id_part
+join contract con on st.id_staff =  con.id_staff
+where year(con.date_contract) between 2020 and 2021
+group by st.id_staff, st.name_staff, lv.name_level, p.name_part, st.number_phone_staff, st.dress_staff
+ having count(*) <3
 ;
-
-
-
-
 
 
 

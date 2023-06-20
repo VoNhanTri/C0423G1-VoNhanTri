@@ -207,3 +207,31 @@ delete c
 from customer c
 join contract con on c.id_customer = con.id_customer
 where year(date_contract) <2021;
+
+-- 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
+SET SQL_SAFE_UPDATES = 0;
+update accompanied_service acs
+join contract_detailed cd on acs.id_accompanied_service = cd.id_accompanied_service
+join contract con on cd.id_contract = con.id_contract
+set acs.price = acs.price *2
+where cd.quantity > 10 and year(date_contract)  = 2020;
+SET SQL_SAFE_UPDATES = 1;
+
+
+-- 20.	Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống,
+--  thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, 
+-- ngay_sinh, dia_chi.
+
+select id_staff , name_staff, email_staff, number_phone_staff, date, dress_staff
+from staff
+union
+select id_customer , name_customer, email_customer, number_phone_customer, date_customer, dress_customer
+from customer
+;
+
+
+
+
+
+
+

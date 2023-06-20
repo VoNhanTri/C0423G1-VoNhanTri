@@ -170,6 +170,40 @@ group by st.id_staff, st.name_staff, lv.name_level, p.name_part, st.number_phone
  having count(*) <3
 ;
 
+-- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+set sql_safe_updates = 0;
+delete from staff
+where id_staff not in (
+select distinct id_staff
+from contract
+where year(date_contract) between 2019 and 2021
+);
+set sql_safe_updates = 1;
+select*
+from staff;
 
+-- 17.	Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond, 
+-- chỉ cập nhật những khách hàng đã từng đặt phòng với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ.
 
+create view update_customer as
+select c.id_customer, c.name_customer, sum(aser.price* cd.quantity + s.expense_service) as total
+from customer c
+join customer_type ct on c.id_type_customer = ct.id_type_customer
+join contract con on c.id_customer = con.id_customer
+join contract_detailed cd on con.id_contract = cd.id_contract
+join accompanied_service aser on cd.id_accompanied_service = aser.id_accompanied_service
+join service s on con.id_service = s.id_service
+where year(date_contract) = 2021
+group by  con.id_customer, c.name_customer
+;
+update customer c
+join customer_type ct on c.id_type_customer = ct.id_type_customer
+join update_customer uc on c.id_customer = uc.id_customer
+set c.id_type_customer = 1
+where c.id_type_customer = 2 and uc.total > 10000000 ;
 
+-- 18.	Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
+delete c
+from customer c
+join contract con on c.id_customer = con.id_customer
+where year(date_contract) <2021;

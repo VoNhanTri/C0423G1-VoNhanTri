@@ -35,14 +35,19 @@ select c.id_customer, c.name_customer, ct.name_type_customer,
   s.name_service,
   con.date_contract,
   con.date_end,
-	s.expense_service + cd.quantity * aser.price
-as tong_tien
+sum( (cd.quantity * aser.price)+ s.expense_service)
+as total
 from customer c
 left join customer_type ct on c.id_type_customer = ct.id_type_customer
 left join contract con on  c.id_customer = con.id_customer
 left join service s on con.id_service = s.id_service
 left join contract_detailed cd on con.id_contract = cd.id_contract
-left join accompanied_service aser on cd.id_accompanied_service = aser.id_accompanied_service;
+left join accompanied_service aser on cd.id_accompanied_service = aser.id_accompanied_service
+group by c.id_customer, c.name_customer, ct.name_type_customer,
+  con.id_contract,
+  s.name_service,
+  con.date_contract,
+  con.date_end;
 
 
  -- 6.	Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, ten_loai_dich_vu 
@@ -130,20 +135,27 @@ group by con.id_contract, s.name_staff, c.name_customer, c.number_phone_customer
 select aser.id_accompanied_service, aser.name_accomanied_service, sum(cd.quantity) as count
 from accompanied_service aser
 join contract_detailed cd on aser.id_accompanied_service = cd.id_accompanied_service
-group by aser.name_accomanied_service, aser.id_accompanied_service
+group by  aser.id_accompanied_service
 order by count desc
 limit 2;
 
 -- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
 --  Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem).
 
-select con.id_contract,ser.name_service,aser.name_accomanied_service, count(*)as count
+select con.id_contract,ts.name_type_service,aser.name_accomanied_service, count(aser.id_accompanied_service)as count
 from contract con
 join service ser on con.id_service = ser.id_service
+join type_service ts on ser.id_type_service = ts.id_type_service
 join contract_detailed cd on con.id_contract = cd.id_contract
 join accompanied_service aser on  cd.id_accompanied_service =  aser.id_accompanied_service
-group by con.id_contract,ser.name_service,aser.name_accomanied_service, aser.id_accompanied_service
-having count(*)= 1;
+-- where cd.id_accompanied_service in(select aser.name_accomanied_service, count(*) as count
+-- from accompanied_service aser 
+-- join contract_detailed cd on aser.id_accompanied_service = cd.id_accompanied_service
+-- group by aser.name_accomanied_service
+-- having count(*) =1
+--  )
+group by con.id_contract,ts.name_type_service,aser.name_accomanied_service, aser.id_accompanied_service
+having count(aser.id_accompanied_service)=1;
 
 -- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do, ten_bo_phan, 
 -- so_dien_thoai, dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.

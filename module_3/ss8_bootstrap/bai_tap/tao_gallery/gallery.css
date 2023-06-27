@@ -1,0 +1,10 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+body{
+    background-image: url("https://img.thuthuatphanmem.vn/uploads/2018/10/26/anh-dong-dep-doc-dao_054957296.gif");
+}

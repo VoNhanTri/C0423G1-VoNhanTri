@@ -6,24 +6,24 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1>Calculator</h1>>
-<form method="get" action="/caculator.jsp" >
+<h1>Calculator</h1>
+<form method="get" action="/CalculatorServlet" >
     <fieldset>
     <label>First Operand</label>
     <input type="number" name="firstNum">
     <br/>
     <label>Operator</label>
     <select name="choose">
-        <option value="total">+</option>
-        <option value="sub">-</option>
-        <option value="core">*</option>
-        <option value="div">+</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
     </select>
         <br/>
     <label>Second Operand</label>
     <input type="number" name="secondNum">
     <br/>
-    <button name="submit">Calculator</button>
+    <button name="result1">Calculator</button>
     </fieldset>
 </form>
 </body>

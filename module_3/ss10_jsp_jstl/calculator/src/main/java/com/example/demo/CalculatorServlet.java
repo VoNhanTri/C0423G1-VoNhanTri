@@ -5,8 +5,8 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "CaculatorServlet", value = "/CaculatorServlet")
-public class CaculatorServlet extends HttpServlet {
+@WebServlet(name = "CalculatorServlet", value = "/CalculatorServlet")
+public class CalculatorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         double firstNum = Double.parseDouble(request.getParameter("firstNum"));
@@ -14,23 +14,24 @@ public class CaculatorServlet extends HttpServlet {
         String choose = request.getParameter("choose");
         double result = 0;
         switch (choose){
-            case "total":
+            case "+":
                 result = firstNum+secondNum;
                 break;
-            case "sub":
+            case "-":
                 result = firstNum-secondNum;
                 break;
-            case "core":
+            case "*":
                 result= firstNum*secondNum;
                 break;
-            case "div":
+            case "/":
                 result = firstNum/secondNum;
                 break;
             default:
                 System.out.println("nhap lai");
+                break;
         }
         request.setAttribute("result1", result);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/caculator.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Calculator.jsp");
         requestDispatcher.forward(request,response);
     }
 

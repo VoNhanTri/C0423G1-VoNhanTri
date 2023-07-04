@@ -17,8 +17,6 @@
     <c:out value="${mess}"/>
 </c:if>
 <form action="/ProductServlet?action=create" method="post">
-    <label for="id">ID: </label>
-    <input type="number" name="id" id="id">
     <label for="name">Name: </label>
     <input type="text" name="name" id="name">
     <label for="price">Price</label>

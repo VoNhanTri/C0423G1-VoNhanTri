@@ -13,6 +13,7 @@
 </head>
 <body>
 <a href="/ProductServlet?action=create">Them Moi</a>
+<a href="/ProductServlet?action=find">Tiềm kiếm</a>
 <c:if test="${mess != null}">
     <c:out value="${mess}"/>
 </c:if>
@@ -33,6 +34,7 @@
             <td><c:out value="${product.status}"/></td>
             <td><c:out value="${product.producer}"/></td>
             <td><a href="/ProductServlet?action=delete&id=${product.getId()}">Xoa</a> </td>
+            <td><a href="/ProductServlet?action=edit&id=${product.getId()}">Edit</a> </td>
         </tr>
     </c:forEach>
 </table>

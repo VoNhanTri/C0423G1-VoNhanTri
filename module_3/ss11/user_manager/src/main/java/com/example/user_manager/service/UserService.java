@@ -20,7 +20,7 @@ public class UserService implements IUsersService {
     }
 
     @Override
-    public List<Users> findById(int id) {
+    public Users findById(int id) {
         return userRepository.selectUser(id);
     }
 
@@ -31,8 +31,8 @@ public class UserService implements IUsersService {
     }
 
     @Override
-    public void edit(Users users) {
-userRepository.updateUsers(users);
+    public void edit(int id,Users users) {
+userRepository.updateUsers(id,users);
     }
 
     @Override

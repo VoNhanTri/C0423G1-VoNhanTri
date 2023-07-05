@@ -13,7 +13,7 @@
 </head>
 <body>
 <a href="/UsersServlet?action=create">Them moi</a>
-<a href="/UsersServlet?action=country">Timkiem theo country</a>
+<a href="/UsersServlet?action=findCountry">Timkiem theo country</a>
 <table>
   <tr>
     <td>ID</td>
@@ -27,6 +27,8 @@
       <td><c:out value="${user.name}"/></td>
       <td><c:out value="${user.email}"/></td>
       <td><c:out value="${user.country}"/></td>
+      <td><a href="/UsersServlet?action=delete&id=${user.id}">Xoa</a></td>
+      <td><a href="/UsersServlet?action=edit&id=${user.id}">Sua</a></td>
     </tr>
   </c:forEach>
 </table>

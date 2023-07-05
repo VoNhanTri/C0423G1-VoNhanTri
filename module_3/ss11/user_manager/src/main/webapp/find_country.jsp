@@ -12,17 +12,28 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/UsersServlet?action=findCountry">Tiem kiem bang country</a>
+<a href="/UsersServlet">Tro ve danh sach</a>
 <c:if test="${mess!=null}">
   <c:out value="${mess}"/>
 </c:if>
-<table>
-  <tr>
-    <td><c:out value="${users.id}"/></td>
-    <td><c:out value="${users.name}"/></td>
-    <td><c:out value="${users.email}"/></td>
-    <td><c:out value="${users.country}"/></td>
-  </tr>
-</table>
+<form action="/UsersServlet?action=findCountry" method="post">
+<label for="country">Nhap quoc gia muon tim</label>
+  <input type="text" name="country" id="country">
+  <input type="submit" value="tim kiem">
+  <table>
+    <tr>
+      <td>Ten</td>
+      <td>Email</td>
+      <td>country</td>
+    </tr>
+    <c:forEach var="c" items="${usersList}">
+      <tr>
+      <td><c:out value="${c.name}"/> </td>
+      <td><c:out value="${c.email}"/> </td>
+      <td><c:out value="${c.country}"/> </td>
+      </tr>
+    </c:forEach>
+  </table>
+</form>
 </body>
 </html>

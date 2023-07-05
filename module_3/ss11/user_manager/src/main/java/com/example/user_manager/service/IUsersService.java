@@ -7,8 +7,8 @@ import java.util.List;
 public interface IUsersService {
 List<Users> display();
 void add(Users users);
-List<Users> findById(int id);
+Users findById(int id);
 void delete(int id);
-void edit(Users users);
+void edit(int id,Users users);
 List<Users> findCountry(String country);
 }

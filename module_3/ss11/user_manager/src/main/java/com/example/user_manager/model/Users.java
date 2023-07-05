@@ -1,6 +1,6 @@
 package com.example.user_manager.model;
 
-public class Users implements Comparable<Users>{
+public class Users implements Comparable<Users> {
     private int id;
     private String name;
     private String email;
@@ -11,6 +11,12 @@ public class Users implements Comparable<Users>{
 
     public Users(int id, String name, String email, String country) {
         this.id = id;
+        this.name = name;
+        this.email = email;
+        this.country = country;
+    }
+
+    public Users(String name, String email, String country) {
         this.name = name;
         this.email = email;
         this.country = country;

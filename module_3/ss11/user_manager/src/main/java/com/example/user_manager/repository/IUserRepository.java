@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface IUserRepository {
    void insertUser(Users users);
-   List<Users> selectUser(int id);
+   Users selectUser(int id);
    List<Users> selectAllUsers();
-   boolean deleteUsers(int id);
-   boolean updateUsers(Users users);
+   void deleteUsers(int id);
+   void updateUsers(int id,Users users);
    List<Users> findCountry(String country);
 }

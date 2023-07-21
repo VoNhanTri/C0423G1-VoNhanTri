@@ -1,0 +1,29 @@
+
+#size {
+    width: 100px;
+    height: 30px;
+    border: 1px;
+    display: inline-block;
+    background: #5c769c;
+    color: white;
+    padding-top: 15px;
+}
+
+#inline {
+    display: inline;
+}
+
+button {
+    width: 150px;
+    height: 60px;
+    background: #1e2125;
+    color: white;
+    border-radius: 10px/5px;
+    transition: all.20s ease;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+span{
+    font-weight: bold;
+    color: #0dcaf0;
+}

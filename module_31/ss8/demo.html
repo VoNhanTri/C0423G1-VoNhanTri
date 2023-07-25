@@ -2,9 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
+  <style>
+    .title {
+      color: blue;
+    }
+    * {
+      /*content-box: width là content
+      border-box: width = content + padding + border
+      */
+      box-sizing: border-box;
+    }
+
+    .row {
+      display: block;
+    }
+
+    .col-1 {
+      width: 8.33%
+    }
+
+    .col-2 {
+      width: 16.66%
+    }
+
+    .col-3 {
+      width: 25%
+    }
+
+    .col-4 {
+      width: 33.3%
+    }
+
+    .col-5 {
+      width: 41.66%
+    }
+
+    .col-6 {
+      width: 50%
+    }
+
+    .col-7 {
+      width: 58.33%
+    }
+
+    .col-8 {
+      width: 66.66%;
+    }
+
+    .col-9 {
+      width: 75%;
+    }
+
+    .col-10 {
+      width: 83.33%;
+    }
+
+    .col-11 {
+      width: 91.66%;
+    }
+
+    .col-12 {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 500px) {
+      .title {
+        color: red;
+      }
+
+      .col-sm-1 {
+        width: 8.33%
+      }
+
+      .col-sm-2 {
+        width: 16.66%
+      }
+
+      .col-sm-3 {
+        width: 25%
+      }
+
+      .col-sm-4 {
+        width: 33.3%
+      }
+
+      .col-sm-5 {
+        width: 41.66%
+      }
+
+      .col-sm-6 {
+        width: 50%
+      }
+
+      .col-sm-7 {
+        width: 58.33%
+      }
+
+      .col-sm-8 {
+        width: 66.66%;
+      }
+
+      .col-sm-9 {
+        width: 75%;
+      }
+
+      .col-sm-10 {
+        width: 83.33%;
+      }
+
+      .col-sm-11 {
+        width: 91.66%;
+      }
+
+      .col-sm-12 {
+        width: 100%;
+      }
+    }
+
+    /*
+    *: áp dụng cho tất cả các class có từ khóa col-
+    ^: bắt đầu bằng col-
+    */
+    [class*=col-] {
+      float: left;
+      padding: 5px;
+    }
+  </style>
 </head>
 <body>
-$END$
+<div>
+  <div>
+    <span class="title">Phim hoạt hình</span>
+  </div>
+  <div>
+    Phim hoạt hình|Phim hoạt hình yêu thích||Nhân vật hoạt hình | Góp ý
+  </div>
+  <div class="row">
+    <div class="col-4 col-sm-6">
+      <div>
+        <video controls width="100%">
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+          Not view video
+        </video>
+        <h4>Title Video</h4>
+        <p>Chanel fun</p>
+      </div>
+
+      <div>
+        <video controls width="100%">
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+          Not view video
+        </video>
+        <h4>Title Video</h4>
+        <p>Chanel fun</p>
+      </div>
+      <div>
+        <video controls width="100%">
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+          Not view video
+        </video>
+        <h4>Title Video</h4>
+        <p>Chanel fun</p>
+      </div>
+    </div>
+    <div class="col-8 col-sm-6">
+      <video controls width="100%">
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Not view video
+      </video>
+      <h4>Title Video</h4>
+      <p>Chanel fun</p>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>

@@ -1,2 +1,4 @@
-package com.example.ban_hang.model.customer;public class Customer {
+package com.example.ban_hang.model.customer;
+
+public class Customer {
 }

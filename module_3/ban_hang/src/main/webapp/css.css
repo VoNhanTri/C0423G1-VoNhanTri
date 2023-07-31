@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+.footer ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.footer ul>li>a{
+    text-decoration: none;
+    color: white;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.menu{
+    background-color: #C7E9B0;
+    color: white;
+}
+.header{
+    background-color: #DDFFBB;
+}
+.footer{
+    background-color: #A4BC92;
+}
+.menu{
+    position: sticky;
+    top: 0px;
+    padding: 10px;
+    z-index: 3;
+}
+
+[class*=col-]{
+    float: left;
+    padding: 10px;
+}

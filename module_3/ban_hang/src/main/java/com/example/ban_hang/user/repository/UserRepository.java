@@ -1,14 +1,14 @@
-package com.example.ban_hang.repository.user;
+package com.example.ban_hang.user.repository;
 
-import com.example.ban_hang.model.user.User;
-import com.example.ban_hang.repository.Base;
+import com.example.ban_hang.user.model.User;
+import com.example.ban_hang.Base;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserRepository implements IUserRepository{
+public class UserRepository implements IUserRepository {
     private static final String ACCOUNT = " select*from accounts where account_username =? and account_password=? ; ";
     private static final String SIGNUP = " insert into accounts(account_username,account_password,account_email,role_id)values(?,?,?,3) ";
     private static final String CHECK = " select*from accounts where account_username=?; ";

@@ -1,6 +1,6 @@
-package com.example.ban_hang.repository.user;
+package com.example.ban_hang.user.repository;
 
-import com.example.ban_hang.model.user.User;
+import com.example.ban_hang.user.model.User;
 
 public interface IUserRepository {
     User account(String username, String password);

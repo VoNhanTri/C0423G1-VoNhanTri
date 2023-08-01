@@ -1,4 +1,4 @@
-package com.example.ban_hang.model.user;
+package com.example.ban_hang.user.model;
 
 import java.util.Date;
 

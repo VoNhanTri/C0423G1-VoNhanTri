@@ -1,13 +1,16 @@
-package com.example.ban_hang.model.product;
+package com.example.ban_hang.product.model;
 
 public class Product {
-    private int available;
+
+
     private int id;
     private String code;
     private String name;
+    private String image;
     private int price;
     private int inventory;
     private String description;
+    private int available;
     private int productType;
 
     public Product() {
@@ -39,6 +42,16 @@ public class Product {
         this.inventory = inventory;
         this.description = description;
         this.available =  available;
+        this.productType = productType;
+    }
+
+    public Product(String code, String name, String image, int price, int inventory, String description, int productType) {
+        this.code = code;
+        this.name = name;
+        this.image = image;
+        this.price = price;
+        this.inventory = inventory;
+        this.description = description;
         this.productType = productType;
     }
 
@@ -106,4 +119,11 @@ public class Product {
         this.productType = productType;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }

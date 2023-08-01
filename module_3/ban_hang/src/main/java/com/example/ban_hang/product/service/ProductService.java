@@ -1,12 +1,12 @@
-package com.example.ban_hang.service.product;
+package com.example.ban_hang.product.service;
 
-import com.example.ban_hang.model.product.Product;
-import com.example.ban_hang.repository.product.IProductRepository;
-import com.example.ban_hang.repository.product.ProductRepository;
+import com.example.ban_hang.product.model.Product;
+import com.example.ban_hang.product.repository.IProductRepository;
+import com.example.ban_hang.product.repository.ProductRepository;
 
 import java.util.List;
 
-public class ProductService implements IProductService{
+public class ProductService implements IProductService {
     private  static IProductRepository productRepository = new ProductRepository();
     @Override
     public void add(Product product) {
@@ -37,4 +37,8 @@ public class ProductService implements IProductService{
     public List<Product> findName(String name) {
         return productRepository.findName(name);
     }
+
+
+
+
 }

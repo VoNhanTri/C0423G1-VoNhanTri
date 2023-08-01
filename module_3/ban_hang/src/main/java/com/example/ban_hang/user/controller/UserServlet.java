@@ -1,8 +1,8 @@
-package com.example.ban_hang.controller.user;
+package com.example.ban_hang.user.controller;
 
-import com.example.ban_hang.model.user.User;
-import com.example.ban_hang.service.user.IUserService;
-import com.example.ban_hang.service.user.UserService;
+import com.example.ban_hang.user.model.User;
+import com.example.ban_hang.user.service.IUserService;
+import com.example.ban_hang.user.service.UserService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -127,7 +127,7 @@ public class UserServlet extends HttpServlet {
             try {
                 HttpSession session = request.getSession();
                 session.setAttribute("acc", user);
-                response.sendRedirect("/index.jsp");
+                response.sendRedirect("/ProductServlet");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

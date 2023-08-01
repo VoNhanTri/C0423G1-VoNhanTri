@@ -1,10 +1,10 @@
-package com.example.ban_hang.service.user;
+package com.example.ban_hang.user.service;
 
-import com.example.ban_hang.model.user.User;
-import com.example.ban_hang.repository.user.IUserRepository;
-import com.example.ban_hang.repository.user.UserRepository;
+import com.example.ban_hang.user.model.User;
+import com.example.ban_hang.user.repository.IUserRepository;
+import com.example.ban_hang.user.repository.UserRepository;
 
-public class UserService implements IUserService{
+public class UserService implements IUserService {
     private static IUserRepository userRepository = new UserRepository();
     @Override
     public User account(String username, String password) {

@@ -122,7 +122,7 @@
                                         San Pham
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="/ProductServlet">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
                                         <li><a class="dropdown-item" href="#">Another action</a></li>
                                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                                     </ul>
@@ -133,7 +133,7 @@
                                             Quan Ly
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-dark">
-                                            <li><a class="dropdown-item" href="/product/display.jsp">Quan Ly San Pham</a></li>
+                                            <li><a class="dropdown-item" href="/ProductServlet">Quan Ly San Pham</a></li>
                                             <li><a class="dropdown-item" href="#">Another action</a></li>
                                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                                         </ul>
@@ -285,7 +285,7 @@
         <%--    end product--%>
         <div class="product-list ">
             <div class="row">
-                <c:forEach items="${productList}" var="pro">
+                <c:forEach items="${productListDto}" var="pro">
                 <div class="col-lg-3 col-md-6">
                     <div class="card" style="width: 18rem;">
                         <img src="${pro.image}" class="card-img-top" alt="...">

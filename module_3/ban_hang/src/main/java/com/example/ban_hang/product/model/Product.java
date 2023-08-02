@@ -3,10 +3,10 @@ package com.example.ban_hang.product.model;
 public class Product {
 
 
+    private String urlImage;
     private int id;
     private String code;
     private String name;
-    private String image;
     private int price;
     private int inventory;
     private String description;
@@ -45,14 +45,22 @@ public class Product {
         this.productType = productType;
     }
 
-    public Product(String code, String name, String image, int price, int inventory, String description, int productType) {
+    public Product(String code, String name, int price, int inventory, String description, int productType, String urlImage) {
         this.code = code;
         this.name = name;
-        this.image = image;
         this.price = price;
         this.inventory = inventory;
         this.description = description;
+        this.urlImage = urlImage;
         this.productType = productType;
+    }
+
+    public String getUrlImage() {
+        return urlImage;
+    }
+
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
     }
 
     public int getAvailable() {
@@ -119,11 +127,5 @@ public class Product {
         this.productType = productType;
     }
 
-    public String getImage() {
-        return image;
-    }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
 }

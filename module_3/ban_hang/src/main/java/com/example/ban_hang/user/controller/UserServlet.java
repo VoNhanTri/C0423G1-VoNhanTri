@@ -127,7 +127,7 @@ public class UserServlet extends HttpServlet {
             try {
                 HttpSession session = request.getSession();
                 session.setAttribute("acc", user);
-                response.sendRedirect("/ProductServlet");
+                response.sendRedirect("/index.jsp");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

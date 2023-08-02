@@ -21,15 +21,16 @@
 <form method="post" action="/ProductServlet?action=add">
     <input name="code" >
     <input name="name" >
-    <input name="image">
     <input name="price" >
     <input name="inventory" >
     <input name="description" >
     <select name="productType" >
-        <c:forEach items="${productList}" var="productTypes">
-            <option value="${productTypes.idProductType}">${productTypes.nameProductType}</option>
+        <c:forEach items="${typeLi
+        st}" var="typeList">
+            <option value="${typeList.idType}">${typeList.nameType}</option>
         </c:forEach>
     </select>
+    <input name="urlImage">
     <button type="submit">ADD</button>
 </form>
 

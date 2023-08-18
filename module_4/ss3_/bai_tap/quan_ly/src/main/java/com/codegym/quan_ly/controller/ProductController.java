@@ -59,10 +59,16 @@ public class ProductController {
         model.addAttribute("product",product);
         return "detail";
     }
-    @PostMapping("/delete")
+    @PostMapping ("/delete")
     public String delete(@RequestParam int id,RedirectAttributes redirectAttributes){
         productService.delete(id);
         redirectAttributes.addFlashAttribute("mess","xoa thanh cong");
         return "redirect:/home/list";
+    }
+    @PostMapping ("/find")
+    public String find(@RequestParam String name,Model model){
+        List<Product> product = productService.findByName(name);
+        model.addAttribute("productList",product);
+        return "find";
     }
 }

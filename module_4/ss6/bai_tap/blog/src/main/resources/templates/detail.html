@@ -18,12 +18,14 @@
     <th>Name</th>
     <th>Tittle</th>
     <th>Content</th>
+    <th>Category</th>
   </tr>
   <tr th:field="*{blog}" >
     <td th:text="${blog.id}"></td>
     <td th:text="${blog.name}"></td>
     <td th:text="${blog.title}"></td>
     <td th:text="${blog.content}"></td>
+    <td th:text="${blog.getCategory().getNameCategory()}"></td>
   </tr>
 </table>
 </div>

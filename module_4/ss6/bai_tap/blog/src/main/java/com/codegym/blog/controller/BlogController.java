@@ -1,8 +1,14 @@
 package com.codegym.blog.controller;
 
 import com.codegym.blog.model.Blog;
+import com.codegym.blog.model.Category;
 import com.codegym.blog.service.IBlogService;
+import com.codegym.blog.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -15,17 +21,25 @@ import java.util.List;
 public class BlogController {
     @Autowired
     private IBlogService iBlogService;
+    @Autowired
+    private ICategoryService iCategoryService;
+
+
 
     @GetMapping("")
-    public String showList(@RequestParam(defaultValue = "") String name, Model model) {
-        List<Blog> blogList = iBlogService.findAll(name);
+    public String showList(@RequestParam(defaultValue = "",required = false) String name, Model model,
+                           @RequestParam(defaultValue = "0", required = false) int page) {
+        Pageable pageable = PageRequest.of(page,2, Sort.by("id").ascending());
+        Page<Blog> blogList = iBlogService.findAll(pageable,name);
         model.addAttribute("blogList", blogList);
         model.addAttribute("name", name);
-        return "list";
+        return "/list";
     }
 
     @GetMapping("/add")
     public String showAdd(Model model) {
+        List<Category> categories = iCategoryService.findAdd();
+        model.addAttribute("categories",categories);
         model.addAttribute("blog", new Blog());
         return "add";
     }
@@ -46,6 +60,8 @@ public class BlogController {
 
     @GetMapping("/edit")
     public String showEdit(@RequestParam int id, Model model) {
+        List<Category> categories = iCategoryService.findAdd();
+        model.addAttribute("categories",categories);
         Blog blog = iBlogService.findById(id);
         model.addAttribute("blogs", blog);
         return "edit";

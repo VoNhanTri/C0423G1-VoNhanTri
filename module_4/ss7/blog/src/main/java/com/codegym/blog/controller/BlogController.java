@@ -29,7 +29,7 @@ public class BlogController {
     @GetMapping("")
     public String showList(@RequestParam(defaultValue = "",required = false) String name, Model model,
                            @RequestParam(defaultValue = "0", required = false) int page) {
-        Pageable pageable = PageRequest.of(page,2, Sort.by("id").ascending());
+        Pageable pageable = PageRequest.of(page,4, Sort.by("id").ascending());
         Page<Blog> blogList = iBlogService.findAll(pageable,name);
         model.addAttribute("blogList", blogList);
         model.addAttribute("name", name);
@@ -63,7 +63,7 @@ public class BlogController {
         List<Category> categories = iCategoryService.findAdd();
         model.addAttribute("categories",categories);
         Blog blog = iBlogService.findById(id);
-        model.addAttribute("blogs", blog);
+        model.addAttribute("blog", blog);
         return "edit";
     }
 

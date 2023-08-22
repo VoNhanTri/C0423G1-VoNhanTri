@@ -21,13 +21,9 @@ public class BlogService implements IBlogService {
 
     @Override
     public void save(Blog blog) {
-        String name = blog.getName();
-        String title = blog.getTitle();
-        String content = blog.getContent();
-        int categoryId = blog.getId();
-        iBlogRepository.saveBlog(name,title,content,categoryId);
+        iBlogRepository.saveBlog(blog.getName(), blog.getTitle(), blog.getContent(), blog.getCategory().getId());
     }
-
+//
     @Override
     public Blog findById(int id) {
         return iBlogRepository.findByIdBlog(id);
@@ -35,11 +31,7 @@ public class BlogService implements IBlogService {
 
     @Override
     public void edit(int id, Blog blog) {
-        String name = blog.getName();
-        String title = blog.getTitle();
-        String content = blog.getContent();
-        int category = blog.getCategory().getId();
-        iBlogRepository.editBlog(name,title,content,category,blog.getId());
+        iBlogRepository.editBlog(blog.getName(), blog.getTitle(), blog.getContent(), blog.getId(), blog.getCategory().getId());
     }
 
     @Override

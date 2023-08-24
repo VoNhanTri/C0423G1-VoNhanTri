@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1 align="center">Blog List</h1>
+    <a href="/blog/add">ADD</a>
+    <form action="/blog" method="get">
+        <input name="name" th:value="${name}" id="name">
+        <button type="submit">Find</button>
+    </form>
+    <table class="table table-hover" style="text-align: center">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Rent</th>
+        </tr>
+        <tr th:each="book :${bookPage}">
+            <td th:text="${book.id}"></td>
+            <td th:text="${book.name}"></td>
+            <td><a th:href="@{/book/detail(id=${book.id})}">Rent</a></td>
+        </tr>
+    </table>
+    <a th:if="${bookPage.hasPrevious()}" th:href="@{/book(page=${(bookPage.number)-1}, id=${id})}">Truoc</a>
+    <span th:text="${bookPage.number+1}"></span>/<span th:text="${bookPage.totalPages}"></span>
+    <a th:if="${bookPage.hasNext()}" th:href="@{/book(page=${bookPage.number+1}, id=${id})}">Sau</a>
+
+</div>
+</body>
+</html>

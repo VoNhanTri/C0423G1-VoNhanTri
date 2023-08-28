@@ -6,26 +6,34 @@
 </head>
 <body>
 <div class="container">
+    <form th:object="${book}" action="/book/detail" method="post">
+        <input type="hidden" th:value="${code}" name="code">
+        <input type="hidden" th:field="*{id}" name="id">
+        <input type="hidden" th:field="*{quantity}" name="quantity">
     <table class="table table-hover" style="text-align: center">
         <tr>
-            <th>ID</th>
+            <th>Id</th>
+            <th>Code</th>
             <th>Name</th>
             <th>Category</th>
             <th>Quantity</th>
+            <th>Name Customer</th>
             <th>Rent</th>
         </tr>
-        <tr th:each="book :${book}">
+        <tr >
             <td th:text="${book.id}"></td>
+            <td th:text="${code}"></td>
             <td th:text="${book.name}"></td>
             <td th:text="${book.category}"></td>
             <td th:text="${book.quantity}"></td>
-            <td><form action="/blog/borrow" method="post">
-                <button type="submit">Find</button>
-            </form>
-            </td>
+            <td> <select name="customerId" >
+                <option th:each="c: ${customerList}" th:value="${c.id}" th:text="${c.name}"></option>
+            </select></td>
+            <td>
+                <button type="submit">rent</button>
         </tr>
     </table>
-
+        </form>
 </div>
 </body>
 </html>

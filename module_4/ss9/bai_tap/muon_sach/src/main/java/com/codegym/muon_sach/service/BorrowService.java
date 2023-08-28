@@ -10,8 +10,9 @@ public class BorrowService implements IBorrowService{
     @Autowired
     private IBorrowRepository iBorrowRepository;
 
+
     @Override
-    public void save(BorrowDetail borrowDetail) {
+    public void save(int code, BorrowDetail borrowDetail) {
         iBorrowRepository.save(borrowDetail);
     }
 }

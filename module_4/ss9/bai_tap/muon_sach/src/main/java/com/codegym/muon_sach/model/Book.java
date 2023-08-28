@@ -61,4 +61,8 @@ public class Book {
     public void setCategory(String category) {
         Category = category;
     }
+
+    public String generateRandomCode() {
+        return String.valueOf((int)(Math.random()*(99999-10000+1)+10000));
+    }
 }

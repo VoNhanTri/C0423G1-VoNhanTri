@@ -8,7 +8,7 @@
 <div class="container">
     <h1 align="center">Blog List</h1>
     <a href="/blog/add">ADD</a>
-    <form action="/blog" method="get">
+    <form action="/blog/{id}" method="get">
         <input name="name" th:value="${name}" id="name">
         <button type="submit">Find</button>
     </form>
@@ -21,7 +21,9 @@
         <tr th:each="book :${bookPage}">
             <td th:text="${book.id}"></td>
             <td th:text="${book.name}"></td>
-            <td><a th:href="@{/book/detail(id=${book.id})}">Rent</a></td>
+            <td><a th:hidden="${book.quantity<=0}" role="button" class="btn btn-primary"
+                   th:href="@{/book/detail/__${book.getId()}__}">Rent</a>
+            </td>
         </tr>
     </table>
     <a th:if="${bookPage.hasPrevious()}" th:href="@{/book(page=${(bookPage.number)-1}, id=${id})}">Truoc</a>

@@ -1,9 +1,7 @@
 package com.codegym.muon_sach.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+
 @Entity
 public class BorrowDetail {
     @ManyToOne
@@ -13,13 +11,14 @@ public class BorrowDetail {
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
     @Id
-    private String code;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int code;
     private boolean status;
 
     public BorrowDetail() {
     }
 
-    public BorrowDetail(Book book, Customer customer, String code, boolean status) {
+    public BorrowDetail(Book book, Customer customer, int code, boolean status) {
         this.book = book;
         this.customer = customer;
         this.code = code;
@@ -42,11 +41,11 @@ public class BorrowDetail {
         this.customer = customer;
     }
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(int code) {
         this.code = code;
     }
 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<h2>Them Moi</h2>
+<input id="name" placeholder="Enter name">
+<input id="title" placeholder="Enter Title">
+<input id="contents" placeholder="Enter content">
+    <select  id="categoryId">
+       <option value="1">Thuc an</option>
+       <option value="2">du lic </option>
+       <option value="3">tham hiem </option>
+       <option value="4">lich su</option>
+</select>
+<button id="btn-add">Add</button>
+<h2>tim kiem</h2>
+<input id="searchName" placeholder="enter search name">
+<button id="btn-search">search</button>
+<h2>Danh Sach</h2>
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Title</td>
+        <td>Content</td>
+        <td>Category</td>
+    </tr>
+    <tbody id="content">
+    </tbody>
+</table>
+<script>
+    //hien thi danh sach
+    display();
+    function display() {
+        let content = "";
+        $.ajax({
+            contentType: "application/json",
+            method: "Get",
+            dataType: "Json",
+            url: "http://localhost:8080/api/blog",
+            success: function (data){
+                console.log(data)
+                for (let i = 0; i <data.length ; i++) {
+                    content += `<tr>
+                        <td>${data[i].id}</td>
+                        <td>${data[i].name}</td>
+                        <td>${data[i].title}</td>
+                        <td>${data[i].content}</td>
+                        <td>${data[i].category.nameCategory}</td>
+                    </tr>`;
+                }
+                $("#content").html(content);
+            }
+        })
+    }
+    //them moi
+    $("#btn-add").click(function (){
+        let name = $("#name").val();
+        let title = $("#title").val();
+        let content = $("#contents").val();
+        let categoryId = $("#categoryId").val();
+        let blog ={
+            name: name,
+            title: title,
+            content: content,
+            category: {
+                id: categoryId
+            }
+        }
+        console.log(blog)
+        $.ajax({
+            contentType: "application/json",
+            method: "Post",
+            dataType: "Json",
+            data: JSON.stringify(blog),
+            url: "http://localhost:8080/api/blog",
+            complete: function (){
+                display();
+            }
+    })
+    })
+    // tim kiem
+    $("#btn-search").click(function (){
+        let name = $("#searchName").val();
+        let content = "";
+        $.ajax({
+            contentType: "application/json",
+            method: "Get",
+            dataType: "Json",
+            url: `http://localhost:8080/api/blog/search/${name}`,
+            success: function (data) {
+                console.log(data)
+                for (let i = 0; i < data.length; i++) {
+                    content += `<tr>
+                        <td>${data[i].id}</td>
+                        <td>${data[i].name}</td>
+                        <td>${data[i].title}</td>
+                        <td>${data[i].content}</td>
+                        <td>${data[i].category.nameCategory}</td>
+                    </tr>`;
+                }
+                $("#content").html(content);
+            }
+        })
+    })
+</script>
+</body>
+</html>

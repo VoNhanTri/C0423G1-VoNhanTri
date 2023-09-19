@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" >
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,7 +9,7 @@
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
-    <link rel="stylesheet" href="../../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
     <!-- CSS here -->
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
@@ -25,9 +25,7 @@
     <link rel="stylesheet" href="../../assets/css/responsive.css">
 </head>
 <body>
-<div th:replace="index::header">
 
-</div>
 
 
 <div class="container-fluid" style="margin-top: 30px" > <a href="/student" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i></a></div>
@@ -35,42 +33,41 @@
 <div class="container-fluid" style="min-height: 500px" align="center">
     <div class="bg-light p-5" style="max-width: 40%">
         <h2 class="mb-4" style="text-align: center">Thêm Mới Học Sinh</h2>
-        <form th:object="${listStudentDto}" action="/student/add" method="post">
+        <form action="/student/add" method="post">
             <div class="input-group mb-3">
                 <span class="input-group-text" style="width: 30%">Tên Học Viên<span style="color: red">*</span></span>
 
-                <input th:field="*{name}" class="form-control" placeholder="Nhập Tên"/><br/><small
-                    style="color: red;font-size: 10px" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></small>
+                <input  class="form-control" placeholder="Nhập Tên"/><br/><small
+                    style="color: red;font-size: 10px" ></small>
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text" style="width: 30%">Giới Tính</span>
-                <select th:field="*{gender}" class="custom-select border-0 px-2" style="height: 47px;">
+                <select class="custom-select border-0 px-2" style="height: 47px;">
                     <option value="true">Nam</option>
                     <option value="false">Nữ</option>
                 </select>
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text" style="width: 30%">CMND<span style="color: red">*</span></span>
-                <input th:field="*{idCard}" class="form-control" placeholder="Nhập Số CMND"/><br/><small
-                    style="color: red;font-size: 10px" th:if="${#fields.hasErrors('idCard')}"
-                    th:errors="*{idCard}"></small>
+                <input  class="form-control" placeholder="Nhập Số CMND"/><br/><small
+                    style="color: red;font-size: 10px"
+                   ></small>
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text"  style="width: 30%">Ngày Sinh</span>
-                <input  type="date" th:field="*{birth}" class="form-control"/><br/><small
-                    style="color: red;font-size: 10px" th:if="${#fields.hasErrors('birth')}"
-                    th:errors="*{birth}"></small>
+                <input  type="date"  class="form-control"/><br/><small
+                    style="color: red;font-size: 10px"></small>
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text" style="width: 30%">Số Điện Thoại<span style="color: red">*</span></span>
-                <input th:field="*{phone}" class="form-control" placeholder="Nhập Số Điện Thoại"/><br/><small
-                    style="color: red;font-size: 10px" th:if="${#fields.hasErrors('phone')}"
-                    th:errors="*{phone}"></small>
+                <input  class="form-control" placeholder="Nhập Số Điện Thoại"/><br/><small
+                    style="color: red;font-size: 10px"
+                   ></small>
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text" style="width: 30%">Lớp</span>
-                <select th:field="*{classes}" class="custom-select border-0 px-2" style="height: 47px;">
-                    <option th:each="c:${classes}" th:value="${c.id}" th:text="${c.name}"></option>
+                <select  class="custom-select border-0 px-2" style="height: 47px;">
+                    <option></option>
                 </select>
             </div>
             <div class="d-flex justify-content-center">
@@ -86,9 +83,7 @@
 
 
 
-<div th:replace="index::footer">
 
-</div>
 </body>
 <!-- All JS Custom Plugins Link Here here -->
 <script src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>

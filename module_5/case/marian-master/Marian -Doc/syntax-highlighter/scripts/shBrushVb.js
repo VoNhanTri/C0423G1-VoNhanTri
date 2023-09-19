@@ -22,7 +22,7 @@
 	function Brush()
 	{
 		var keywords =	'AddHandler AddressOf AndAlso Alias And Ansi As Assembly Auto ' +
-						'Boolean ByRef Byte ByVal Call Case Catch CBool CByte CChar CDate ' +
+						'Boolean ByRef Byte ByVal Call case Catch CBool CByte CChar CDate ' +
 						'CDec CDbl Char CInt Class CLng CObj Const CShort CSng CStr CType ' +
 						'Date Decimal Declare Default Delegate Dim DirectCast Do Double Each ' +
 						'Else ElseIf End Enum Erase Error Event Exit False Finally For Friend ' +

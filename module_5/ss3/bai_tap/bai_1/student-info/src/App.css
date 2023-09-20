@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+.table{
+  height: 500rem;
+  width: 500rem;
+  marginLeft: 'auto';
+  marginRight: 'auto';
+  marginTop: '5%'
+
+}

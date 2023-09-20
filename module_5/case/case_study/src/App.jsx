@@ -7,6 +7,7 @@ import Contract from "./contract/conponent/Contract.jsx";
 import AddCustomer from "./customer/component/AddCustomer.jsx";
 import EditCustomer from "./customer/component/EditCustomer.jsx";
 import AddContract from "./contract/conponent/AddContract.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <AddCustomer/>
             <EditCustomer/>
             <AddContract/>
+            <Footer/>
         </>
     )
 }

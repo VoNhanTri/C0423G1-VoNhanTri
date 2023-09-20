@@ -44,8 +44,8 @@ function App() {
           <th>Country</th>
         </tr>
         {
-          students.map(st =>(
-              <tr>
+          students.map((st,index) =>(
+              <tr key={index}>
                 <td>{st.company}</td>
                 <td>{st.contact}</td>
                 <td>{st.country}</td>

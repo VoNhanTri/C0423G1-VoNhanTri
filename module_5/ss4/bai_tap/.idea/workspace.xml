@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0ecd15c-2527-470e-8594-20bda48c5ce3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/case/src/assets/bootstrap-5.0.2-dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/double_counter/src/components/TwoCounter.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/count/src/components/Counter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/modum1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ProductDiscountCalculator/src/main/java/DescriptionServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ProductDiscountCalculator/src/main/webapp/discountPrice.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../hien_thi/src/main/java/com/example/hien_thi/controller/CustomerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../hien_thi/src/main/java/com/example/hien_thi/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../hien_thi/src/main/java/com/example/hien_thi/repository/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../hien_thi/src/main/java/com/example/hien_thi/repository/ICustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../hien_thi/src/main/java/com/example/hien_thi/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../hien_thi/src/main/java/com/example/hien_thi/service/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/.idea/module_3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/.idea/module_3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/SpringGreeting/src/main/java/com/example/controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/SpringGreeting/src/main/java/com/example/controller/GreetingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/SpringGreeting/src/main/webapp/WEB-INF/views/greeting.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/SpringGreeting/src/main/webapp/WEB-INF/views/greeting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/SpringGreetingXml/src/main/java/com/code/springgreeting/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/SpringGreetingXml/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/SpringGreetingXml/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/SpringGreetingXml/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/controller/QuanLyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/controller/QuanLyServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/model/QuanLy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/model/QuanLy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/repository/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/repository/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/repository/IQuanLyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/repository/IQuanLyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/repository/QuanLyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/repository/QuanLyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/service/IQuanLyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/service/IQuanLyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/service/QuanLyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/java/com/example/bai_thi/service/QuanLyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/webapp/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/webapp/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/webapp/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/bai_thi/src/main/webapp/display.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ban_hang/src/main/java/com/example/ban_hang/product/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ban_hang/src/main/java/com/example/ban_hang/product/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ban_hang/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ban_hang/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ban_hang/src/main/webapp/product/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ban_hang/src/main/webapp/product/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/java/com/example/demo/customer/controller/CustomerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/java/com/example/demo/customer/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/java/com/example/demo/customer/repository/Base.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/java/com/example/demo/customer/repository/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/java/com/example/demo/customer/repository/ICustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/java/com/example/demo/customer/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/java/com/example/demo/customer/service/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/webapp/customer/add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/webapp/customer/delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/webapp/customer/display.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/webapp/customer/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/case_study_2/men/demo/src/main/webapp/customer/find.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/giai_thuat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/giai_thuat/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss11/user_manager/src/main/java/com/example/user_manager/repository/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss11/user_manager/src/main/java/com/example/user_manager/repository/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss11/user_manager/src/main/java/com/example/user_manager/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss11/user_manager/src/main/java/com/example/user_manager/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss11/user_manager/src/main/java/com/example/user_manager/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss11/user_manager/src/main/java/com/example/user_manager/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss11/user_manager/src/main/java/com/example/user_manager/until/Regex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss11/user_manager/src/main/java/com/example/user_manager/until/Regex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/java/com/example/user_manager/controller/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/java/com/example/user_manager/controller/UsersServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/java/com/example/user_manager/repository/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/java/com/example/user_manager/repository/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/java/com/example/user_manager/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/java/com/example/user_manager/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/find_country.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/find_country.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss12/user_manager/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss7_thiet_ke_bo_cuc_trang_web/layout_rwd/rwd.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss7_thiet_ke_bo_cuc_trang_web/layout_rwd/rwd.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/ss7_thiet_ke_bo_cuc_trang_web/layout_rwd/rwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/ss7_thiet_ke_bo_cuc_trang_web/layout_rwd/rwd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/repository/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/repository/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/repository/IProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/java/com/example/test/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/webapp/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/webapp/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/webapp/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/webapp/display.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/webapp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/webapp/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test/src/main/webapp/find.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test/src/main/webapp/find.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/controller/StudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/controller/StudentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/repository/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/repository/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/repository/IStudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/repository/IStudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/service/IStudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test_test/src/main/java/com/example/test_test/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test_test/src/main/webapp/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test_test/src/main/webapp/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test_test/src/main/webapp/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test_test/src/main/webapp/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_3/test_test/src/main/webapp/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_3/test_test/src/main/webapp/display.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/controller/StudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/controller/StudentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/dto/StudentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/dto/StudentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/model/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/model/Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/repository/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/repository/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/repository/ClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/repository/ClassRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/repository/IClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/repository/IClassRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/repository/IStudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/repository/IStudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/service/ClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/service/ClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/service/IClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/service/IClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/service/IStudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/java/com/example/demo/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/webapp/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/webapp/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/webapp/find.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/webapp/find.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/demo/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/demo/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/controller/StudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/controller/StudentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/dto/StudentsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/dto/StudentsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/model/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/model/Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/model/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/model/Students.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/repository/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/repository/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/repository/ClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/repository/ClassRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/repository/IClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/repository/IClassRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/repository/IStudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/repository/IStudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/service/ClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/service/ClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/service/IClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/service/IClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/service/IStudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/java/com/example/luyen/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/webapp/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/webapp/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/webapp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/webapp/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/webapp/find.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/webapp/find.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/controller/StudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/controller/StudentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/dto/StudentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/dto/StudentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/model/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/model/Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/repository/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/repository/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/repository/ClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/repository/ClassRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/repository/IClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/repository/IClassRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/repository/IStudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/repository/IStudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/service/ClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/service/ClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/service/IClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/service/IClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/service/IStudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/java/com/example/luyen_taap/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/webapp/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/webapp/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/luyen_taap/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/repository/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/repository/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/repository/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/java/com/example/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/webapp/asd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/webapp/asd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/ss10/demo/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/controller/BaiHocServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/controller/BaiHocServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/dto/BaiHocDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/dto/BaiHocDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/model/BaiHoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/model/BaiHoc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/model/HocPhan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/model/HocPhan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/repository/BaiHocRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/repository/BaiHocRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/repository/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/repository/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/repository/HocPhanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/repository/HocPhanRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/repository/IBaiHocRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/repository/IBaiHocRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/repository/IHocPhanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/repository/IHocPhanRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/service/BaiHocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/service/BaiHocService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/service/HocPhanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/service/HocPhanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/service/IBaiHocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/service/IBaiHocService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/service/IHocPhanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/java/com/example/thi_luon/service/IHocPhanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/webapp/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/webapp/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/webapp/find.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/webapp/find.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_31/thi_luon/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/controller/CongTacController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/controller/CongTacController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/dto/CongTacDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/dto/CongTacDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/model/CongTac.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/model/CongTac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/model/SuaChua.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/model/SuaChua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/repository/ICongTacRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/repository/ICongTacRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/repository/ISuaChuaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/repository/ISuaChuaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/service/CongTacService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/service/CongTacService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/service/ICongTacService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/service/ICongTacService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/service/ISuaChuaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/service/ISuaChuaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/service/SuaChuaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/java/com/example/thi/service/SuaChuaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/resources/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/chuan_bi/thi/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/ss11/blog_api/src/main/java/com/codegym/blog/controller/RestBlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/ss11/blog_api/src/main/java/com/codegym/blog/controller/RestBlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/ss11/blog_api/src/main/java/com/codegym/blog/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/ss11/blog_api/src/main/java/com/codegym/blog/repository/IBlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/ss11/blog_api/src/main/java/com/codegym/blog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/ss11/blog_api/src/main/java/com/codegym/blog/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/ss11/blog_api/src/main/java/com/codegym/blog/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/ss11/blog_api/src/main/java/com/codegym/blog/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/ss12_ajax/blogAjax.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/ss12_ajax/blogAjax.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/model/Catelory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/model/Catelory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/repository/IBlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/repository/ICateloryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/repository/ICateloryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/service/CateloryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/service/CateloryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/service/ICateloryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/java/com/example/thi/service/ICateloryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/resources/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi/thi/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/controller/HeoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/controller/HeoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/dto/HeoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/dto/HeoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/model/Heo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/model/Heo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/model/XuatXu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/model/XuatXu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/repository/HeoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/repository/HeoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/repository/XuatXuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/repository/XuatXuRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/service/HeoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/service/HeoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/service/IHeoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/service/IHeoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/service/IXuatXuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/service/IXuatXuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/service/XuatXuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/java/com/example/thi_luon/service/XuatXuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/resources/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module_4/thi_luon/thi_luon/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/marian-master/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/marian-master/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/case/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/case/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/case/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/case/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/case/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/case/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/case/src/components/footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/case/src/components/footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/case/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/case/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/case/src/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/case/src/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/case/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/case/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/bai_tap/bai_2/todo-app/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss3/bai_tap/bai_2/todo-app/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../server-time/src/main/java/ServerTimeServlet.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSX" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Ve2QRbgk3wc8IE1Z9k0Grh0STd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../case_study/case" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0ecd15c-2527-470e-8594-20bda48c5ce3" name="Changes" comment="" />
+      <created>1695182212918</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695182212918</updated>
+      <workItem from="1695182215604" duration="7464000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

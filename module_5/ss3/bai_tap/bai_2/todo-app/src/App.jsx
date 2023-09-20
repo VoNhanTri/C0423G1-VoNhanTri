@@ -1,4 +1,5 @@
 import './App.css'
+// eslint-disable-next-line no-unused-vars
 import React, {Component} from "react";
 
 class App extends Component {
@@ -7,8 +8,8 @@ class App extends Component {
         this.state = {
             list: ["fffffff"],
             item: ''
-        }
-    };
+        };
+    }
 
     handleChange = (event) => {
         this.setState({item: event.target.value})

@@ -1,8 +1,6 @@
-import Badge from 'react-bootstrap/Badge';
-import Button from 'react-bootstrap/Button';
-
 function Header() {
     return (
+
         <>
                 <div  className="header-area header-sticky">
                     <div className="main-header ">
@@ -10,29 +8,29 @@ function Header() {
                             <div className="row align-items-center">
                                 <div className="col-xl-2 col-lg-2">
                                     <div className="logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""/></a>
+                                        {/*<a href={link}><img src="case/src/assets/img/logo/logo.png" alt=""/></a>*/}
                                     </div>
                                 </div>
                                 <div className="col-xl-8 col-lg-8">
                                     <div className="main-menu f-right d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="services.html">Service</a></li>
-                                                <li><a href="blog.html">Blog</a>
+                                                <li><a >Home</a></li>
+                                                <li><a >About</a></li>
+                                                <li><a >Service</a></li>
+                                                <li><a >Blog</a>
                                                     <ul className="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="single-blog.html">Blog Details</a></li>
+                                                        <li><a >Blog</a></li>
+                                                        <li><a >Blog Details</a></li>
                                                     </ul>
                                                 </li>
                                                 <li><a href="#">Pages</a>
                                                     <ul className="submenu">
-                                                        <li><a href="rooms.html">Rooms</a></li>
-                                                            <li><a href="elements.html">Element</a></li>
+                                                        <li><a >Rooms</a></li>
+                                                            <li><a >Element</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a >Contact</a></li>
                                             </ul>
                                         </nav>
                                     </div>

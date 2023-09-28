@@ -2,75 +2,81 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer class="footer-14398">
-
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-md-3">
-                        <a href="#" class="footer-site-logo">Colorlib</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit officiis corporis optio natus. </p>
-                    </div>
-                    <div class="col-md-2 ml-auto">
-                        <h3>Shop</h3>
-                        <ul class="list-unstyled links">
-                            <li><a href="#">Sell online</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Examples</a></li>
-                            <li><a href="#">Website editors</a></li>
-                            <li><a href="#">Online retail</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2 ml-auto">
-                        <h3>Press</h3>
-                        <ul class="list-unstyled links">
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Awards</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Online retail</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2 ml-auto">
-                        <h3>About</h3>
-                        <ul class="list-unstyled links">
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Career</a></li>
-                            <li><a href="#">Contacts</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row mb-4">
-                    <div class="col-12 pb-4">
-                        <div class="line"/>
-                    </div>
-                    <div class="col-md-6 text-md-left">
-                        <ul class="list-unstyled link-menu nav-left">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Code of Conduct</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 text-md-right">
-                        <ul class="list-unstyled social nav-right">
-                            <li><a href="#"><span class="icon-twitter"/></a></li>
-                            <li><a href="#"><span class="icon-instagram"/></a></li>
-                            <li><a href="#"><span class="icon-facebook"/></a></li>
-                            <li><a href="#"><span class="icon-pinterest"/></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-7">
-                        <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, fuga. Ex at maxime eum odio quibusdam pariatur expedita explicabo harum! Consectetur ducimus delectus nemo, totam odit!</small></p>
+        <footer>
+            <div className="container-fluid">
+            <div className="footer-area black-bg footer-padding" style={{marginTop:"20px"}}>
+                    <div className="row d-flex justify-content-between">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div className="single-footer-caption mb-30">
+                                <div className="footer-logo">
+                                    <a href=""><img src="src/assets/img/logo/logo2_footer.png" alt=""/></a>
+                                </div>
+                                <div className="footer-social footer-social2">
+                                    <a href="#"><i className="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i className="fab fa-twitter"></i></a>
+                                    <a href="#"><i className="fas fa-globe"></i></a>
+                                    <a href="#"><i className="fab fa-behance"></i></a>
+                                </div>
+                                <div className="footer-pera">
+                                    <p>
+                                        Copyright &copy;
+                                        <script>document.write(new Date().getFullYear());</script>
+                                        All rights reserved | This template is made with
+                                        <i className="ti-heart" aria-hidden="true"></i> by
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-5">
+                            <div className="single-footer-caption mb-30">
+                                <div className="footer-tittle">
+                                    <h4>Quick Links</h4>
+                                    <ul>
+                                        <li><a href="#">About Mariana</a></li>
+                                        <li><a href="#">Our Best Rooms</a></li>
+                                        <li><a href="#">Our Photo Gellary</a></li>
+                                        <li><a href="#">Pool Service</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                            <div className="single-footer-caption mb-30">
+                                <div className="footer-tittle">
+                                    <h4>Reservations</h4>
+                                    <ul>
+                                        <li><a href="#">Tel: 345 5667 889</a></li>
+                                        <li><a href="#">Skype: Marianabooking</a></li>
+                                        <li><a href="#">reservations@hotelriver.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-xl-3 col-lg-3 col-md-4  col-sm-5">
+                            <div className="single-footer-caption mb-30">
+                                <div className="footer-tittle">
+                                    <h4>Our Location</h4>
+                                    <ul>
+                                        <li><a href="#">198 West 21th Street,</a></li>
+                                        <li><a href="#">Suite 721 New York NY 10016</a></li>
+                                    </ul>
+                                    <div className="footer-form">
+                                        <div id="mc_embed_signup">
+                                            <form target="_blank"
+                                                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                                  method="get" className="subscribe_form relative mail_part">
+                                                    <div className="mt-10 info"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-</footer>
-    );
+        </footer>
+);
 }
 
 export default Footer ;

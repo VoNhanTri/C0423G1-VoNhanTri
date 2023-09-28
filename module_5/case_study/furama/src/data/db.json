@@ -1,0 +1,196 @@
+{
+  "contract": [
+    {
+      "id": 1,
+      "hopDong": "1",
+      "batDau": "25-12-2020",
+      "ketThuc": "12/12/2022",
+      "datCoc": "10000000",
+      "tong": "1000000000"
+    },
+    {
+      "soHopDong": "2",
+      "batDau": "12/12/2005",
+      "ketThuc": "12/12/2020",
+      "datCoc": "1000000",
+      "tong": "1000000",
+      "id": 2
+    },
+    {
+      "hopDong": "3",
+      "batDau": "12/12/2005",
+      "ketThuc": "12/12/2020",
+      "datCoc": "1000000",
+      "tong": "1000000",
+      "id": 3
+    },
+    {
+      "hopDong": "",
+      "batDau": "",
+      "ketThuc": "",
+      "datCoc": "",
+      "tong": "",
+      "id": 4
+    },
+    {
+      "hopDong": "12",
+      "batDau": "12/12/2009",
+      "ketThuc": "12/12/2022",
+      "datCoc": "1000000111",
+      "tong": "1113123123123",
+      "id": 5
+    },
+    {
+      "hopDong": "123",
+      "batDau": "123",
+      "ketThuc": "123",
+      "datCoc": "123",
+      "tong": "123123",
+      "id": 6
+    },
+    {
+      "hopDong": "14234",
+      "batDau": "234234",
+      "ketThuc": "234234",
+      "datCoc": "234234",
+      "tong": "234234",
+      "id": 7
+    },
+    {
+      "hopDong": "234234",
+      "batDau": "234234",
+      "ketThuc": "234234",
+      "datCoc": "234234",
+      "tong": "1113123123123",
+      "id": 8
+    },
+    {
+      "hopDong": "asdasd",
+      "batDau": "asdasd",
+      "ketThuc": "asdasd",
+      "datCoc": "asdasd",
+      "tong": "asdasd",
+      "id": 9
+    }
+  ],
+  "customer": [
+    {
+      "hoTen": "nghia4",
+      "ngaySinh": "2311-12-31",
+      "gioiTinh": "male",
+      "cmnd": "123123123",
+      "sdt": "09878123123",
+      "email": "nhantri249@gmail.com",
+      "diaChi": "da nang",
+      "loaiKhach": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "id": 1
+    }
+  ],
+  "loaiKhach": [
+    {
+      "id": 1,
+      "name": "PLATINUM"
+    },
+    {
+      "id": 2,
+      "name": "DIAMOND"
+    },
+    {
+      "id": 3,
+      "name": "GOLD"
+    },
+    {
+      "id": 4,
+      "name": "Member"
+    }
+  ],
+  "dichVu": [
+    {
+      "id": 1,
+      "serviceName": "Villa",
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room1.jpg"
+    },
+    {
+      "id": 2,
+      "serviceName": "Villa",
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room2.jpg"
+    },
+    {
+      "id": 3,
+      "serviceName": "Villa",
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room3.jpg"
+    },
+    {
+      "id": 4,
+      "serviceName": "Villa",
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room4.jpg"
+    },
+    {
+      "id": 5,
+      "serviceName": "Villa",
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room5.jpg"
+    },
+    {
+      "id": 6,
+      "serviceName": "Villa",
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room6.jpg"
+    }
+  ]
+}

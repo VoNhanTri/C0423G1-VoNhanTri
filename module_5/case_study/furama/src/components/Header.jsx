@@ -18,10 +18,11 @@ export function Header() {
                                     <div className="main-menu f-right d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
-                                                <li><Link className="nav-link" to="/home">Trang Chủ</Link></li>
+                                                <li><Link className="nav-link" to="/">Trang Chủ</Link></li>
                                                 <li><Link className="nav-link" to="/customer">Khách Hàng</Link></li>
                                                 <li><Link className="nav-link" to="/contract">Hợp Đồng</Link></li>
                                                 <li><Link className="nav-link" to="/facility">Dịch Vụ</Link></li>
+                                                <li><Link className="nav-link" to="/employee">Nhân Viên</Link></li>
                                             </ul>
                                         </nav>
                                     </div>

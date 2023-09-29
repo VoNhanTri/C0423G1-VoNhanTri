@@ -23,8 +23,7 @@ function Customer() {
 
     const getCustomer = async () => {
         const res = await getAll(hoTen)
-        const record = res.headers['x-total-count']
-        console.log(res)
+        const record = res.headers['x-total-count'];
         setTotalPage(Math.ceil(record / 2))
         setCustomers(res.data);
     }
@@ -58,6 +57,7 @@ function Customer() {
             <table className="table table-hover">
                 <thead>
                 <tr>
+                    <th>STT</th>
                     <th>Họ Tên</th>
                     <th>Ngày Sinh</th>
                     <th>Giới Tính</th>
@@ -70,9 +70,10 @@ function Customer() {
                 </tr>
                 </thead>
                 <tbody>
-                {customers.map((cus) => {
+                {customers.map((cus,index) => {
                     return (
                         <tr key={cus.id}>
+                            <td>{index+1}</td>
                             <td>{cus.hoTen}</td>
                             <td>{cus.ngaySinh}</td>
                             <td>{cus.gioiTinh}</td>

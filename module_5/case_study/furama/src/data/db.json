@@ -87,6 +87,34 @@
         "name": "PLATINUM"
       },
       "id": 1
+    },
+    {
+      "hoTen": "nghia",
+      "ngaySinh": "1211-12-12",
+      "gioiTinh": "famale",
+      "cmnd": "123123123",
+      "sdt": "09878123123",
+      "email": "tin@gmail.com",
+      "diaChi": "da nang",
+      "loaiKhach": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "id": 2
+    },
+    {
+      "hoTen": "trung",
+      "ngaySinh": "1111-12-12",
+      "gioiTinh": "famale",
+      "cmnd": "123123123",
+      "sdt": "09878123123",
+      "email": "thanh@gmail.com",
+      "diaChi": "123123",
+      "loaiKhach": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "id": 3
     }
   ],
   "loaiKhach": [
@@ -187,10 +215,65 @@
       "rentalType": "Tháng",
       "roomStandard": "Vip",
       "amenities": "Buffet sáng",
-      "poolArea": 40,
       "floors": 3,
       "freeServices": "",
       "img": "src/assets/img/rooms/room6.jpg"
+    }
+  ],
+  "employee": [
+    {
+      "name": "quân ap",
+      "birthday": "1211-12-12",
+      "identity": "1231243",
+      "phone": "+84367692899",
+      "email": "nhantri249@gmail.com",
+      "location": {
+        "id": 2,
+        "name": "Cao Đẳng"
+      },
+      "id": 2
+    },
+    {
+      "name": "Ngo kien huy",
+      "birthday": "1111-12-12",
+      "identity": "1203192837",
+      "phone": "0998765123",
+      "email": "huy@gmail.com",
+      "location": {
+        "id": 3,
+        "name": "Đại Học"
+      },
+      "id": 4
+    },
+    {
+      "name": "thanh",
+      "birthday": "1994-12-12",
+      "identity": "1231243123",
+      "phone": "+84367692899",
+      "email": "nhantri249@gmail.com",
+      "location": {
+        "id": 2,
+        "name": "Cao Đẳng"
+      },
+      "id": 5
+    }
+  ],
+  "location": [
+    {
+      "id": 1,
+      "name": "Trung Cấp"
+    },
+    {
+      "id": 2,
+      "name": "Cao Đẳng"
+    },
+    {
+      "id": 3,
+      "name": "Đại Học"
+    },
+    {
+      "id": 4,
+      "name": "Sau Đại Học"
     }
   ]
 }

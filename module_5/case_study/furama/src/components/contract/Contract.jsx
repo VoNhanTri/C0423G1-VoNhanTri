@@ -28,8 +28,9 @@ export function Contract() {
                 </thead>
                 <tbody>
                 {
-                    contract.map((c)=>(
+                    contract.map((c,index)=>(
                         <tr key={c.id}>
+                            <td>{index+1}</td>
                             <td>{c.hopDong}</td>
                             <td>{c.batDau}</td>
                             <td>{c.ketThuc}</td>

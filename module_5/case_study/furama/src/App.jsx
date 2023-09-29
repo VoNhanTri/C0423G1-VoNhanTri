@@ -11,6 +11,9 @@ import {EditCustomer} from "./components/customer/EditCustomer.jsx";
 import Customer from "./components/customer/Customer.jsx";
 import {Facility} from "./components/facility/Facility.jsx";
 import Home from "./components/Home.jsx";
+import {Employee} from "./components/employye/Employee.jsx";
+import {AddEmployee} from "./components/employye/AddEmployee.jsx";
+import {EditEmployee} from "./components/employye/EditEmployee.jsx";
 export function App() {
     return (
         <>
@@ -22,7 +25,10 @@ export function App() {
                 <Route path="/customer/add" element={<AddCustomer/>}></Route>
                 <Route path="/customer/edit/:id" element={<EditCustomer/>}></Route>
                 <Route path="/facility" element={<Facility/>}></Route>
-                <Route path="/home" element={<Home/>}></Route>
+                <Route path="/" element={<Home/>}></Route>
+                <Route path="/employee" element={<Employee/>}></Route>
+                <Route path="/employee/add" element={<AddEmployee/>}></Route>
+                <Route path="/employee/edit/:id" element={<EditEmployee/>}></Route>
             </Routes>
             <ToastContainer></ToastContainer>
             <Footer/>

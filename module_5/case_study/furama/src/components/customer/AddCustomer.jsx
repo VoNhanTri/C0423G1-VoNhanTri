@@ -4,7 +4,6 @@ import {toast} from "react-toastify";
 import {useEffect, useState} from "react";
 import {add, getAllCustomerType} from "../../service/CustomerService.jsx";
 import * as Yup from "yup";
-import customer from "./Customer.jsx";
 
 export function AddCustomer() {
     const navigate = useNavigate();
@@ -12,7 +11,6 @@ export function AddCustomer() {
     const addNewCustomer = async (value) => {
         const rs = {...value, loaiKhach: JSON.parse(value.loaiKhach)}
         await add(rs);
-        console.log(rs)
     }
     const loadType = async () => {
         const res = await getAllCustomerType()

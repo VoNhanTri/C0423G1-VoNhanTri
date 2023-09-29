@@ -1,41 +1,47 @@
 import {useEffect, useState} from "react";
-import {getAll, getSearch} from "../../service/EmployyeService.jsx";
+import {getAllLocation, getSearch} from "../../service/EmployyeService.jsx";
 import {Link} from "react-router-dom";
 import {DeleteEmployee} from "./DeleteEmployee.jsx";
 import {Button} from "react-bootstrap";
 
 export function Employee() {
     const [employee, setEmployee] = useState([]);
-    const [name,setName] = useState("");
+    const [name, setName] = useState('');
+    const [location, setLocation] = useState([]);
+    const [locationSearch, setLocationSearch] = useState('');
+    const [modalStatus, setModalStatus] = useState(false);
+    const [selectEmployee, setselectEmployee] = useState(null);
 
-    const [modalStatus,setModalStatus] = useState(false);
-    const [selectEmployee,setselectEmployee] = useState(null);
+    console.log('name: ' + name, 'location: ' + locationSearch);
 
     useEffect(() => {
-        getAllEmployee()
-    }, []);
+        getLocation();
+    }, [])
+
+    // console.log(employee)
 
     useEffect(() => {
         searchName()
-    }, [name]);
+    }, [name, locationSearch]);
 
-    const searchName = async () =>{
-        const res = await getSearch(name)
+    const searchName = async () => {
+        const res = await getSearch(name, locationSearch)
         setEmployee(res);
     }
-    const getAllEmployee = async () => {
-        const res = await getAll()
-        setEmployee(res)
-    }
 
-    const handleModal = (value) =>{
+
+    const handleModal = (value) => {
         setselectEmployee(value)
         setModalStatus(true);
     }
-    const closeModal = () =>{
-        getAllEmployee();
+    const closeModal = () => {
+        searchName();
         setselectEmployee(null);
         setModalStatus(false)
+    }
+    const getLocation = async () => {
+        const location = await getAllLocation();
+        setLocation(location);
     }
 
 
@@ -43,13 +49,25 @@ export function Employee() {
         <>
             <h1>List Employee</h1>
             <div className="navbar navbar-inverse">
-            <Link className="btn btn-primary" to="/employee/add">ADD</Link>
+                <Link className="btn btn-primary" to="/employee/add">ADD</Link>
             </div>
             <div className="d-flex justify-content-end">
-                <input  className="bg-light text-dark" style={{borderRadius: "15px", textAlign: "center"}}
-                        type='text' onChange={(event) => setName(event.target.value)}/>
+                <input className="bg-light text-dark" style={{borderRadius: "15px", textAlign: "center"}}
+                       placeholder='Search ...'
+                       type='text' onChange={(event) => setName(event.target.value)}/>
+                <select onChange={(event) => {
+                    setLocationSearch(event.target.value);
+                }} className="bg-light text-dark" style={{borderRadius: "15px", textAlign: "center"}}>
+                    <option value=''>Location</option>
+                    {location && location.map((item) => {
+                        return (
+
+                            <option key={item.id} value={item.id}>{item.name}</option>)
+                    })}
+                    <option></option>
+                </select>
             </div>
-                <table className="table table-hover">
+            <table className="table table-hover">
                 <thead>
                 <tr>
                     <th>Name</th>
@@ -63,9 +81,9 @@ export function Employee() {
                 </thead>
                 <tbody>
                 {
-                    employee.map((em,index) => (
+                    employee.map((em, index) => (
                         <tr key={em.id}>
-                            <td>{index+1}</td>
+                            <td>{index + 1}</td>
                             <td>{em.name}</td>
                             <td>{em.birthday}</td>
                             <td>{em.identity}</td>
@@ -75,16 +93,17 @@ export function Employee() {
                             <td>
                                 <Link className='btn btn-outline-primary' to={`/employee/edit/${em.id}`}>Edit</Link>
                             </td>
-                            <td><Button className='btn btn-outline-danger' onClick={()=> handleModal(em)}>Delete</Button></td>
+                            <td><Button className='btn btn-outline-danger'
+                                        onClick={() => handleModal(em)}>Delete</Button></td>
                         </tr>
                     ))
                 }
                 </tbody>
             </table>
             <DeleteEmployee
-            show={modalStatus}
-            handleClose={closeModal}
-            select={selectEmployee}
+                show={modalStatus}
+                handleClose={closeModal}
+                select={selectEmployee}
             >
 
             </DeleteEmployee>

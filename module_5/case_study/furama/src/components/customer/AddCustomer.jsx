@@ -27,7 +27,7 @@ export function AddCustomer() {
         <Formik initialValues={{
             name: '',
             date: '',
-            gender: "1",
+            gender: "",
             identity: '',
             phone: '',
             email: '',

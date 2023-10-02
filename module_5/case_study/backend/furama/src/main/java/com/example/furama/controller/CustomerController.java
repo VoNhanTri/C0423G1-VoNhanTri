@@ -47,14 +47,14 @@ public class CustomerController {
         return new ResponseEntity<>("xoa thanh cong", HttpStatus.OK);
     }
     @GetMapping("/type")
-    public String showAdd(Model model){
+    public ResponseEntity<?> showAdd(Model model) {
         List<Type> typeList = iTypeService.findAllType();
-            if (typeList.isEmpty()){
-                return String.valueOf(new ResponseEntity<>(HttpStatus.NO_CONTENT));
-            }
-            return String.valueOf(new ResponseEntity<>(typeList, HttpStatus.OK));
+        if (typeList.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(typeList, HttpStatus.OK);
     }
-    @PostMapping("/customer/")
+    @PostMapping("/customer")
         public ResponseEntity<?> add (@RequestBody Customer customer){
         iCustomerService.add(customer);
         return new ResponseEntity<>("Them moi thanh cong",HttpStatus.OK);

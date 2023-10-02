@@ -1,14 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useEffect, useState} from 'react';
-import {getAll, getPage} from "../../service/CustomerService.jsx";
+import {getAll} from "../../service/CustomerService.jsx";
 import {Link} from "react-router-dom";
-import ReactPaginate from "react-paginate";
 import {DeleteCustomer} from "./DeleteCustomer.jsx";
 
 function Customer() {
     const [customers, setCustomers] = useState([]);
     const [hoTen, setHoTen] = useState("");
-    const [totalPage, setTotalPage] = useState(1);
 
     const [modalStatus, setModalStatus] = useState(false);
     const [selectCustomer, setSelectCustomer] = useState(null);
@@ -22,10 +20,8 @@ function Customer() {
     // },[hoTen])
 
     const getCustomer = async () => {
-        const res = await getAll(hoTen)
-        const record = res.headers['x-total-count'];
-        setTotalPage(Math.ceil(record / 2))
-        setCustomers(res.data);
+        const res = await getAll()
+        setCustomers(res);
     }
     const handleModal = (customer) => {
         setSelectCustomer(customer);
@@ -38,11 +34,11 @@ function Customer() {
         setModalStatus(false);
     }
 
-    const handlePageClick = async (event) => {
-        const page = event.selected + 1
-        const res = await getPage(page);
-        setCustomers(res)
-    }
+    // const handlePageClick = async (event) => {
+    //     const page = event.selected + 1
+    //     const res = await getPage(page);
+    //     setCustomers(res)
+    // }
 
     return (
         <>
@@ -74,14 +70,14 @@ function Customer() {
                     return (
                         <tr key={cus.id}>
                             <td>{index+1}</td>
-                            <td>{cus.hoTen}</td>
-                            <td>{cus.ngaySinh}</td>
-                            <td>{cus.gioiTinh}</td>
-                            <td>{cus.cmnd}</td>
-                            <td>{cus.sdt}</td>
+                            <td>{cus.name}</td>
+                            <td>{cus.date}</td>
+                            <td>{cus.gender}</td>
+                            <td>{cus.identity}</td>
+                            <td>{cus.phone}</td>
                             <td>{cus.email}</td>
-                            <td>{cus.diaChi}</td>
-                            <td>{cus.loaiKhach.name}</td>
+                            <td>{cus.address}</td>
+                            <td>{cus.type.nameType}</td>
                             <td>
                                 <button className="btn btn-outline-danger"
                                         onClick={() => handleModal(cus)}>Delete
@@ -102,29 +98,29 @@ function Customer() {
             >
             </DeleteCustomer>
 
-            <ReactPaginate
-                breakLabel="..."
-                nextLabel="next >"
-                onPageChange={handlePageClick}
-                pageCount={totalPage}
-                previousLabel="< previous"
-                renderOnZeroPageCount={null}
-                marginPagesDisplayed={3}
-                pageRangeDisplayed={1}
+            {/*<ReactPaginate*/}
+            {/*    breakLabel="..."*/}
+            {/*    nextLabel="next >"*/}
+            {/*    onPageChange={handlePageClick}*/}
+            {/*    pageCount={totalPage}*/}
+            {/*    previousLabel="< previous"*/}
+            {/*    renderOnZeroPageCount={null}*/}
+            {/*    marginPagesDisplayed={3}*/}
+            {/*    pageRangeDisplayed={1}*/}
 
 
 
-                containerClassName={"pagination justify-content-center"}
-                previousClassName={"page-item"}
-                previousLinkClassName={"page-link"}
-                pageClassName={"page-item"}
-                pageLinkClassName={"page-link"}
-                nextClassName={"page-item"}
-                nextLinkClassName={"page-link"}
-                breakClassName={"page-item"}
-                breakLinkClassName={"page-link"}
-                activeClassName={"active"}
-            />
+            {/*    containerClassName={"pagination justify-content-center"}*/}
+            {/*    previousClassName={"page-item"}*/}
+            {/*    previousLinkClassName={"page-link"}*/}
+            {/*    pageClassName={"page-item"}*/}
+            {/*    pageLinkClassName={"page-link"}*/}
+            {/*    nextClassName={"page-item"}*/}
+            {/*    nextLinkClassName={"page-link"}*/}
+            {/*    breakClassName={"page-item"}*/}
+            {/*    breakLinkClassName={"page-link"}*/}
+            {/*    activeClassName={"active"}*/}
+            {/*/>*/}
 
         </>
     );

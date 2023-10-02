@@ -1,16 +1,17 @@
 import axios from "axios"
-export const getAll = async (hoTen) =>{
+export const getAll = async () =>{
     try {
-        const res = await axios.get(`http://localhost:8080/customer?_page=1&_limit=2&hoTen_like=${hoTen}`);
-        return res;
+        const res = await axios.get(`http://localhost:8080/customer`)
+        console.log(res)
+        return res.data;
     }catch (e) {
         alert("Không tìm thấy dữ liệu")
 
     }
 }
-// export const getAllAll = async () =>{
+// export const getAll = async () =>{
 //     try {
-//         const res = await axios.get(`http://localhost:8080/customer`);
+//         const res = await axios.get(`http://localhost:8080/api/customer/list`);
 //         return res.data;
 //     }catch (e) {
 //         alert("Không tìm thấy dữ liệu")
@@ -58,7 +59,7 @@ export const edit = async (customer) =>{
 }
 export const getAllCustomerType = async () => {
     try{
-        const result = await axios.get("http://localhost:8080/loaiKhach");
+        const result = await axios.get("http://localhost:8080/type");
         return result.data;
     }catch(e){
         alert("Không tìm thấy dữ liệu")

@@ -9,7 +9,7 @@ export function AddCustomer() {
     const navigate = useNavigate();
     const [type, setType] = useState([])
     const addNewCustomer = async (value) => {
-        const rs = {...value, loaiKhach: JSON.parse(value.loaiKhach)}
+        const rs = {...value, type: JSON.parse(value.type)}
         await add(rs);
     }
     const loadType = async () => {
@@ -25,16 +25,16 @@ export function AddCustomer() {
     return (
         <>
         <Formik initialValues={{
-            hoTen: '',
-            ngaySinh: '',
-            gioiTinh: "1",
-            cmnd: '',
-            sdt: '',
+            name: '',
+            date: '',
+            gender: "1",
+            identity: '',
+            phone: '',
             email: '',
-            diaChi: '',
-            loaiKhach: JSON.stringify({
+            address: '',
+            type: JSON.stringify({
                 id: 1,
-                name: "PLATINUM"
+                nameType: "PLATINUM"
             })
         }} onSubmit={(value) => {
             addNewCustomer(value);
@@ -42,62 +42,60 @@ export function AddCustomer() {
             toast("thêm mới thành công")
         }}
                 validationSchema={Yup.object({
-                    hoTen: Yup.string()
-                        .required("Không Được Để Trống"),
-                    ngaySinh: Yup.string()
-                        .required("Không Được Để Trống"),
-                    cmnd: Yup.string()
-                        .required("Không Được Để Trống")
-                        .matches(/^[0-9]{9,12}$/, "Số CMND Không Đúng Định Dạng"),
-
-                    sdt: Yup.string()
-                        .required("Không Được Để Trống")
-                        .matches(/^0[0-9]{9,11}$/, "Số điện Thoại Không Đúng Định Dạng"),
-
-                    email: Yup.string()
-                        .required("Không Được Để Trống")
-                        .matches(/^[\w\-.]+@([\w-]+\.)+[\w-]{2,}$/, "Email Không Đúng định dạng"),
-                    diaChi: Yup.string()
-                        .required("Không Được Để Trống")
-                })}
-        >
+                    // name: Yup.string()
+                    //     .required("Không Được Để Trống"),
+                    // date: Yup.string()
+                    //     .required("Không Được Để Trống"),
+                    // identity: Yup.string()
+                    //     .required("Không Được Để Trống")
+                    //     .matches(/^[0-9]{9,12}$/, "Số CMND Không Đúng Định Dạng"),
+                    //
+                    // phone: Yup.string()
+                    //     .required("Không Được Để Trống")
+                    //     .matches(/^0[0-9]{9,11}$/, "Số điện Thoại Không Đúng Định Dạng"),
+                    //
+                    // email: Yup.string()
+                    //     .required("Không Được Để Trống")
+                    //     .matches(/^[\w\-.]+@([\w-]+\.)+[\w-]{2,}$/, "Email Không Đúng định dạng"),
+                    // address: Yup.string()
+                    //     .required("Không Được Để Trống")
+                })}>
             <div className="container px-5 my-5">
                 <Form id="contactForm" data-sb-form-api-token="API_TOKEN">
                     <div className="mb-3">
-                        <label className="form-label" htmlFor="hoTen">Họ Tên </label>
-                        <Field className="form-control" id="hoTen" name="hoTen" type="text" placeholder="Họ Tên "
+                        <label className="form-label" htmlFor="name">Name Customer</label>
+                        <Field className="form-control" id="name" name="name" type="text" placeholder="Họ Tên "
                                data-sb-validations=""/>
-                        <ErrorMessage name="hoTen" component="span" className="form-err"></ErrorMessage>
+                        <ErrorMessage name="name" component="span" className="form-err"></ErrorMessage>
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor="ngaySinh">Ngày Sinh</label>
-                        <Field className="form-control" id="ngaySinh" name='ngaySinh' type="date"
+                        <label className="form-label" htmlFor="date">Date</label>
+                        <Field className="form-control" id="date" name='date' type="date"
                                placeholder="Ngày Sinh"
                                data-sb-validations=""/>
-                        <ErrorMessage name="ngaySinh" component="span" className="form-err"></ErrorMessage>
+                        <ErrorMessage name="date" component="span" className="form-err"></ErrorMessage>
 
                     </div>
                     <div className="mb-3">
                         <label>Giới Tính</label>
-                        <Field as="select" name="gioiTinh" style={{width:'1100px',textAlign:'center', backgroundColor:'white', color:'black'}}>
+                        <Field as="select" name="gender" style={{width:'1100px',textAlign:'center', backgroundColor:'white', color:'black'}}>
                             <option className="option" value>--Gender--</option>
                             <option className="option" value="male">Male</option>
                             <option className="option" value="famale">Famale</option>
-                            <option className="option" value="other">Other</option>
                         </Field>
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor="cmnd">CMND</label>
-                        <Field className="form-control" id="cmnd" name='cmnd' type="text" placeholder="CMND"
+                        <label className="form-label" htmlFor="identity">CMND</label>
+                        <Field className="form-control" id="identity" name='identity' type="text" placeholder="CMND"
                                data-sb-validations=""/>
                         <ErrorMessage name="cmnd" component="span" className="form-err"></ErrorMessage>
 
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor="sdt">SĐT</label>
-                        <Field className="form-control" id="sdt" name="sdt" type="text" placeholder="SĐT"
+                        <label className="form-label" htmlFor="phone">SĐT</label>
+                        <Field className="form-control" id="phone" name="phone" type="text" placeholder="SĐT"
                                data-sb-validations=""/>
-                        <ErrorMessage name="sdt" component="span" className="form-err"></ErrorMessage>
+                        <ErrorMessage name="phone" component="span" className="form-err"></ErrorMessage>
 
                     </div>
                     <div className="mb-3">
@@ -109,17 +107,17 @@ export function AddCustomer() {
                     </div>
 
                     <div className="mb-3">
-                        <label className="form-label" htmlFor="diaChi">Địa Chỉ</label>
-                        <Field className="form-control" id="diaChi" name='diaChi' type="text" placeholder="Địa Chỉ"
+                        <label className="form-label" htmlFor="address">Địa Chỉ</label>
+                        <Field className="form-control" id="address" name='address' type="text" placeholder="Địa Chỉ"
                                data-sb-validations=""/>
-                        <ErrorMessage name="diaChi" component="span" className="form-err"></ErrorMessage>
+                        <ErrorMessage name="address" component="span" className="form-err"></ErrorMessage>
                     </div>
                     <div className="mb-3" >
                         <label>Loại Khách Hàng</label>
-                        <Field as="select" name="loaiKhach" style={{width:"1100px", textAlign:"center", backgroundColor:'white',color:'black' }}>
+                        <Field as="select" name="type" style={{width:"1100px", textAlign:"center", backgroundColor:'white',color:'black' }}>
                             {
                                 type.map((e) => (
-                                    <option key={e.id} value={JSON.stringify(e)}>{e.name}</option>
+                                    <option key={e.id} value={e.id}>{e.nameType}</option>
                                 ))
                             }
                         </Field>

@@ -246,16 +246,16 @@
       "id": 4
     },
     {
-      "name": "thanh",
-      "birthday": "1994-12-12",
+      "name": "Dam Thoai Tin 1",
+      "birthday": "1111-12-12",
       "identity": "1231243123",
-      "phone": "+84367692899",
-      "email": "nhantri249@gmail.com",
+      "phone": "0912345678",
+      "email": "tin@gmail.com",
       "location": {
-        "id": 2,
+        "id": 1,
         "name": "Cao Đẳng"
       },
-      "id": 5
+      "id": 6
     }
   ],
   "location": [

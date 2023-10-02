@@ -1,0 +1,43 @@
+{
+  "hangHoa": [
+    {
+      "id": 1,
+      "maHangHoa": "MHH-001",
+      "tenHangHoa": "Xà Lách",
+      "donVi": "kg",
+      "gia": 10000,
+      "ngayThu": "12-12-2023",
+      "loai": {
+        "id": 1,
+        "tenLoai": "Rau"
+      }
+    },
+    {
+      "maHangHoa": "qq",
+      "tenHangHoa": "qqqq",
+      "donVi": "túi",
+      "gia": "1111",
+      "ngayThu": "23123-12-31",
+      "loai": 2,
+      "id": 2
+    }
+  ],
+  "loai": [
+    {
+      "id": 1,
+      "tenLoai": "Rau"
+    },
+    {
+      "id": 2,
+      "tenLoai": "Củ"
+    },
+    {
+      "id": 3,
+      "tenLoai": "Quả"
+    },
+    {
+      "id": 4,
+      "tenLoai": "Hoa"
+    }
+  ]
+}

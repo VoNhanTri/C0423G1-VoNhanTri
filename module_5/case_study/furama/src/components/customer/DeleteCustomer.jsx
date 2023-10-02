@@ -27,7 +27,7 @@ export function DeleteCustomer(props) {
                             </div>
                             <div className="modal-body">
                                 {/* eslint-disable-next-line react/prop-types */}
-                                <p>Do you want to delete <b>{selectCustomer.hoTen}</b></p>
+                                <p>Do you want to delete <b>{selectCustomer.name}</b></p>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"

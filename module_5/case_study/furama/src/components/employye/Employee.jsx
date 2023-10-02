@@ -6,19 +6,20 @@ import {Button} from "react-bootstrap";
 
 export function Employee() {
     const [employee, setEmployee] = useState([]);
+
     const [name, setName] = useState('');
     const [location, setLocation] = useState([]);
     const [locationSearch, setLocationSearch] = useState('');
+
+
     const [modalStatus, setModalStatus] = useState(false);
     const [selectEmployee, setselectEmployee] = useState(null);
 
-    console.log('name: ' + name, 'location: ' + locationSearch);
 
     useEffect(() => {
         getLocation();
     }, [])
 
-    // console.log(employee)
 
     useEffect(() => {
         searchName()

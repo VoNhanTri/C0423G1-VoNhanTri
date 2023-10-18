@@ -1,0 +1,144 @@
+{
+  "facility": [
+    {
+      "id": 1,
+      "serviceName": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room1.jpg"
+    },
+    {
+      "id": 2,
+      "serviceName": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room2.jpg"
+    },
+    {
+      "id": 3,
+      "serviceName": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room3.jpg"
+    },
+    {
+      "id": 4,
+      "serviceName": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room4.jpg"
+    },
+    {
+      "id": 5,
+      "serviceName": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "poolArea": 40,
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room5.jpg"
+    },
+    {
+      "id": 6,
+      "serviceName": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "area": 500,
+      "rentalCost": "2000",
+      "maxCapacity": 6,
+      "rentalType": "Tháng",
+      "roomStandard": "Vip",
+      "amenities": "Buffet sáng",
+      "floors": 3,
+      "freeServices": "",
+      "img": "src/assets/img/rooms/room6.jpg"
+    },
+    {
+      "serviceName": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "area": "âsas",
+      "rentalCost": "ád",
+      "maxCapacity": "ádasd",
+      "rentalType": "ádasd",
+      "img": "ádasd",
+      "location": "{\"id\":2,\"name\":\"House\"}",
+      "id": 7
+    },
+    {
+      "serviceName": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "area": "12",
+      "rentalCost": "12",
+      "maxCapacity": "12",
+      "rentalType": "12",
+      "img": "src/assets/img/rooms/room6.jpg",
+      "id": 8
+    }
+  ],
+  "serviceName": [
+    {
+      "id": 1,
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Room"
+    }
+  ]
+}

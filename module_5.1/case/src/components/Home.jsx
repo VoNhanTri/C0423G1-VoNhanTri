@@ -9,19 +9,19 @@ function IndividualIntervalsExample() {
                 <Carousel>
                     <Carousel.Item interval={500}>
                         <Image src='src/assets/img/hero/contact_hero.jpg'
-                               style={{width: "1100px", marginBottom: "50px"}}/>
+                               style={{width: "100%", marginBottom: "50px"}}/>
                         <Carousel.Caption>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={500}>
                         <Image src='src/assets/img/hero/roomspage_hero.jpg'
-                               style={{width: "1100px", marginBottom: "50px"}}/>
+                               style={{width: "100%", marginBottom: "50px"}}/>
                         <Carousel.Caption>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <Image src='src/assets/img/hero/servicespage_hero.jpg'
-                               style={{width: "1100px", marginBottom: "50px"}}/>
+                               style={{width: "100%", marginBottom: "50px"}}/>
                         <Carousel.Caption>
                         </Carousel.Caption>
                     </Carousel.Item>

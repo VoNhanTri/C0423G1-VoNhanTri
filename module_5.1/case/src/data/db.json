@@ -3,13 +3,13 @@
     {
       "id": 1,
       "serviceName": {
-        "id": 1,
-        "name": "Villa"
+        "id": 2,
+        "name": "House"
       },
       "area": 500,
       "rentalCost": "2000",
       "maxCapacity": 6,
-      "rentalType": "Tháng",
+      "rentalType": "ngày",
       "roomStandard": "Vip",
       "amenities": "Buffet sáng",
       "poolArea": 40,
@@ -37,8 +37,8 @@
     {
       "id": 3,
       "serviceName": {
-        "id": 1,
-        "name": "Villa"
+        "id": 3,
+        "name": "Room"
       },
       "area": 500,
       "rentalCost": "2000",
@@ -71,8 +71,8 @@
     {
       "id": 5,
       "serviceName": {
-        "id": 1,
-        "name": "Villa"
+        "id": 2,
+        "name": "House"
       },
       "area": 500,
       "rentalCost": "2000",
@@ -106,25 +106,24 @@
         "id": 1,
         "name": "Villa"
       },
-      "area": "âsas",
-      "rentalCost": "ád",
-      "maxCapacity": "ádasd",
-      "rentalType": "ádasd",
-      "img": "ádasd",
-      "location": "{\"id\":2,\"name\":\"House\"}",
-      "id": 7
-    },
-    {
-      "serviceName": {
-        "id": 1,
-        "name": "Villa"
-      },
       "area": "12",
       "rentalCost": "12",
       "maxCapacity": "12",
       "rentalType": "12",
       "img": "src/assets/img/rooms/room6.jpg",
       "id": 8
+    },
+    {
+      "serviceName": {
+        "id": 2,
+        "name": "House"
+      },
+      "area": "12",
+      "rentalCost": "12",
+      "maxCapacity": "12",
+      "rentalType": "12",
+      "img": "src/assets/img/rooms/room6.jpg",
+      "id": 9
     }
   ],
   "serviceName": [
@@ -139,6 +138,79 @@
     {
       "id": 3,
       "name": "Room"
+    }
+  ],
+  "customer": [
+    {
+      "name": "nghia4",
+      "date": "2311-12-31",
+      "gender": "male",
+      "identity": "123123123",
+      "phone": "09878123123",
+      "email": "nhantri249@gmail.com",
+      "address": "da nang",
+      "typeCustomer": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "id": 1
+    },
+    {
+      "name": "quân ap",
+      "date": "12111-12-12",
+      "gender": "famale",
+      "identity": "123123123",
+      "phone": "+84367692899",
+      "email": "nhantri249@gmail.com",
+      "address": "quang binh",
+      "typeCustomer": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "type": "3",
+      "id": 6
+    },
+    {
+      "name": "danny",
+      "date": "1211-12-12",
+      "gender": "famale",
+      "identity": "011111111",
+      "phone": "0912345667",
+      "email": "danny@gmail.com",
+      "address": "quang tri",
+      "typeCustomer": {
+        "id": 4,
+        "name": "Member"
+      },
+      "id": 10
+    }
+  ],
+  "typeCustomer": [
+    {
+      "id": 1,
+      "name": "PLATINUM"
+    },
+    {
+      "id": 2,
+      "name": "DIAMOND"
+    },
+    {
+      "id": 3,
+      "name": "GOLD"
+    },
+    {
+      "id": 4,
+      "name": "Member"
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "numContract": "001",
+      "startDate": "25-12-2020",
+      "endDate": "12/12/2022",
+      "deposit": "10000000",
+      "total": "1000000000"
     }
   ]
 }

@@ -21,7 +21,6 @@ export function AddFacility() {
       const res = {...data, serviceName: JSON.parse(data.serviceName)}
         await addFacility(res)
     }
-
     return (
         <>
             <Formik initialValues={{
@@ -29,6 +28,7 @@ export function AddFacility() {
                     id: 1,
                     name: "Villa"
                 }),
+
                 area: '',
                 rentalCost: '',
                 maxCapacity: '',
@@ -39,7 +39,9 @@ export function AddFacility() {
                 navigate("/facility");
                 toast("Thêm Mới Thành Công")
             }}>
+
                 <div className="container px-5 my-5">
+                    <h1 style={{textAlign:"center"}}>Add Facility</h1>
                     <Form id="contactForm" data-sb-form-api-token="API_TOKEN">
                         <div className="mb-3">
                             <label className="form-label" htmlFor="serviceName">Service Name</label>
@@ -69,8 +71,12 @@ export function AddFacility() {
                         </div>
                         <div className="mb-3">
                             <label className="form-label" htmlFor="rentalType">Rental Type</label>
-                            <Field className="form-control" id="rentalType" name="rentalType" type="text" placeholder="RentalType"
-                                   data-sb-validations=""/>
+                            <Field as='select' className="form-control" id="rentalType" name="rentalType" type="text" placeholder="RentalType"
+                                   data-sb-validations="">
+                                <option className="option" value="Tháng">Tháng</option>
+                                <option className="option" value="Ngày">Ngày</option>
+                                <option className="option" value="Năm">Năm</option>
+                            </Field>
                         </div>
                         <div className="mb-3">
                             <label className="form-label" htmlFor="img">Image</label>
@@ -78,7 +84,7 @@ export function AddFacility() {
                                    data-sb-validations=""/>
                         </div>
 
-                        <div className="d-grid">
+                        <div className="d-grid" style={{textAlign:"center"}}>
                             <button className="btn btn-primary" id="submitButton" type="submit">Submit</button>
                         </div>
                     </Form>

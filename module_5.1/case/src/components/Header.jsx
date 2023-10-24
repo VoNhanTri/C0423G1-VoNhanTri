@@ -19,8 +19,8 @@ export function Header() {
                                         <nav>
                                             <ul id="navigation">
                                                 <li><Link className="nav-link" to="/" style={{fontSize:25}}>Home</Link></li>
-                                                {/*<li><Link className="nav-link" to="/customer">Khách Hàng</Link></li>*/}
-                                                {/*<li><Link className="nav-link" to="/contract">Hợp Đồng</Link></li>*/}
+                                                <li><Link className="nav-link" to="/customer" style={{fontSize:20}}>Customer</Link></li>
+                                                <li><Link className="nav-link" to="/contract" style={{fontSize:20}}>Contract</Link></li>
                                                 <li><Link className="nav-link" to="/facility" style={{fontSize:20}}>Facility</Link></li>
                                                 {/*<li><Link className="nav-link" to="/employee">Nhân Viên</Link></li>*/}
                                             </ul>

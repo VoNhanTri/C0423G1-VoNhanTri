@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import {NavLink} from "react-bootstrap";
 
 export function Header() {
 
@@ -11,7 +12,7 @@ export function Header() {
                             <div className="row align-items-center">
                                 <div className="col-xl-2 col-lg-2">
                                     <div className="logo">
-                                        <a href=""><img src={"src/assets/img/logo/logo.png"} alt=""/></a>
+                                        <NavLink href=""><img src={"src/assets/img/logo/logo.png"} alt=""/></NavLink>
                                     </div>
                                 </div>
                                 <div className="col-xl-8 col-lg-8">

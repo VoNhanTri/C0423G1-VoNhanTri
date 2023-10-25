@@ -40,7 +40,7 @@
         "id": 3,
         "name": "Room"
       },
-      "area": 500,
+      "area": "5001",
       "rentalCost": "2000",
       "maxCapacity": 6,
       "rentalType": "Tháng",
@@ -142,30 +142,16 @@
   ],
   "customer": [
     {
-      "name": "nghia4",
-      "date": "2311-12-31",
-      "gender": "male",
-      "identity": "123123123",
-      "phone": "09878123123",
-      "email": "nhantri249@gmail.com",
-      "address": "da nang",
-      "typeCustomer": {
-        "id": 1,
-        "name": "PLATINUM"
-      },
-      "id": 1
-    },
-    {
       "name": "quân ap",
       "date": "12111-12-12",
-      "gender": "famale",
+      "gender": "male",
       "identity": "123123123",
       "phone": "+84367692899",
       "email": "nhantri249@gmail.com",
       "address": "quang binh",
       "typeCustomer": {
-        "id": 1,
-        "name": "PLATINUM"
+        "id": 3,
+        "name": "GOLD"
       },
       "type": "3",
       "id": 6
@@ -183,6 +169,118 @@
         "name": "Member"
       },
       "id": 10
+    },
+    {
+      "name": "danny",
+      "date": "1211-12-12",
+      "gender": "famale",
+      "identity": "011111111",
+      "phone": "0912345667",
+      "email": "danny@gmail.com",
+      "address": "quang tri",
+      "typeCustomer": {
+        "id": 4,
+        "name": "Member"
+      },
+      "id": 11
+    },
+    {
+      "name": "quân ap",
+      "date": "0012-12-12",
+      "gender": "male",
+      "identity": "011212",
+      "phone": "+84367692899",
+      "email": "nhantri249@gmail.com",
+      "address": "quang binh",
+      "typeCustomer": {
+        "id": 2,
+        "name": "DIAMOND"
+      },
+      "id": 12
+    },
+    {
+      "name": "Ngo kien huy",
+      "date": "0012-12-12",
+      "gender": "female",
+      "identity": "012",
+      "phone": "0998765123",
+      "email": "huy@gmail.com",
+      "address": "da nang",
+      "typeCustomer": {
+        "id": 3,
+        "name": "GOLD"
+      },
+      "id": 13
+    },
+    {
+      "name": "312 312",
+      "date": "",
+      "gender": "male",
+      "identity": "0",
+      "phone": "0912345678",
+      "email": "",
+      "address": "",
+      "typeCustomer": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "id": 16
+    },
+    {
+      "name": "quân cho điên",
+      "date": "",
+      "gender": "male",
+      "identity": "0",
+      "phone": "+84367692899",
+      "email": "nhantri2491994@gmail.com",
+      "address": "",
+      "typeCustomer": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "id": 17
+    },
+    {
+      "name": "thanh",
+      "date": "",
+      "gender": "male",
+      "identity": "0",
+      "phone": "0",
+      "email": "thanh@gmail.com",
+      "address": "",
+      "typeCustomer": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "id": 18
+    },
+    {
+      "name": "danny",
+      "date": "",
+      "gender": "male",
+      "identity": "0",
+      "phone": "0912345667",
+      "email": "danny@gmail.com",
+      "address": "quang tri",
+      "typeCustomer": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "id": 19
+    },
+    {
+      "name": "Ngo kien huy",
+      "date": "",
+      "gender": "male",
+      "identity": "0",
+      "phone": "0998765123",
+      "email": "huy@gmail.com",
+      "address": "da nang",
+      "typeCustomer": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "id": 20
     }
   ],
   "typeCustomer": [
@@ -207,10 +305,26 @@
     {
       "id": 1,
       "numContract": "001",
-      "startDate": "25-12-2020",
-      "endDate": "12/12/2022",
+      "dateStart": "",
+      "dateEnd": "",
       "deposit": "10000000",
       "total": "1000000000"
+    },
+    {
+      "numContract": "222",
+      "dateStart": "2311-12-31",
+      "dateEnd": "2311-12-31",
+      "deposit": "1111",
+      "total": "11111",
+      "id": 2
+    },
+    {
+      "numContract": "333",
+      "dateStart": "1111-12-12",
+      "dateEnd": "1111-12-12",
+      "deposit": "1123123",
+      "total": "123123",
+      "id": 3
     }
   ]
 }

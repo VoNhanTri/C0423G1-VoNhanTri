@@ -1,0 +1,284 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "HaiTT",
+      "age": 18,
+      "gender": 1,
+      "languages": [
+        "C#"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "CongNT",
+      "age": 18,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "Java"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "TrungDP",
+      "age": 18,
+      "gender": 1,
+      "languages": [
+        "C#"
+      ]
+    },
+    {
+      "name": "ChanhTV",
+      "age": 29,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "JAVA",
+        "ReactJS"
+      ],
+      "id": 4
+    },
+    {
+      "name": "PhuongTD",
+      "age": 18,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 5
+    },
+    {
+      "name": "TienNVT",
+      "age": 20,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "JAVA",
+        "ReactJS"
+      ],
+      "id": 6
+    },
+    {
+      "name": "TienNVT",
+      "age": 20,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "JAVA",
+        "ReactJS"
+      ],
+      "id": 7
+    },
+    {
+      "name": "TrungDC",
+      "age": 25,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "JAVA",
+        "ReactJS"
+      ],
+      "id": 8
+    },
+    {
+      "name": "akgdahsdgas",
+      "age": 24,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 9
+    },
+    {
+      "name": "sdfdg",
+      "age": 19,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "JAVA",
+        "ReactJS"
+      ],
+      "id": 10
+    },
+    {
+      "name": "ThaoTP",
+      "age": 24,
+      "gender": 0,
+      "languages": [],
+      "id": 11
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 12
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 13
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 14
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 15
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 16
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 17
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 18
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 19
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 20
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 21
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 22
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 23
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 24
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 25
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 26
+    },
+    {
+      "name": "quan",
+      "age": 18,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 27
+    },
+    {
+      "name": "Ngo kien huy",
+      "age": 20,
+      "gender": 0,
+      "languages": [
+        "C#",
+        "JAVA"
+      ],
+      "id": 28
+    }
+  ]
+}

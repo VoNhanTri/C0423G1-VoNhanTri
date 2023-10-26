@@ -6,6 +6,7 @@ function IndividualIntervalsExample() {
     return (
         <>
             <div className='container-fluid'>
+                <div>
                 <Carousel>
                     <Carousel.Item interval={500}>
                         <Image src='src/assets/img/hero/contact_hero.jpg'
@@ -20,7 +21,11 @@ function IndividualIntervalsExample() {
                                style={{width: "100%", marginBottom: "50px"}}/>
                     </Carousel.Item>
                 </Carousel>
-                <FacilityDisplay/>
+                </div>
+                <div style={{display:"flex", justifyContent:"center",alignItems:"center", height:"100%", margin:"0"}}>
+                    <FacilityDisplay/>
+                </div>
+
             </div>
         </>
     );

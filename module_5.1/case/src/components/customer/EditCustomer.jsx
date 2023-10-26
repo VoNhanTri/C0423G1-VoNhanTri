@@ -3,6 +3,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {edits, getAllType, getByIds} from "../../service/CustomerService.jsx";
 import {toast} from "react-toastify";
 import {ErrorMessage, Field, Form, Formik} from "formik";
+import * as Yup from "yup";
 
 export function EditCustomer() {
     const [customer, setCustomer] = useState(null);
@@ -36,6 +37,10 @@ export function EditCustomer() {
             toast.error("Error")
         }
     }
+    //kiem tra trên 18
+    const today = new Date();
+    const years18 = new Date(today);
+    years18.setFullYear(today.getFullYear() - 18);
     return (
         customer &&
         <>
@@ -46,7 +51,27 @@ export function EditCustomer() {
             } onSubmit={(id) => {
                 editCustomer(id)
 
-            }}>
+            }}
+                    validationSchema={Yup.object({
+                        name: Yup.string()
+                            .required("Not null")
+                            .matches(/^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$/),
+                        date: Yup.date()
+                            .required("Not null")
+                            .max(years18, "Greater than 18 year old"),
+                        identity: Yup.string()
+                            .required("Not null")
+                            .matches(/^[0-9]{9,12}$/, "Not Invalid"),
+                        phone: Yup.string()
+                            .required("Not Null")
+                            .matches(/^0[0-9]{9,11}$/, "Not Invalid"),
+                        email: Yup.string()
+                            .required("Not null")
+                            .matches(/^[\w\-.]+@([\w-]+\.)+[\w-]{2,}$/, "Not Invalid"),
+                        address: Yup.string()
+                            .required("Not null")
+                    })}
+            >
                 <div className="container px-5 my-5">
                     <Form id="contactForm" data-sb-form-api-token="API_TOKEN">
                         <div className="mb-3">
@@ -61,17 +86,16 @@ export function EditCustomer() {
                                    placeholder="Date"
                                    data-sb-validations=""/>
                             <ErrorMessage name="date" component="span" className="form-err"></ErrorMessage>
-
                         </div>
                         <div className="mb-3">
                             <label>Gender</label>
                             <Field as="select" name="gender" style={{
-                                width: '1100px',
+                                width: '1225px',
                                 textAlign: 'center',
                                 backgroundColor: 'white',
                                 color: 'black'
                             }}>
-                                <option className="option" value>--Gender--</option>
+                                <option className="option" >--Gender--</option>
                                 <option className="option" value="male">Male</option>
                                 <option className="option" value="female">Female</option>
                             </Field>
@@ -79,9 +103,9 @@ export function EditCustomer() {
                         <div className="mb-3">
                             <label className="form-label" htmlFor="identity">Identity</label>
                             <Field className="form-control" id="identity" name='identity' type="text"
-                                   placeholder="CMND"
+                                   placeholder="identity"
                                    data-sb-validations=""/>
-                            <ErrorMessage name="cmnd" component="span" className="form-err"></ErrorMessage>
+                            <ErrorMessage name="identity" component="span" className="form-err"></ErrorMessage>
 
                         </div>
                         <div className="mb-3">
@@ -109,7 +133,7 @@ export function EditCustomer() {
                         <div className="mb-3">
                             <label>Type Customer</label>
                             <Field as="select" name="typeCustomer" style={{
-                                width: "1100px",
+                                width: "1225px",
                                 textAlign: "center",
                                 backgroundColor: 'white',
                                 color: 'black'
@@ -121,7 +145,7 @@ export function EditCustomer() {
                                 }
                             </Field>
                         </div>
-                        <div className="d-grid">
+                        <div className="submit" style={{textAlign:"center"}} >
                             <button className="btn btn-primary" id="submitButton" type="submit">Submit
                             </button>
                         </div>

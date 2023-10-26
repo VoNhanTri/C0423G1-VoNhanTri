@@ -1,8 +1,9 @@
-import  {useEffect, useState} from "react";
-import {getAll} from "../../service/CustomerService.jsx";
+import {useEffect, useState} from "react";
+import {getAll, getPage} from "../../service/CustomerService.jsx";
 import {Link} from "react-router-dom";
 import {Card} from "react-bootstrap";
 import {DeleteCustomer} from "./DeleteCustomer.jsx";
+import ReactPaginate from "react-paginate";
 
 export function Customer() {
     const [customer, setCustomer] = useState([]);
@@ -12,17 +13,26 @@ export function Customer() {
     const [status, setStatus] = useState(false);
     const [selectCustomer, setSelectCustomer] = useState(null);
 
-
+    const [currentPage] = useState(1);
+    const [totalPage, setTotalPage] = useState(0);
 
 
     useEffect(() => {
         display()
-    }, [name]);
+    }, [currentPage, name]);
 
-
+    let limit = 5;
     const display = async () => {
-        const res = await getAll(name);
-        setCustomer(res);
+        const res = await getAll(name, currentPage);
+        console.log(res)
+        const total = res.headers["x-total-count"]
+        setTotalPage(Math.ceil(total / 5))
+        setCustomer(res.data);
+    }
+    const handlePageClick = async (event) => {
+        let currentPage = event.selected + 1;
+        const customerList = await  getPage(currentPage,limit);
+        setCustomer(customerList);
     }
 
     // xoá modal
@@ -43,7 +53,7 @@ export function Customer() {
 
             <h1 style={{textAlign: "center"}}>List Customer</h1>
             <div className="navbar navbar-inverse">
-                <Link className="btn btn-outline-primary" to='/customer/add'>Add</Link>
+                <Link className="btn btn-outline-info" to='/customer/add'>Add</Link>
             </div>
             <div className="d-flex justify-content-end">
                 <input className="bg-light text-dark" style={{borderRadius: "15px", textAlign: "center"}}
@@ -81,7 +91,7 @@ export function Customer() {
                             <td><Link to={`/customer/edit/${customers.id}`}><i
                                 className="me-5 fa-regular fa-pen-to-square"
                                 style={{
-                                    color: "#dca73a",
+                                    color: "#6e65e6",
                                     fontSize: 25
                                 }}></i></Link>
                             </td>
@@ -100,8 +110,27 @@ export function Customer() {
                 handleClose={closeModel}
             ></DeleteCustomer>
 
+            <ReactPaginate
+                breakLabel="..."
+                nextLabel="next >"
+                onPageChange={handlePageClick}
+                pageCount={totalPage}
+                previousLabel="< previous"
+                renderOnZeroPageCount={null}
+                marginPagesDisplayed={1}
+                pageRangeDisplayed={3}
 
-
+                containerClassName={"pagination justify-content-center"}
+                previousClassName={"page-item"}
+                previousLinkClassName={"page-link"}
+                pageClassName={"page-item"}
+                pageLinkClassName={"page-link"}
+                nextClassName={"page-item"}
+                nextLinkClassName={"page-link"}
+                breakClassName={"page-item"}
+                breakLinkClassName={"page-link"}
+                activeClassName={"active"}
+            />
         </>
     )
 }

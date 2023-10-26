@@ -5,14 +5,14 @@ function Footer() {
     return (
         <footer>
             <div className="container-fluid">
-                <div className="footer-area black-bg footer-padding" style={{marginTop: "20px", marginRight: "20px"}}>
-                    <div className="row d-flex justify-content-between">
+                <div className="footer-area black-bg footer-padding" style={{marginTop: "10px", marginRight: "10px", paddingTop:"8px",paddingBottom:"8px",backgroundColor:"lightsteelblue"}}>
+                    <div className="row d-flex justify-content-between" >
                         <div className="col-1"></div>
                         <div className="row col-10">
                             <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                                 <div className="single-footer-caption mb-30">
                                     <div className="footer-logo">
-                                        <a href=""><img src="src/assets/img/logo/logo2_footer.png" alt=""/></a>
+                                        <a href=""><img src="src/assets/img/logo/logo.png" alt=""/></a>
                                     </div>
                                     <div className="footer-social footer-social2">
                                         <a href="#"><i className="fab fa-facebook-f"></i></a>

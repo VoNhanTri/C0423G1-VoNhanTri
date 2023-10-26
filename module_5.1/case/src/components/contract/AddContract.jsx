@@ -60,7 +60,7 @@ export function AddContract() {
                                    data-sb-validations=""/>
                         </div>
 
-                        <div className="d-grid">
+                        <div className="sunmit" style={{textAlign:"center"}}>
                             <button className="btn btn-primary " id="submitButton" type="submit">Submit</button>
                         </div>
                     </Form>

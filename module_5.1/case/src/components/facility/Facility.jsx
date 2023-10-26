@@ -43,16 +43,16 @@ export function Facility() {
     return (
 
         <>
-            <div className="container-fluid">
+            <div className="container">
                 <h1 style={{textAlign:"center"}}>List Facility</h1>
                 <div className="navbar navbar-inverse" >
-                    <Link  to="/facility/add" ><i className="fa-regular fa-square-plus" style={{color: "#dca73a",fontSize:40}}></i></Link>
+                    <Link  to="/facility/add" ><i className="fa-regular fa-square-plus" style={{color: "#e0c2f0",fontSize:40}}></i></Link>
                 </div>
                 <div className="row px-5 ">
                     {
                         facility.map((fac) => (
                             // eslint-disable-next-line react/jsx-key
-                            <div className="col-md-6 col-xl-3 mb-5 ">
+                            <div className="col-md-6 col-xl-4 mb-5 ">
                                 <Card style={{width: '20rem'}}>
                                     {/* eslint-disable-next-line react/jsx-no-undef */}
                                     <Card.Img variant="top" src={fac.img}/>
@@ -71,7 +71,7 @@ export function Facility() {
                                     <Card.Body>
                                         <div className="navbar">
                                         <div >
-                                            <Link  to={`/facility/edit/${fac.id}`}><i className="me-5 fa-regular fa-pen-to-square" style={{color: "#dca73a", fontSize:25}}></i></Link>
+                                            <Link  to={`/facility/edit/${fac.id}`}><i className="me-5 fa-regular fa-pen-to-square" style={{color: "#6e65e6", fontSize:25}}></i></Link>
 
                                         </div>
                                         <div >

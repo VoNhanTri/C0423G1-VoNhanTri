@@ -159,7 +159,7 @@
     {
       "name": "danny",
       "date": "1211-12-12",
-      "gender": "famale",
+      "gender": "male",
       "identity": "011111111",
       "phone": "0912345667",
       "email": "danny@gmail.com",
@@ -173,7 +173,7 @@
     {
       "name": "danny",
       "date": "1211-12-12",
-      "gender": "famale",
+      "gender": "female",
       "identity": "011111111",
       "phone": "0912345667",
       "email": "danny@gmail.com",
@@ -201,7 +201,7 @@
     {
       "name": "Ngo kien huy",
       "date": "0012-12-12",
-      "gender": "female",
+      "gender": "male",
       "identity": "012",
       "phone": "0998765123",
       "email": "huy@gmail.com",
@@ -281,6 +281,20 @@
         "name": "PLATINUM"
       },
       "id": 20
+    },
+    {
+      "name": "Ngo Kien Huy",
+      "date": "2003-02-11",
+      "gender": "female",
+      "identity": "012312312",
+      "phone": "0912381243",
+      "email": "huy@gmail.com",
+      "address": "da nang",
+      "typeCustomer": {
+        "id": 3,
+        "name": "GOLD"
+      },
+      "id": 21
     }
   ],
   "typeCustomer": [
@@ -325,6 +339,30 @@
       "deposit": "1123123",
       "total": "123123",
       "id": 3
+    },
+    {
+      "numContract": "4444",
+      "dateStart": "2023-10-03",
+      "dateEnd": "2023-10-30",
+      "deposit": "1111111",
+      "total": "2222222",
+      "id": 4
+    },
+    {
+      "numContract": "555555",
+      "dateStart": "2023-10-12",
+      "dateEnd": "2023-10-28",
+      "deposit": "11111",
+      "total": "11111",
+      "id": 5
+    },
+    {
+      "numContract": "66666",
+      "dateStart": "6666-06-06",
+      "dateEnd": "2023-10-11",
+      "deposit": "66666",
+      "total": "0666666",
+      "id": 6
     }
   ]
 }

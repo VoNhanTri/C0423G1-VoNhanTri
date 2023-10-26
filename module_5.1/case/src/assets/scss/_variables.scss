@@ -40,7 +40,7 @@ $heading-color:#2e2e2e;
 $gray-color: #bebebe;
 $gray-color-2: #bdbdbd;
 
-$theme-color: #2e2e2e;
+$theme-color: #bebebe;
 $theme-color2: #222222;
 $theme-color3: #BC9321;
 $theme-color4: #ff3500;
@@ -72,7 +72,7 @@ $big_screen:'only screen and (min-width: 1200px) and (max-width: 1440px)';
 $extra_big_screen: 'only screen and (min-width: 1200px) and (max-width: 3640px)';
 
 // ,,,,,,,,,,,
-$btn_bg: #dca73a;
+$btn_bg: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
 $btn_hover: #dca73a;
 $section_bg: #f7f7f7;
 $section_bg_1: #454545;
@@ -84,7 +84,7 @@ $heading_color2: #ff8b23;
 
 
 .boxed-btn {
-	background: #fff;
+  background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
 	color: #dca73a !important;
 	display: inline-block;
 	padding: 18px 44px;

@@ -37,7 +37,7 @@ export function AddFacility() {
             }} onSubmit={(values) => {
                 addFacilities(values)
                 navigate("/facility");
-                toast("Thêm Mới Thành Công")
+                toast("Create Successfully")
             }}>
 
                 <div className="container px-5 my-5">
@@ -80,11 +80,11 @@ export function AddFacility() {
                         </div>
                         <div className="mb-3">
                             <label className="form-label" htmlFor="img">Image</label>
-                            <Field className="form-control" id="img" name="img" type="text" placeholder="img"
+                            <Field className="form-control" id="img" name="img" type="img" placeholder="img"
                                    data-sb-validations=""/>
                         </div>
 
-                        <div className="d-grid" style={{textAlign:"center"}}>
+                        <div className="submit" style={{textAlign:"center"}}>
                             <button className="btn btn-primary" id="submitButton" type="submit">Submit</button>
                         </div>
                     </Form>

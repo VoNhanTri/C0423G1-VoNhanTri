@@ -1,21 +1,34 @@
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
-import {getAll} from "../../service/ContractService.jsx";
+import {getAll, getPage} from "../../service/ContractService.jsx";
+import ReactPaginate from "react-paginate";
 
 export function Contract() {
 
     const [contract, setContract] = useState([]);
-    const [numContract,setNumContract] = useState("");
+    const [numContract, setNumContract] = useState("");
+
+
+    const [currentPage] = useState(1);
+    const [totalPage, setTotalPage] = useState(0);
 
     useEffect(() => {
         display()
-    }, [numContract]);
+    }, [currentPage, numContract]);
 
     const display = async () => {
-        const res = await getAll(numContract);
-        setContract(res)
+        const res = await getAll(currentPage, numContract);
+        const total = res.headers["x-total-count"]
+        setTotalPage(Math.ceil(total / 5))
+        setContract(res.data)
     }
+    let limit = 5;
 
+    const handlePageClick = async (event) => {
+        let currentPage = event.selected + 1;
+        const contractList = await getPage(currentPage, limit);
+        setContract(contractList);
+    }
     return (
         <>
             <h1 style={{textAlign: "center"}}>List Contract</h1>
@@ -53,6 +66,28 @@ export function Contract() {
                 }
                 </tbody>
             </table>
+
+            <ReactPaginate
+                breakLabel="..."
+                nextLabel="next >"
+                onPageChange={handlePageClick}
+                pageCount={totalPage}
+                previousLabel="< previous"
+                renderOnZeroPageCount={null}
+                marginPagesDisplayed={1}
+                pageRangeDisplayed={3}
+
+                containerClassName={"pagination justify-content-center"}
+                previousClassName={"page-item"}
+                previousLinkClassName={"page-link"}
+                pageClassName={"page-item"}
+                pageLinkClassName={"page-link"}
+                nextClassName={"page-item"}
+                nextLinkClassName={"page-link"}
+                breakClassName={"page-item"}
+                breakLinkClassName={"page-link"}
+                activeClassName={"active"}
+            />
         </>
     )
 }

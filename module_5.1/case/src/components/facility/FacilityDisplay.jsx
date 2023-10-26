@@ -18,7 +18,7 @@ export function FacilityDisplay() {
     return (
 
         <>
-            <div className="container-fluid">
+            <div className="container">
                 <div className="row pb-4 ">
                     {
                         facility.map((fac) => (
@@ -40,7 +40,7 @@ export function FacilityDisplay() {
                                     </ListGroup>
                                     <Card.Body>
                                             <div style={{textAlign:"center"}}>
-                                                <Card.Link href="#"><i className="fa-solid fa-bed" style={{color: "#dca73a", fontSize:25}}></i></Card.Link>
+                                                <Card.Link href="#"><i className="fa-solid fa-bed" style={{backgroundColor:"linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308))"}}></i></Card.Link>
                                             </div>
                                     </Card.Body>
                                 </Card>

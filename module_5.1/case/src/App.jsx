@@ -13,6 +13,7 @@ import {AddCustomer} from "./components/customer/AddCustomer.jsx";
 import {EditCustomer} from "./components/customer/EditCustomer.jsx";
 import {Contract} from "./components/contract/Contract.jsx";
 import {AddContract} from "./components/contract/AddContract.jsx";
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 function App() {

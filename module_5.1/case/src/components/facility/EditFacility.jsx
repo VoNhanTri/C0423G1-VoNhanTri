@@ -29,9 +29,9 @@ export function EditFacility() {
         const res = await edit(value);
         if (res.status === 200){
             navigate("/facility")
-            toast("Sửa Thành Công");
+            toast("Edit Successfully");
         }else {
-            toast.error("Sửa Thất Bại");
+            toast.error("Error");
         }
     }
 
@@ -85,11 +85,11 @@ export function EditFacility() {
                         </div>
                         <div className="mb-3">
                             <label className="form-label" htmlFor="img">Image</label>
-                            <Field className="form-control" id="img" name="img" type="text" placeholder="img"
+                            <Field className="form-control" id="img" name="img" type="img" placeholder="img"
                                    data-sb-validations=""/>
                         </div>
 
-                        <div className="d-grid" style={{textAlign:"center"}}>
+                        <div className="submit" style={{textAlign:"center"}}>
                             <button className="btn btn-primary" id="submitButton" type="submit">Submit</button>
                         </div>
                     </Form>

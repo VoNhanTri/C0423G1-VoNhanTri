@@ -1,17 +1,18 @@
 import axios from "axios";
 
-export const getAll = async (name) => {
+export const getAll = async (name, page) => {
     try {
-        const res = await axios.get(`http://localhost:8080/customer?name_like=${name}`);
-        return res.data;
+        const res = await axios.get(`http://localhost:8080/customer?name_like=${name}&_page=${page}&_limit=5`);
+        console.log(res)
+        return res;
     } catch (e) {
         alert("Error");
     }
 }
 
-export const getPage = async (name,page) => {
+export const getPage = async (page,limit) => {
   try {
-      const res = await axios.get(`http://localhost:8080/customer?name_like=${name}&_page=${page}`);
+      const res = await axios.get(`http://localhost:8080/customer?_page=${page}&_limit=${limit}`);
       return res.data;
   }catch (e) {
       alert("Error");

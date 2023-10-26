@@ -9,9 +9,9 @@ export function DeleteFacility(props) {
         const res = await removeFacility(data.id)
         if (res.status === 200) {
             handleClose()
-            toast("Xoá Thành Công")
+            toast("Delete Successfully")
         } else {
-            toast.error("Xoá Thất Bại")
+            toast.error("Error Delete")
         }
     }
 

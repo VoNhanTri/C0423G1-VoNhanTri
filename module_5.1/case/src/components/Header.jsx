@@ -12,26 +12,24 @@ export function Header() {
                             <div className="row align-items-center">
                                 <div className="col-xl-2 col-lg-2">
                                     <div className="logo">
-                                        <NavLink href=""><img src={"src/assets/img/logo/logo.png"} alt=""/></NavLink>
+                                        <NavLink href="/"><img src={"src/assets/img/logo/logo.png"} alt=""/></NavLink>
                                     </div>
                                 </div>
                                 <div className="col-xl-8 col-lg-8">
                                     <div className="main-menu f-right d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
-                                                <li><Link className="nav-link" to="/" style={{fontSize:25}}>Home</Link></li>
-                                                <li><Link className="nav-link" to="/customer" style={{fontSize:20}}>Customer</Link></li>
-                                                <li><Link className="nav-link" to="/contract" style={{fontSize:20}}>Contract</Link></li>
-                                                <li><Link className="nav-link" to="/facility" style={{fontSize:20}}>Facility</Link></li>
+                                                <li><Link className="nav-link" to="/" ><button>Home</button></Link></li>
+                                                <li><Link className="nav-link" to="/customer" ><button>Customer</button></Link></li>
+                                                <li><Link className="nav-link" to="/contract" ><button>Contract</button></Link></li>
+                                                <li><Link className="nav-link" to="/facility" ><button>Facility</button></Link></li>
                                                 {/*<li><Link className="nav-link" to="/employee">Nhân Viên</Link></li>*/}
                                             </ul>
                                         </nav>
                                     </div>
                                 </div>
                                 <div className="col-xl-2 col-lg-2">
-                                    <div className="header-btn">
-                                        <a href="#" className="btn btn1 d-none d-lg-block " style={{width:110}}>Book Online</a>
-                                    </div>
+                                        <button >Book Online</button>
                                 </div>
                                 <div className="col-12">
                                     <div className="mobile_menu d-block d-lg-none"></div>

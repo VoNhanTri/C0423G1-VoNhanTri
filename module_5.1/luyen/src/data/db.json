@@ -1,0 +1,68 @@
+{
+  "goods": [
+    {
+      "id": 1,
+      "code": "MHH-0011",
+      "name": "typicode",
+      "unit": "kg",
+      "price": 15000,
+      "date": "12-12-2022",
+      "type": {
+        "id": 1,
+        "name": "Rau"
+      }
+    },
+    {
+      "code": "123123",
+      "name": "Dam Thoai Tin",
+      "unit": "",
+      "price": "1233333",
+      "date": "2023-10-04",
+      "type": 3,
+      "dơnVịTinh": "tui",
+      "id": 2
+    },
+    {
+      "code": "MHH-1111",
+      "name": "",
+      "unit": "",
+      "price": "10000",
+      "date": "",
+      "type": {
+        "id": 1,
+        "name": "Rau"
+      },
+      "id": 4
+    },
+    {
+      "code": "MHH-2222",
+      "name": "",
+      "unit": "",
+      "price": "1000",
+      "date": "",
+      "type": {
+        "id": 1,
+        "name": "Rau"
+      },
+      "id": 5
+    }
+  ],
+  "type": [
+    {
+      "id": 1,
+      "name": "Rau"
+    },
+    {
+      "id": 2,
+      "name": "CỦ"
+    },
+    {
+      "id": 3,
+      "name": "Quả"
+    },
+    {
+      "id": 4,
+      "name": "Hoa"
+    }
+  ]
+}

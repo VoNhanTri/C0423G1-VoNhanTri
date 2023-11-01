@@ -22,11 +22,10 @@ export function Contract() {
         setTotalPage(Math.ceil(total / 5))
         setContract(res.data)
     }
-    let limit = 5;
 
     const handlePageClick = async (event) => {
         let currentPage = event.selected + 1;
-        const contractList = await getPage(currentPage, limit);
+        const contractList = await getPage(currentPage,numContract);
         setContract(contractList);
     }
     return (

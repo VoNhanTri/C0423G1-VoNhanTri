@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const getAll = async (name, page) => {
+export const getAll = async (name, page,limit) => {
     try {
-        const res = await axios.get(`http://localhost:8080/customer?name_like=${name}&_page=${page}&_limit=5`);
+        const res = await axios.get(`http://localhost:8080/customer?name_like=${name}&_page=${page}&_limit=${limit}`);
         console.log(res)
         return res;
     } catch (e) {
@@ -10,9 +10,9 @@ export const getAll = async (name, page) => {
     }
 }
 
-export const getPage = async (page,limit) => {
+export const getPage = async (page,name,limit) => {
   try {
-      const res = await axios.get(`http://localhost:8080/customer?_page=${page}&_limit=${limit}`);
+      const res = await axios.get(`http://localhost:8080/customer?name_like=${name}&_page=${page}&_limit=${limit}`);
       return res.data;
   }catch (e) {
       alert("Error");
@@ -29,8 +29,8 @@ export const addCustomer = async (value) => {
 
 export const getAllType = async () => {
     try {
-        const res = await axios.get("http://localhost:8080/typeCustomer");
-        return res.data
+        const res = await axios.get("http://localhost:8080/type");
+        return res;
     } catch (e) {
         alert("Error");
     }

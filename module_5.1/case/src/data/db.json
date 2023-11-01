@@ -295,6 +295,48 @@
         "name": "GOLD"
       },
       "id": 21
+    },
+    {
+      "name": "Tran Trung Trực",
+      "date": "1994-12-12",
+      "gender": "male",
+      "identity": "0122344444",
+      "phone": "0912345678",
+      "email": "tin@gmail.com",
+      "address": "da nang",
+      "typeCustomer": {
+        "id": 1,
+        "name": "PLATINUM"
+      },
+      "id": 22
+    },
+    {
+      "name": "Nhan Tri",
+      "date": "2000-11-24",
+      "gender": "male",
+      "identity": "0122344444",
+      "phone": "0912345678",
+      "email": "tin@gmail.com",
+      "address": "da nang",
+      "typeCustomer": {
+        "id": 2,
+        "name": "DIAMOND"
+      },
+      "id": 23
+    },
+    {
+      "name": "Thiện Trần",
+      "date": "2002-02-06",
+      "gender": "female",
+      "identity": "0122344444",
+      "phone": "0912345678",
+      "email": "tin@gmail.com",
+      "address": "da nang",
+      "typeCustomer": {
+        "id": 2,
+        "name": "DIAMOND"
+      },
+      "id": 24
     }
   ],
   "typeCustomer": [
@@ -363,6 +405,46 @@
       "deposit": "66666",
       "total": "0666666",
       "id": 6
+    },
+    {
+      "numContract": "77777",
+      "dateStart": "2023-10-11",
+      "dateEnd": "2023-10-02",
+      "deposit": "22222222222",
+      "total": "3333333333",
+      "id": 7
+    },
+    {
+      "numContract": "8888",
+      "dateStart": "1998-12-12",
+      "dateEnd": "2023-10-24",
+      "deposit": "4444444",
+      "total": "444444",
+      "id": 8
+    },
+    {
+      "numContract": "999",
+      "dateStart": "",
+      "dateEnd": "",
+      "deposit": 0,
+      "total": 0,
+      "id": 9
+    },
+    {
+      "numContract": "10000000000",
+      "dateStart": "",
+      "dateEnd": "",
+      "deposit": 0,
+      "total": 0,
+      "id": 10
+    },
+    {
+      "numContract": "99999",
+      "dateStart": "",
+      "dateEnd": "",
+      "deposit": 0,
+      "total": 0,
+      "id": 11
     }
   ]
 }

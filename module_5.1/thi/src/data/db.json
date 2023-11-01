@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "code": "PROD-1111",
+      "name": "banh Socola",
+      "quantity": 1000,
+      "price": 59000,
+      "date": "2023-12-12",
+      "description": "aaaaaaa",
+      "type": {
+        "id": 1,
+        "name": "Banh"
+      }
+    },
+    {
+      "code": "PROD-2222",
+      "name": "keo ",
+      "quantity": 0,
+      "price": "18000",
+      "date": "2023-10-12",
+      "description": "aaaaaaaaaaabbbbbb",
+      "type": {
+        "id": 2,
+        "name": "Keo"
+      },
+      "id": 2
+    },
+    {
+      "code": "PROD-2222",
+      "name": "banh ",
+      "quantity": "11111",
+      "price": "18000",
+      "date": "2023-11-02",
+      "description": "aaaaaaaaaaabbbbbb",
+      "type": {
+        "id": 1,
+        "name": "Banh"
+      },
+      "id": 3
+    },
+    {
+      "code": "PROD-5555",
+      "name": "sua",
+      "quantity": "11111",
+      "price": "18000",
+      "date": "2023-10-31",
+      "description": "aaaaaaaaaaabbbbbb",
+      "type": {
+        "id": 3,
+        "name": "Sua"
+      },
+      "id": 4
+    }
+  ],
+  "type": [
+    {
+      "id": 1,
+      "name": "Banh"
+    },
+    {
+      "id": 2,
+      "name": "Keo"
+    },
+    {
+      "id": 3,
+      "name": "Sua"
+    },
+    {
+      "id": 4,
+      "name": "Snack"
+    }
+  ]
+}

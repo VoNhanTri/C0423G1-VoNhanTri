@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {getAll, getPage} from "../../service/CustomerService.jsx";
 import {Link} from "react-router-dom";
-import {Card} from "react-bootstrap";
+import {Card, NavLink} from "react-bootstrap";
 import {DeleteCustomer} from "./DeleteCustomer.jsx";
 import ReactPaginate from "react-paginate";
 
@@ -13,25 +13,24 @@ export function Customer() {
     const [status, setStatus] = useState(false);
     const [selectCustomer, setSelectCustomer] = useState(null);
 
-    const [currentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1);
     const [totalPage, setTotalPage] = useState(0);
-
+    let limit = 10;
 
     useEffect(() => {
         display()
     }, [currentPage, name]);
 
-    let limit = 5;
+
     const display = async () => {
-        const res = await getAll(name, currentPage);
-        console.log(res)
+        const res = await getAll(name, currentPage,limit);
         const total = res.headers["x-total-count"]
-        setTotalPage(Math.ceil(total / 5))
-        setCustomer(res.data);
+        setTotalPage(Math.ceil(total / 10))
+        setCustomer(res.data.content);
     }
     const handlePageClick = async (event) => {
-        let currentPage = event.selected + 1;
-        const customerList = await  getPage(currentPage,limit);
+        let currentPage = event.selected + 1
+        const customerList = await getPage(currentPage, name,limit);
         setCustomer(customerList);
     }
 
@@ -53,7 +52,7 @@ export function Customer() {
 
             <h1 style={{textAlign: "center"}}>List Customer</h1>
             <div className="navbar navbar-inverse">
-                <Link className="btn btn-outline-info" to='/customer/add'>Add</Link>
+                <NavLink className="btn btn-outline-info" href='/customer/add'>Add</NavLink>
             </div>
             <div className="d-flex justify-content-end">
                 <input className="bg-light text-dark" style={{borderRadius: "15px", textAlign: "center"}}

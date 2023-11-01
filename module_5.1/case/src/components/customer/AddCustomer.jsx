@@ -15,7 +15,8 @@ export function AddCustomer() {
 
     const displayType = async () => {
         const res = await getAllType();
-        setTypeCustomer(res);
+        console.log(res.data)
+        setTypeCustomer(res.data);
     }
 
     const add = async (value) => {

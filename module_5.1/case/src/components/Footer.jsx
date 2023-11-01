@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer>
             <div className="container-fluid">
-                <div className="footer-area black-bg footer-padding" style={{marginTop: "10px", marginRight: "10px", paddingTop:"8px",paddingBottom:"8px",backgroundColor:"lightsteelblue"}}>
+                <div className="footer-area black-bg footer-padding" style={{marginTop: "10px", marginRight: "10px", paddingTop:"5px",paddingBottom:"5px",backgroundColor:"lightsteelblue"}}>
                     <div className="row d-flex justify-content-between" >
                         <div className="col-1"></div>
                         <div className="row col-10">

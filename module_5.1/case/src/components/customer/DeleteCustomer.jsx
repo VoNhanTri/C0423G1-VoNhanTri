@@ -1,4 +1,5 @@
-import {deleteCustomer} from "../../service/CustomerService.jsx";
+import
+{deleteCustomer} from "../../service/CustomerService.jsx";
 import {toast} from "react-toastify";
 
 

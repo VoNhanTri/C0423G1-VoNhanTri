@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{
+show && (
+<div class="modal" tabIndex="-1" style={{display:block}}>
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Confirm Deletion</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    onClick="{handleClose}"></button>
+        </div>
+        <div class="modal-body">
+            {/* eslint-disable-next-line react/prop-types */}
+            <p>Do you want to delete {select.name}</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    onClick={handleClose}>Close
+            </button>
+            <button type="button" class="btn btn-primary"
+                    {() => handleDelete(select)}>Delete
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+)
+}
+
+
+  <a href='/add' class='btn btn-outline-primary'>Add</a>
+            <div>
+                <input class='input-group-text' type='text' onChange={}>
+            </div>
+            <select class='select form-select'  onChange={}>
+                <option value=''>Loại</option>
+                {(() => {
+                        return (
+                            <option ></option>
+                        )
+                    })}
+            </select>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã Hàng Hoá</th>
+                    <th>Tên Hàng Hoá</th>
+                    <th>Đơn Vị Tính</th>
+                    <th>Giá(VNĐ/kg</th>
+                    <th>Ngày Thu Hoạch</th>
+                    <th>Loại Sản Phẩm</th>
+                    <th>Functiob</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+<!--them -->
+    <div class="container px-5 my-5">
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="mb-3">
+                        <label class="form-label" htmlFor="maHangHoa">Mã Hàng Hoá</label>
+                        <input class="form-control" id="maHangHoa" name='maHangHoa' type="text" placeholder="Mã Hàng Hoá"  />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" htmlFor="tenHangHoa">Tên Hàng Hoá</label>
+                        <input class="form-control" id="tenHangHoa" name='tenHangHoa' type="text" placeholder="Tên Hàng Hoá" />
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" id="dơnVịTinh" aria-label="Đơn Vị Tính">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <label for="dơnVịTinh">Đơn VỊ Tính</label>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" htmlFor="giaVndKg">Giá (VNĐ/kg)</label>
+                        <input class="form-control" id="giaVndKg" name='gia' type="text" placeholder="Giá (VNĐ/kg)"  />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" htmlFor="ngayThuHoạch">Ngày Thu Hoạch</label>
+                        <input class="form-control" id="ngayThuHoạch" name='ngayThuHoach' type="date" placeholder="Ngày Thu Hoạch"  />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" htmlFor="loạiSảnPhẩm">Loại Sản Phẩm</label>
+                        <select  class="form-select" name='loai' id="loạiSảnPhẩm" aria-label="Loại Sản Phẩm">
+                            {
+                               (()=>(
+                                    <option  ></option>
+                                ))
+                            }
+                        </select>
+                    </div>
+
+                    <div class="d-grid">
+                        <button class="btn btn-primary" id="submitButton" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+
+
+</body>
+</html>
